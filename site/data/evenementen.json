@@ -1,0 +1,406 @@
+[
+  {
+    "slug": "intervisie-gwh-staatlozen",
+    "titel": {
+      "nl": "Intervisie: het arrest van het Grondwettelijk Hof over de verblijfsprocedure voor staatlozen"
+    },
+    "start": "2026-11-19T14:00",
+    "einde": "2026-11-19T17:00",
+    "heleDag": false,
+    "type": "intervisie",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "NANSEN, Rue Émile Féron 153, 1060 Brussel"
+    },
+    "doelpubliek": [
+      "advocaten",
+      "juristen"
+    ],
+    "partners": [],
+    "inschrijving": {
+      "status": "open",
+      "url": "#inschrijven"
+    },
+    "themas": [
+      "staatloosheid"
+    ],
+    "publicaties": [
+      "pact-staatloosheid-aanbevelingen"
+    ],
+    "deelnemers": null,
+    "samenvatting": {
+      "nl": "Wat betekent het arrest van juni 2026 voor lopende dossiers? Een intervisie op basis van casussen uit de praktijk."
+    },
+    "beschrijving": {
+      "nl": "<p>In zijn arrest van juni 2026 vernietigde het Grondwettelijk Hof verschillende bepalingen van de verblijfsprocedure voor staatlozen. Tijdens deze intervisie bespreken we de gevolgen voor lopende en nieuwe dossiers, aan de hand van casussen die deelnemers vooraf kunnen aanbrengen.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  },
+  {
+    "slug": "online-pact-grensprocedure",
+    "titel": {
+      "nl": "Het Migratiepact en de grensprocedure: wat verandert er voor uw cliënt?"
+    },
+    "start": "2026-11-06T12:30",
+    "einde": "2026-11-06T14:00",
+    "heleDag": false,
+    "type": "vorming",
+    "formaat": "online",
+    "locatie": {
+      "nl": "Online (Teams)"
+    },
+    "doelpubliek": [
+      "advocaten",
+      "juristen"
+    ],
+    "partners": [],
+    "inschrijving": {
+      "status": "full",
+      "url": null
+    },
+    "themas": [
+      "detentie",
+      "internationale-bescherming"
+    ],
+    "publicaties": [
+      "procedure-frontiere-detention"
+    ],
+    "deelnemers": null,
+    "samenvatting": {
+      "nl": "Middagsessie van anderhalf uur over de nieuwe screening- en grensprocedure onder het Pact."
+    },
+    "beschrijving": {
+      "nl": "<p>Een praktijkgerichte sessie over de screening- en grensprocedure onder het Europees Migratie- en Asielpact, en wat die betekent voor de bijstand aan personen die aan de grens worden vastgehouden.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  },
+  {
+    "slug": "studiedag-interdisciplinariteit",
+    "titel": {
+      "nl": "Studiedag: interdisciplinariteit in dossiers internationale bescherming"
+    },
+    "start": "2026-12-04T09:30",
+    "einde": "2026-12-04T16:30",
+    "heleDag": false,
+    "type": "studiedag",
+    "formaat": "hybride",
+    "locatie": {
+      "nl": "Brussel en online"
+    },
+    "doelpubliek": [
+      "advocaten",
+      "juristen",
+      "terrein"
+    ],
+    "partners": [
+      "Innoviris"
+    ],
+    "inschrijving": {
+      "status": "open",
+      "url": "#inschrijven"
+    },
+    "themas": [
+      "internationale-bescherming",
+      "foltering"
+    ],
+    "publicaties": [],
+    "deelnemers": null,
+    "samenvatting": {
+      "nl": "Voorstelling van de praktische gids, met juristen, psychologen en artsen aan één tafel."
+    },
+    "beschrijving": {
+      "nl": "<p>Tijdens deze studiedag stellen we de praktische gids over interdisciplinariteit voor. Juristen, psychologen, artsen en maatschappelijk werkers delen hoe ze samenwerken in concrete dossiers.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  },
+  {
+    "slug": "clinic-sogi-bewijs",
+    "titel": {
+      "nl": "Legal clinic: bewijsvoering in SOGI-dossiers"
+    },
+    "start": "2027-01-21T13:00",
+    "einde": "2027-01-21T16:00",
+    "heleDag": false,
+    "type": "clinic",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "Brussel"
+    },
+    "doelpubliek": [
+      "studenten",
+      "juristen"
+    ],
+    "partners": [
+      "WAWY-netwerk"
+    ],
+    "inschrijving": {
+      "status": "open",
+      "url": "#inschrijven"
+    },
+    "themas": [
+      "sogi"
+    ],
+    "publicaties": [],
+    "deelnemers": null,
+    "samenvatting": {
+      "nl": "Werksessie voor studenten en jonge juristen rond geloofwaardigheid en bewijs in SOGI-verzoeken."
+    },
+    "beschrijving": {
+      "nl": "<p>Een werksessie op basis van geanonimiseerde dossiers, in samenwerking met de partners van het WAWY-netwerk.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  },
+  {
+    "slug": "intervisie-ecre-non-refoulement",
+    "titel": {
+      "nl": "Intervisie: non-refoulement aan de grens"
+    },
+    "start": "2025-10-14T13:30",
+    "einde": "2025-10-14T17:00",
+    "heleDag": false,
+    "type": "intervisie",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "Brussel"
+    },
+    "doelpubliek": [
+      "advocaten",
+      "instanties",
+      "juristen"
+    ],
+    "partners": [
+      "ECRE"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "detentie"
+    ],
+    "publicaties": [],
+    "deelnemers": 60,
+    "samenvatting": {
+      "nl": "Samen met ECRE over de naleving van het principe van non-refoulement aan de grens. Meer dan 60 deelnemers."
+    },
+    "beschrijving": {
+      "nl": "<p>Samen met de European Council on Refugees and Exiles (ECRE) organiseerde NANSEN een intervisie over de naleving van het principe van non-refoulement aan de grens. Meer dan 60 deelnemers, onder wie advocaten, vertegenwoordigers van de asielinstanties en medewerkers van ngo’s, namen deel.</p>"
+    },
+    "verslag": {
+      "nl": "<p>De deelnemers deelden ervaringen uit de praktijk rond informatieverstrekking aan de grens, het onderzoek naar non-refoulement en de toegang tot een advocaat vanuit detentie. De vaststellingen voeden de publicaties van NANSEN over detentie.</p>"
+    },
+    "materiaal": [
+      {
+        "label": "Slides intervisie",
+        "taal": "fr",
+        "grootte": "2,1 MB",
+        "url": null
+      }
+    ],
+    "foto": "zaal"
+  },
+  {
+    "slug": "uclouvain-non-refoulement",
+    "titel": {
+      "nl": "Non-refoulement: sessie in de opleiding vluchtelingen- en migratierecht"
+    },
+    "start": "2025-11-20T09:00",
+    "einde": "2025-11-20T12:30",
+    "heleDag": false,
+    "type": "vorming",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "UCLouvain, Louvain-la-Neuve"
+    },
+    "doelpubliek": [
+      "terrein",
+      "advocaten"
+    ],
+    "partners": [
+      "UCLouvain"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "detentie"
+    ],
+    "publicaties": [],
+    "deelnemers": 40,
+    "samenvatting": {
+      "nl": "Veertig actoren op het terrein, onder wie maatschappelijk werkers, advocaten en tolken."
+    },
+    "beschrijving": {
+      "nl": "<p>Nog eens 40 actoren op het terrein, onder wie maatschappelijk werkers, advocaten en tolken, namen deel aan onze sessie over non-refoulement in het kader van de opleiding vluchtelingen- en migratierecht van UCLouvain.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": "vorming-procedure"
+  },
+  {
+    "slug": "ovb-module-staatloosheid",
+    "titel": {
+      "nl": "Online vormingsmodule staatloosheid voor de Orde van Vlaamse Balies"
+    },
+    "start": "2025-09-01T00:00",
+    "einde": null,
+    "heleDag": true,
+    "type": "vorming",
+    "formaat": "online",
+    "locatie": {
+      "nl": "Online leerplatform OVB"
+    },
+    "doelpubliek": [
+      "advocaten"
+    ],
+    "partners": [
+      "Orde van Vlaamse Balies"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "staatloosheid"
+    ],
+    "publicaties": [
+      "enfants-palestiniens"
+    ],
+    "deelnemers": 11000,
+    "samenvatting": {
+      "nl": "Een module op het online opleidingssysteem van de OVB, toegankelijk voor meer dan 11.000 advocaten."
+    },
+    "beschrijving": {
+      "nl": "<p>NANSEN ontwikkelde en nam een online vormingsmodule over staatloosheid op voor het online opleidingssysteem van de Orde van Vlaamse Balies, toegankelijk voor meer dan 11.000 ingeschreven advocaten in Vlaanderen.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  },
+  {
+    "slug": "wawy-brusselse-balie",
+    "titel": {
+      "nl": "WAWY ontmoet de Brusselse balie: samenwerken rond SOGI-verzoekers"
+    },
+    "start": "2025-05-15T17:00",
+    "einde": "2025-05-15T19:30",
+    "heleDag": false,
+    "type": "studiedag",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "Brussel"
+    },
+    "doelpubliek": [
+      "advocaten"
+    ],
+    "partners": [
+      "Merhaba",
+      "Rainbow Refugee Committee",
+      "Vluchtelingenwerk Vlaanderen",
+      "Humanitarian Hub"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "sogi"
+    ],
+    "publicaties": [],
+    "deelnemers": 60,
+    "samenvatting": {
+      "nl": "Een zestigtal advocaten van de Brusselse balie maakten kennis met de organisaties van het WAWY-netwerk."
+    },
+    "beschrijving": {
+      "nl": "<p>Samen met onze WAWY-partners brachten we een zestigtal advocaten van de Brusselse balie samen. We lieten hen kennismaken met de organisaties die op dit terrein actief zijn en met concrete manieren om samen te werken om SOGI-verzoekers beter te ondersteunen.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": "conferentie"
+  },
+  {
+    "slug": "vorming-cgvs-istanbul",
+    "titel": {
+      "nl": "Vorming voor protection officers: het Protocol van Istanbul"
+    },
+    "start": "2025-03-11T09:30",
+    "einde": "2025-03-11T12:30",
+    "heleDag": false,
+    "type": "vorming",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "CGVS, Brussel"
+    },
+    "doelpubliek": [
+      "instanties"
+    ],
+    "partners": [
+      "CGVS"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "foltering"
+    ],
+    "publicaties": [],
+    "deelnemers": 60,
+    "samenvatting": {
+      "nl": "Zestig protection officers van het CGVS over het Protocol van Istanbul en het lezen van medische verslagen."
+    },
+    "beschrijving": {
+      "nl": "<p>We vormden 60 protection officers van het CGVS over het Protocol van Istanbul en over het lezen van uitgebreide medische verslagen.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": "spreker"
+  },
+  {
+    "slug": "gastcollege-ugent",
+    "titel": {
+      "nl": "Gastcollege staatloosheid aan de UGent"
+    },
+    "start": "2025-03-27T10:00",
+    "einde": "2025-03-27T12:00",
+    "heleDag": false,
+    "type": "andere",
+    "formaat": "fysiek",
+    "locatie": {
+      "nl": "Universiteit Gent"
+    },
+    "doelpubliek": [
+      "studenten"
+    ],
+    "partners": [
+      "UGent"
+    ],
+    "inschrijving": {
+      "status": null,
+      "url": null
+    },
+    "themas": [
+      "staatloosheid"
+    ],
+    "publicaties": [],
+    "deelnemers": null,
+    "samenvatting": {
+      "nl": "Om de volgende generatie juristen kennis te laten maken met een vaak onderbelicht rechtsdomein."
+    },
+    "beschrijving": {
+      "nl": "<p>NANSEN gaf een gastcollege aan rechtenstudenten van de UGent, om de volgende generatie juristen en advocaten kennis te laten maken met dit vaak onderbelichte rechtsdomein.</p>"
+    },
+    "verslag": null,
+    "materiaal": [],
+    "foto": null
+  }
+]

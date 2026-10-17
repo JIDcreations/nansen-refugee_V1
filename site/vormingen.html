@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vormingen op maat | NANSEN</title>
+<meta name="description" content="Vormingen, intervisies en online modules van NANSEN voor balies, ngo's, asielinstanties en universiteiten.">
+<meta property="og:site_name" content="NANSEN, the Belgian Refugee Council">
+<meta property="og:title" content="Vormingen op maat">
+<meta property="og:description" content="Vormingen, intervisies en online modules van NANSEN voor balies, ngo's, asielinstanties en universiteiten.">
+<meta property="og:image" content="assets/img/grens-hek-1280.jpg">
+<meta name="theme-color" content="#5F7362">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..750;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="static" data-section="diensten" data-static="true">
+<div id="header"></div>
+<main id="main" tabindex="-1">
+  <header class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li>Diensten</li><li aria-current="page">Vormingen op maat</li></ol></nav>
+      <h1>Vormingen op maat</h1>
+      <p class="lead">NANSEN deelt wat het leert uit dossierwerk met de mensen die dagelijks met deze procedures werken: advocaten, juristen, protection officers, artsen, maatschappelijk werkers en tolken.</p>
+    </div>
+  </header>
+  <div class="wrap" data-translation-notice></div>
+  <figure class="wrap photo-strip" style="margin-bottom:var(--s-8)">
+    <picture><source type="image/webp" srcset="assets/img/zaal-640.webp 640w, assets/img/zaal-1280.webp 1280w" sizes="50vw"><img src="assets/img/zaal-1280.jpg" alt="Volle aula tijdens een vorming van NANSEN" loading="lazy"></picture>
+    <picture><source type="image/webp" srcset="assets/img/vorming-procedure-640.webp 640w" sizes="25vw"><img src="assets/img/vorming-procedure-1280.jpg" alt="Een medewerker van NANSEN licht de asielprocedure toe aan een whiteboard" loading="lazy"></picture>
+    <picture><source type="image/webp" srcset="assets/img/spreker-640.webp 640w, assets/img/spreker-1280.webp 1280w" sizes="35vw"><img src="assets/img/spreker-1280.jpg" alt="Een spreker van NANSEN met een microfoon" loading="lazy"></picture>
+  </figure>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap split">
+      <header><h2>Wat we aanbieden</h2></header>
+      <div class="format-list">
+        <article><h3>Vorming</h3><p>Een sessie van een halve of volledige dag rond één thema, met theorie en casussen. Bijvoorbeeld: het Protocol van Istanbul voor 60 protection officers van het CGVS.</p></article>
+        <article><h3>Intervisie</h3><p>Een gesprek tussen praktijkjuristen op basis van concrete dossiers. Bijvoorbeeld: non-refoulement aan de grens, samen met ECRE, met meer dan 60 deelnemers.</p></article>
+        <article><h3>Online module</h3><p>Een opgenomen module die deelnemers zelf volgen. Bijvoorbeeld: staatloosheid op het leerplatform van de Orde van Vlaamse Balies.</p></article>
+        <article><h3>Gastcollege of legal clinic</h3><p>Voor rechtenstudenten en jonge juristen, in samenwerking met universiteiten zoals UCLouvain en UGent.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--band">
+    <div class="wrap split">
+      <header><h2>Een vorming aanvragen</h2><p class="muted">Vertel ons voor wie de vorming is en wat u wilt bereiken. We nemen binnen enkele werkdagen contact op.</p></header>
+      <form class="form-grid form-grid--2" action="#" onsubmit="event.preventDefault(); this.querySelector('[role=status]').textContent='Demo: in de definitieve site wordt deze aanvraag verstuurd naar info@nansenrefugee.be.';">
+        <div><label for="v-org">Organisatie</label><input class="field" id="v-org" name="organisatie" autocomplete="organization" required></div>
+        <div><label for="v-name">Contactpersoon</label><input class="field" id="v-name" name="naam" autocomplete="name" required></div>
+        <div><label for="v-mail">E-mailadres</label><input class="field" id="v-mail" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="v-theme">Thema</label>
+          <select class="field select" id="v-theme" name="thema"><option>Internationale bescherming</option><option>Staatloosheid</option><option>Slachtoffers van foltering</option><option>Detentie</option><option>SOGI</option><option>Interdisciplinariteit</option><option>Ander thema</option></select></div>
+        <div><label for="v-format">Formaat</label>
+          <select class="field select" id="v-format" name="formaat"><option>Vorming</option><option>Intervisie</option><option>Online module</option><option>Gastcollege / legal clinic</option></select></div>
+        <div><label for="v-n">Aantal deelnemers (geschat)</label><input class="field" id="v-n" name="deelnemers" type="number" min="1" inputmode="numeric"></div>
+        <div class="span-2"><label for="v-msg">Wat wilt u bereiken?</label><textarea class="field" id="v-msg" name="bericht" rows="5"></textarea></div>
+        <div class="span-2"><button class="btn btn--primary" type="submit">Aanvraag versturen</button><p class="form-note" role="status"></p></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "gert",
+    "naam": "Gert Bruininkx",
+    "functie": {
+      "nl": "Directeur",
+      "fr": "Directeur",
+      "en": "Director"
+    },
+    "email": null
+  },
+  {
+    "slug": "ellen",
+    "naam": "Ellen Desmet",
+    "functie": {
+      "nl": "Voorzitter raad van bestuur",
+      "fr": "Présidente du conseil d’administration",
+      "en": "Chair of the Board"
+    },
+    "email": null
+  }
+]

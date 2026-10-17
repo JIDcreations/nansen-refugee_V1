@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klacht indienen | NANSEN</title>
+<meta name="description" content="Niet tevreden over de werking of de kwaliteit van de dienstverlening van NANSEN? Zo dient u een klacht in.">
+<meta property="og:site_name" content="NANSEN, the Belgian Refugee Council">
+<meta property="og:title" content="Klacht indienen">
+<meta property="og:description" content="Niet tevreden over de werking of de kwaliteit van de dienstverlening van NANSEN? Zo dient u een klacht in.">
+<meta property="og:image" content="assets/img/grens-hek-1280.jpg">
+<meta name="theme-color" content="#5F7362">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..750;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="static" data-section="" data-static="true">
+<div id="header"></div>
+<main id="main" tabindex="-1">
+  <header class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Klacht indienen</li></ol></nav>
+      <h1>Klacht indienen</h1>
+      <p class="lead">Bent u niet tevreden over de werking van NANSEN of over de kwaliteit van onze dienstverlening? Laat het ons weten. Elke klacht wordt vertrouwelijk behandeld.</p>
+    </div>
+  </header>
+  <div class="wrap" data-translation-notice></div>
+  <section class="section" style="padding-top:0">
+    <div class="wrap split">
+      <header><h2>Hoe verloopt het?</h2></header>
+      <ol class="steps">
+        <li><div><h3>U beschrijft uw klacht</h3><p>Via het formulier hieronder of per e-mail naar <a href="mailto:info@nansenrefugee.be">info@nansenrefugee.be</a>, in het Nederlands, Frans of Engels.</p></div></li>
+        <li><div><h3>We bevestigen de ontvangst</h3><p>U krijgt een bevestiging en weet wie uw klacht behandelt.</p></div></li>
+        <li><div><h3>We onderzoeken en antwoorden</h3><p>U ontvangt een gemotiveerd antwoord.</p></div></li>
+      </ol>
+    </div>
+  </section>
+  <section class="section section--band">
+    <div class="wrap split">
+      <header><h2>Formulier</h2><p class="todo">Open vraag: formulier of enkel e-mailadres? Termijnen te bevestigen.</p></header>
+      <form class="form-grid form-grid--2" action="#" onsubmit="event.preventDefault(); this.querySelector('[role=status]').textContent='Demo: in de definitieve site wordt uw klacht verstuurd.';">
+        <div><label for="k-name">Naam</label><input class="field" id="k-name" name="naam" autocomplete="name"></div>
+        <div><label for="k-mail">E-mailadres</label><input class="field" id="k-mail" name="email" type="email" autocomplete="email" required></div>
+        <div class="span-2"><label for="k-msg">Uw klacht</label><textarea class="field" id="k-msg" name="klacht" rows="6" required></textarea></div>
+        <div class="span-2"><button class="btn btn--primary" type="submit">Klacht versturen</button><p class="form-note" role="status"></p></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+</body>
+</html>

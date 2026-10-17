@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nieuwsbrief | NANSEN</title>
+<meta name="description" content="Schrijf u in op de nieuwsbrief van NANSEN: nieuwe publicaties, vormingen en intervisies.">
+<meta property="og:site_name" content="NANSEN, the Belgian Refugee Council">
+<meta property="og:title" content="Nieuwsbrief">
+<meta property="og:description" content="Schrijf u in op de nieuwsbrief van NANSEN: nieuwe publicaties, vormingen en intervisies.">
+<meta property="og:image" content="assets/img/grens-hek-1280.jpg">
+<meta name="theme-color" content="#5F7362">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..750;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="static" data-section="" data-static="true">
+<div id="header"></div>
+<main id="main" tabindex="-1">
+  <header class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Nieuwsbrief</li></ol></nav>
+      <h1>Nieuwsbrief</h1>
+      <p class="lead">Nieuwe publicaties, vormingen en intervisies, ongeveer één keer per maand. Voor advocaten, juristen en organisaties op het terrein.</p>
+    </div>
+  </header>
+  <div class="wrap" data-translation-notice></div>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <form class="form-grid" action="#" onsubmit="event.preventDefault(); this.querySelector('[role=status]').textContent='Demo: in de definitieve site wordt u ingeschreven via de nieuwsbrieftool.';">
+        <div><label for="n-mail">E-mailadres</label><input class="field" id="n-mail" name="email" type="email" autocomplete="email" required></div>
+        <fieldset class="filter-group" style="border-top:0;padding-top:0"><legend>Taal van de nieuwsbrief</legend>
+          <label class="check"><input type="radio" name="taal" value="nl" checked><span>Nederlands</span></label>
+          <label class="check"><input type="radio" name="taal" value="fr"><span>Français</span></label>
+          <label class="check"><input type="radio" name="taal" value="en"><span>English</span></label>
+        </fieldset>
+        <div><button class="btn btn--primary" type="submit">Inschrijven</button><p class="form-note" role="status"></p><p class="form-note">U kunt zich altijd uitschrijven. We delen uw adres met niemand. Zie ons <a href="privacy.html">privacybeleid</a>.</p></div>
+      </form>
+      <p class="todo mt-6"><strong>Open vraag:</strong> welke nieuwsbrieftool (Mailchimp, Brevo…)?</p>
+    </div>
+  </section>
+  <script>
+    // e-mail uit de footer-form overnemen
+    const e = new URLSearchParams(location.search).get('email'); if (e) document.getElementById('n-mail').value = e;
+  </script>
+</main>
+<div id="footer"></div>
+</body>
+</html>

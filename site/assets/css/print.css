@@ -1,0 +1,23 @@
+/* Print: juristen printen publicaties. Enkel inhoud, metadata bovenaan, URL's zichtbaar. */
+@page { margin: 18mm 18mm 20mm; }
+body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.5; }
+.site-header, .mobile-menu, .prefooter, .site-footer, .breadcrumb, .filters, .subnav,
+.related, .meta-actions, .toc, .toc-inline, .skip-link, .btn, .search-panel, .cite-box, .no-print { display: none !important; }
+.wrap { max-width: none; padding: 0; }
+.detail { display: block; padding: 0; }
+.detail-aside { position: static !important; margin: 0 0 8mm; }
+.meta-card { box-shadow: none; border: 0; border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 3mm 0; background: none; }
+.meta-card dl { grid-template-columns: repeat(3, 1fr); gap: 2mm 6mm; }
+.doc-head { padding: 0 0 4mm; }
+.doc-head h1 { font-size: 22pt; color: #000; }
+.print-only { display: block !important; }
+h1, h2, h3 { color: #000; break-after: avoid; }
+.blocks, .prose { max-width: none; }
+.keypoints, .casus, .download { background: none; border-color: #000; break-inside: avoid; }
+.casus-head { background: none; color: #000; border-bottom: 1px solid #000; }
+.casus-head h3 { color: #000; }
+.blocks a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #444; word-break: break-all; }
+.tag { border-color: #666; color: #000; }
+.lang { background: none; border: 1px solid #000; color: #000; }
+.ribbon, .ribbon-big { color: #000 !important; }
+img { max-width: 60% !important; }

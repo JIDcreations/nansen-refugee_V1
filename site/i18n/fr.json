@@ -1,0 +1,237 @@
+{
+  "locale": "fr-BE",
+  "langName": "Français",
+  "skip": "Aller au contenu",
+  "nav": {
+    "nansen": "NANSEN",
+    "themes": "Thématiques",
+    "services": "Services",
+    "knowledge": "Ressources",
+    "support": "Nous soutenir",
+    "menu": "Menu",
+    "close": "Fermer",
+    "search": "Rechercher",
+    "home": "Accueil"
+  },
+  "anchors": {
+    "missie": "Mission",
+    "aanpak": "Approche",
+    "team": "Équipe",
+    "geschiedenis": "Histoire",
+    "partners": "Partenaires",
+    "jaarverslagen": "Rapports annuels",
+    "contact": "Contact"
+  },
+  "anchorsSub": {
+    "missie": "La raison d’être de NANSEN",
+    "aanpak": "L’interdisciplinarité et trois objectifs stratégiques",
+    "team": "Les juristes et expert·es de NANSEN",
+    "geschiedenis": "Fridtjof Nansen et le passeport Nansen",
+    "partners": "HCR, barreaux, universités et ONG",
+    "jaarverslagen": "Chiffres et activités par année",
+    "contact": "Adresse et contacts par service"
+  },
+  "services": {
+    "bijstand": "Aide juridique",
+    "bijstandSub": "Soumettre un dossier en tant qu’avocat",
+    "vormingen": "Formations sur mesure",
+    "vormingenSub": "Pour barreaux, ONG et instances"
+  },
+  "knowledge": {
+    "pubs": "Publications",
+    "pubsSub": "Notes, cas, fiches pratiques, guides",
+    "events": "Événements, intervisions et archives",
+    "eventsSub": "Sessions à venir et comptes rendus"
+  },
+  "megaTitle": "Thématiques",
+  "megaIntro": "Cinq domaines dans lesquels NANSEN suit des dossiers, développe et partage son expertise.",
+  "allThemes": "Toutes les thématiques",
+  "navPanels": {
+    "nansen": {
+      "intro": "Centre d’expertise juridique en matière de protection internationale et d’apatridie, à Bruxelles depuis 2017.",
+      "more": "À propos de NANSEN"
+    },
+    "services": {
+      "intro": "Pour les avocats et organisations qui traitent des dossiers complexes.",
+      "more": "dossiers@nansenrefugee.be"
+    },
+    "knowledge": {
+      "intro": "Notes, études de cas, fiches pratiques et événements sur la protection internationale et l’apatridie.",
+      "more": "Rechercher dans toutes les ressources"
+    }
+  },
+  "searchLabel": "Rechercher dans les publications, événements et thématiques",
+  "searchPh": "P. ex. apatridie, refoulement, Afghanistan",
+  "searchBtn": "Rechercher",
+  "searchTry": "Essayez :",
+  "footer": {
+    "tagline": "Centre d’expertise juridique en matière de protection internationale et d’apatridie.",
+    "contact": "Contact",
+    "general": "Général",
+    "cases": "Dossiers",
+    "direction": "Direction",
+    "address": "Adresse",
+    "links": "Accès rapide",
+    "partner": "Partenaire",
+    "privacy": "Vie privée",
+    "dpp": "Data Protection Policy (PDF, EN)",
+    "complaint": "Déposer une plainte",
+    "rights": "NANSEN asbl. Numéro d’entreprise à compléter.",
+    "unhcr": "Partenaire opérationnel en Belgique"
+  },
+  "newsletter": {
+    "title": "Restez informé·e",
+    "text": "Nouvelles publications, formations et intervisions, environ une fois par mois.",
+    "label": "Adresse e-mail",
+    "btn": "S’inscrire",
+    "note": "Désinscription possible à tout moment. Votre adresse n’est jamais partagée."
+  },
+  "complaint": {
+    "title": "Insatisfait·e de nos services ?",
+    "text": "Faites-le nous savoir. Chaque plainte est traitée de manière confidentielle.",
+    "btn": "Déposer une plainte"
+  },
+  "types": {
+    "theme": "Thématique",
+    "themes": "Thématiques",
+    "publication": "Publication",
+    "publications": "Publications",
+    "event": "Événement",
+    "events": "Événements",
+    "page": "Page",
+    "pages": "Pages"
+  },
+  "filters": {
+    "title": "Filtres",
+    "show": "Afficher les filtres",
+    "hide": "Masquer les filtres",
+    "search": "Rechercher dans cette liste",
+    "clear": "Tout effacer",
+    "remove": "Retirer le filtre",
+    "more": "Afficher plus",
+    "less": "Afficher moins",
+    "theme": "Thématique",
+    "type": "Type",
+    "country": "Pays",
+    "docLang": "Langue du document",
+    "year": "Année",
+    "when": "Quand",
+    "upcoming": "À venir",
+    "past": "Archives",
+    "mode": "Format",
+    "audience": "Public",
+    "all": "Tous"
+  },
+  "sort": {
+    "label": "Trier",
+    "newest": "Plus récent",
+    "oldest": "Plus ancien",
+    "az": "Titre A–Z",
+    "soonest": "Prochainement"
+  },
+  "results": {
+    "pub1": "publication",
+    "pubN": "publications",
+    "ev1": "événement",
+    "evN": "événements",
+    "loadMore": "Charger plus",
+    "showing": "{n} sur {total} affichés",
+    "emptyTitle": "Aucun résultat pour cette combinaison",
+    "emptyText": "Retirez un filtre ou effacez tous les filtres pour recommencer."
+  },
+  "meta": {
+    "type": "Type",
+    "date": "Date de publication",
+    "themes": "Thématiques",
+    "countries": "Pays",
+    "docLang": "Disponible en",
+    "authors": "Auteur(s)",
+    "download": "Télécharger",
+    "cite": "Citer cette publication",
+    "copy": "Copier la référence",
+    "copied": "Référence copiée",
+    "print": "Imprimer",
+    "share": "Partager le lien",
+    "toc": "Sur cette page",
+    "readAlso": "À lire aussi",
+    "linkedEvents": "Événements liés",
+    "linkedPubs": "Publications liées",
+    "related": "Voir aussi",
+    "sameTheme": "Même thématique",
+    "pages": "p.",
+    "keypoints": "Points clés"
+  },
+  "event": {
+    "when": "Quand",
+    "where": "Où",
+    "for": "Pour qui",
+    "partners": "Avec",
+    "register": "S’inscrire",
+    "status": "Statut",
+    "open": "Inscriptions ouvertes",
+    "full": "Complet",
+    "past": "Terminé",
+    "upcoming": "À venir",
+    "archive": "Archives",
+    "report": "Compte rendu",
+    "material": "Supports",
+    "participants": "participants",
+    "online": "En ligne",
+    "fysiek": "En présentiel",
+    "hybride": "Hybride",
+    "allDay": "En continu",
+    "waitlist": "Liste d’attente"
+  },
+  "theme": {
+    "pubs": "Publications sur cette thématique",
+    "events": "Événements sur cette thématique",
+    "upcoming": "Événements à venir",
+    "archive": "Archives",
+    "contact": "Personne de contact",
+    "allPubs": "Toutes les publications sur {t}",
+    "noUpcoming": "Aucun événement n’est prévu pour le moment sur cette thématique.",
+    "countPub": "{n} publications",
+    "countEv": "{n} événements"
+  },
+  "search": {
+    "title": "Rechercher",
+    "resultsFor": "Résultats pour",
+    "all": "Tout",
+    "showAll": "Voir les {n} {type}",
+    "none": "Aucun résultat pour « {q} ».",
+    "noneHelp": "Vérifiez l’orthographe, utilisez un terme plus général ou cherchez un pays ou une thématique.",
+    "otherLangs": "Rechercher aussi dans les documents en d’autres langues",
+    "matchedVia": "trouvé via la thématique"
+  },
+  "translationMissing": "Ce contenu est uniquement disponible en néerlandais dans ce prototype.",
+  "docOnlyIn": "Ce document est uniquement disponible en {l}.",
+  "breadcrumbHome": "Accueil",
+  "langNames": {
+    "nl": "néerlandais",
+    "fr": "français",
+    "en": "anglais"
+  },
+  "home": {
+    "title": "Centre d’expertise juridique en matière de protection internationale et d’apatridie",
+    "searchLabel": "Rechercher dans les notes, études de cas, fiches pratiques et formations",
+    "lawyer": "Avocat·e avec un dossier complexe ?",
+    "lawyerLink": "Soumettez-le à NANSEN",
+    "quote": "Derrière chaque procédure, il y a une personne.",
+    "quoteSrc": "NANSEN, rapport annuel 2025",
+    "themes": "Thématiques",
+    "latest": "Publications récentes",
+    "allPubs": "Toutes les publications",
+    "upcoming": "Événements à venir",
+    "allEvents": "Tous les événements et archives",
+    "noUpcoming": "Aucun événement n’est prévu pour le moment."
+  },
+  "pages": {
+    "themasTitle": "Thématiques",
+    "themasLead": "NANSEN travaille sur cinq domaines. Pour chaque thématique : publications, formations, intervisions et personne de contact.",
+    "pubsTitle": "Publications",
+    "pubsLead": "Notes, études de cas, fiches pratiques, guides et recommandations. De nombreux documents existent uniquement en français ; filtrez par langue du document.",
+    "eventsTitle": "Événements, intervisions et archives",
+    "eventsLead": "Formations, intervisions et journées d’étude pour avocat·es, juristes et acteurs de terrain. Après chaque événement : compte rendu et supports.",
+    "notFound": "Cette page n’existe pas (ou plus)."
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "nansen",
+    "titel": {
+      "nl": "Over NANSEN"
+    },
+    "url": "nansen.html",
+    "tekst": {
+      "nl": "Missie aanpak team geschiedenis partners jaarverslagen contact. Juridisch expertisecentrum opgericht in 2017 door advocaten en academici. Fridtjof Nansen, Nansenpaspoort."
+    }
+  },
+  {
+    "slug": "bijstand",
+    "titel": {
+      "nl": "Juridische bijstand voor advocaten"
+    },
+    "url": "bijstand.html",
+    "tekst": {
+      "nl": "Een dossier voorleggen. Wanneer kan NANSEN helpen, welke dossiers, hoe aanmelden, wat bezorgen. dossiers@nansenrefugee.be. Internationale bescherming, staatloosheid, detentie, foltering, gender."
+    }
+  },
+  {
+    "slug": "vormingen",
+    "titel": {
+      "nl": "Vormingen op maat"
+    },
+    "url": "vormingen.html",
+    "tekst": {
+      "nl": "Vormingen voor advocaten, balies, ngo, asielinstanties, universiteiten. Intervisie, workshop, online module."
+    }
+  },
+  {
+    "slug": "steun",
+    "titel": {
+      "nl": "Steun ons"
+    },
+    "url": "steun-ons.html",
+    "tekst": {
+      "nl": "Doneren, gift, fiscaal attest, steun het werk van NANSEN."
+    }
+  },
+  {
+    "slug": "klacht",
+    "titel": {
+      "nl": "Klacht indienen"
+    },
+    "url": "klacht.html",
+    "tekst": {
+      "nl": "Ontevreden over de werking of de kwaliteit van de dienstverlening. Klachtenprocedure."
+    }
+  },
+  {
+    "slug": "privacy",
+    "titel": {
+      "nl": "Privacy"
+    },
+    "url": "privacy.html",
+    "tekst": {
+      "nl": "Data Protection Policy, GDPR, persoonsgegevens."
+    }
+  }
+]

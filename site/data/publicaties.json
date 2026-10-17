@@ -1,0 +1,989 @@
+[
+  {
+    "slug": "procedure-frontiere-detention",
+    "titel": {
+      "fr": "La procédure d’asile à la frontière et la détention des demandeurs de protection internationale"
+    },
+    "origineleTaal": "fr",
+    "datum": "2025-11-18",
+    "type": "nota",
+    "themas": [
+      "detentie",
+      "internationale-bescherming"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [
+      "Juridisch team NANSEN"
+    ],
+    "samenvatting": {
+      "nl": "Analyse van de grensprocedure in België: systematische vasthouding, de snelheid van de procedure en de gevolgen voor toegang tot informatie en kwaliteitsvolle juridische bijstand.",
+      "fr": "Analyse de la procédure à la frontière en Belgique : détention systématique, rapidité de la procédure et conséquences pour l’accès à l’information et à une aide juridique de qualité."
+    },
+    "bijlagen": [
+      {
+        "label": "Note: procédure à la frontière",
+        "taal": "fr",
+        "grootte": "1,4 MB",
+        "paginas": 38,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "intervisie-ecre-non-refoulement"
+    ],
+    "gerelateerd": [
+      "effectivite-recours-refoulement",
+      "detentie-samenvatting"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "kernpunten",
+          "titel": "Kernpunten",
+          "punten": [
+            "Personen die aan de grens om bescherming verzoeken, worden in België systematisch vastgehouden.",
+            "Informatie over het recht om internationale bescherming aan te vragen wordt niet altijd gegeven.",
+            "Detentiebevelen steunen vaak op stereotiepe motiveringen in plaats van op individuele gronden.",
+            "Beroep en rechterlijke toetsing bieden in de praktijk te vaak geen daadwerkelijke controle."
+          ]
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Context"
+        },
+        {
+          "type": "tekst",
+          "html": "<p>De asielprocedure aan de grens verloopt snel, vaak te snel om toegang te krijgen tot de nodige informatie, de eigen rechten volledig te begrijpen en uit te oefenen, of kwaliteitsvolle juridische bijstand te ontvangen. De combinatie van detentieomstandigheden en versnelde procedures vormt aanzienlijke drempels voor een daadwerkelijke toegang tot internationale bescherming.</p>"
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Methode"
+        },
+        {
+          "type": "tekst",
+          "html": "<p>De nota bouwt op twee jaar terreinwerk: regelmatige bezoeken aan gesloten centra, individueel dossierwerk en juridische analyse, in samenwerking met de MOVE Coalition.</p>"
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Vaststellingen"
+        },
+        {
+          "type": "tekst",
+          "html": "<p>De nota documenteert drie terugkerende problemen: de informatieverstrekking aan de grens, de motivering van detentiebevelen, en de effectiviteit van de rechtsmiddelen. Voor elk probleem formuleert NANSEN concrete aanbevelingen aan de asielinstanties en de wetgever.</p>"
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Aanbevelingen"
+        },
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "vraag": "Informatie aan de grens",
+              "antwoord": "<p>Systematische, begrijpelijke informatie over het recht om internationale bescherming aan te vragen, in een taal die de betrokkene begrijpt.</p>"
+            },
+            {
+              "vraag": "Individuele motivering van detentie",
+              "antwoord": "<p>Elk detentiebevel moet steunen op een individuele beoordeling van de situatie en de kwetsbaarheden van de betrokkene.</p>"
+            },
+            {
+              "vraag": "Daadwerkelijke rechterlijke toetsing",
+              "antwoord": "<p>Rechtsmiddelen moeten in de praktijk toegankelijk zijn binnen termijnen die realistisch zijn vanuit detentie.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "effectivite-recours-refoulement",
+    "titel": {
+      "fr": "L’effectivité du recours contre les décisions de refoulement"
+    },
+    "origineleTaal": "fr",
+    "datum": "2025-10-07",
+    "type": "nota",
+    "themas": [
+      "detentie"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Hoe daadwerkelijk is het beroep tegen een refoulementbeslissing aan de grens? Een analyse van termijnen, toegang tot een advocaat en het onderzoek naar non-refoulement."
+    },
+    "bijlagen": [
+      {
+        "label": "Note: effectivité du recours",
+        "taal": "fr",
+        "grootte": "880 KB",
+        "paginas": 22,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "intervisie-ecre-non-refoulement",
+      "uclouvain-non-refoulement"
+    ],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>NANSEN deelde bezorgdheden over het daadwerkelijke onderzoek naar non-refoulement aan de grens en de effectiviteit van dit onderzoek. Deze nota analyseert of het beroep tegen refoulementbeslissingen in de praktijk een daadwerkelijk rechtsmiddel vormt in de zin van artikel 13 EVRM.</p>"
+        },
+        {
+          "type": "bronnen",
+          "titel": "Kernbronnen",
+          "items": [
+            {
+              "soort": "Wetgeving",
+              "titel": "Wet van 15 december 1980 betreffende de toegang tot het grondgebied, artikel 74/5",
+              "url": "https://www.ejustice.just.fgov.be",
+              "datum": "1980-12-15"
+            },
+            {
+              "soort": "Rechtspraak",
+              "titel": "EHRM, M.K. e.a. t. Polen, nr. 40503/17",
+              "url": "https://hudoc.echr.coe.int",
+              "datum": "2020-07-23"
+            },
+            {
+              "soort": "Rapport",
+              "titel": "ECRE, Border procedures: not a panacea",
+              "url": "https://ecre.org",
+              "datum": "2019-07-01"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "detentie-samenvatting",
+    "titel": {
+      "nl": "Detentie aan de grens: de belangrijkste bevindingen",
+      "fr": "Détention à la frontière : principaux constats",
+      "en": "Detention at the border: key findings"
+    },
+    "origineleTaal": "nl",
+    "datum": "2025-12-02",
+    "type": "beleid",
+    "themas": [
+      "detentie"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr",
+      "en"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Samenvattende nota met de belangrijkste bevindingen van twee jaar werk van NANSEN in detentie, en de aanbevelingen aan beleidsmakers."
+    },
+    "bijlagen": [
+      {
+        "label": "Samenvattende nota",
+        "taal": "nl",
+        "grootte": "420 KB",
+        "paginas": 8,
+        "url": null
+      },
+      {
+        "label": "Note de synthèse",
+        "taal": "fr",
+        "grootte": "430 KB",
+        "paginas": 8,
+        "url": null
+      },
+      {
+        "label": "Summary note",
+        "taal": "en",
+        "grootte": "410 KB",
+        "paginas": 8,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "intervisie-ecre-non-refoulement"
+    ],
+    "gerelateerd": [
+      "procedure-frontiere-detention",
+      "effectivite-recours-refoulement",
+      "etude-cas-detention"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "kernpunten",
+          "titel": "In het kort",
+          "punten": [
+            "Twee jaar terreinwerk in gesloten centra, samen met de MOVE Coalition.",
+            "Drempels in informatie, motivering van detentie en rechtsmiddelen.",
+            "Concrete aanbevelingen aan asielinstanties en beleidsmakers."
+          ]
+        },
+        {
+          "type": "tekst",
+          "html": "<p>Geen enkele publicatie verandert het systeem van vandaag op morgen. Maar samen zorgen ze ervoor dat de problemen in de Belgische praktijk rond de detentie van verzoekers om internationale bescherming niet langer onzichtbaar blijven: ze worden gedocumenteerd, onderbouwd met bewijs en gedeeld met beleidsmakers die het verschil kunnen maken.</p>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "etude-cas-detention",
+    "titel": {
+      "fr": "Étude de cas : bénéficiaire de protection en Italie, détenu à la frontière belge"
+    },
+    "origineleTaal": "fr",
+    "datum": "2025-12-16",
+    "type": "casus",
+    "themas": [
+      "detentie",
+      "internationale-bescherming"
+    ],
+    "landen": [
+      "afghanistan"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Uitgebreide case study over een Afghaanse man met subsidiaire bescherming in Italië, die bij aankomst in België werd vastgehouden en naar Turkije dreigde te worden teruggestuurd."
+    },
+    "bijlagen": [
+      {
+        "label": "Étude de cas",
+        "taal": "fr",
+        "grootte": "1,1 MB",
+        "paginas": 26,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [
+      "detentie-samenvatting"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "casus",
+          "titel": "Casus Said (alias)",
+          "profiel": {
+            "Land": "Afghanistan",
+            "Situatie": "Subsidiaire bescherming in Italië, detentie aan de Belgische grens"
+          },
+          "stappen": [
+            {
+              "label": "Feiten",
+              "tekst": "Said kreeg in Italië subsidiaire bescherming omdat hij bij terugkeer naar Afghanistan risico’s zou lopen. In 2025 reisde hij vanuit Turkije naar België en werd hij aan de grens aangehouden en in detentie geplaatst."
+            },
+            {
+              "label": "Juridische vraag",
+              "tekst": "Mag België een begunstigde van internationale bescherming in een andere lidstaat terugsturen naar een derde land, zonder onderzoek naar het risico op indirecte refoulement?"
+            },
+            {
+              "label": "Tussenkomst",
+              "tekst": "NANSEN schreef een tussenkomst om de autoriteiten te waarschuwen voor het aanzienlijke risico op indirecte refoulement en hen ervan te weerhouden Said naar Turkije te sturen."
+            },
+            {
+              "label": "Analyse",
+              "tekst": "De case study bespreekt het non-refoulementbeginsel, de verantwoordelijkheid van de lidstaat waar de persoon zich bevindt, en de waarborgen die in de grensprocedure ontbreken."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fiche-sogi-procedure",
+    "titel": {
+      "nl": "Praktijkfiche SOGI: de Belgische asielprocedure, stap voor stap",
+      "fr": "Fiche pratique SOGI : la procédure d’asile belge, étape par étape",
+      "en": "SOGI practice sheet: the Belgian asylum procedure, step by step"
+    },
+    "origineleTaal": "nl",
+    "datum": "2025-06-24",
+    "type": "fiche",
+    "themas": [
+      "sogi",
+      "internationale-bescherming"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr",
+      "en"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Stapsgewijs overzicht van de Belgische asielprocedure met specifieke aandachtspunten voor verzoekers die bescherming vragen omwille van hun seksuele oriëntatie of genderidentiteit."
+    },
+    "bijlagen": [
+      {
+        "label": "Praktijkfiche procedure",
+        "taal": "nl",
+        "grootte": "610 KB",
+        "paginas": 6,
+        "url": null
+      },
+      {
+        "label": "Fiche pratique procédure",
+        "taal": "fr",
+        "grootte": "620 KB",
+        "paginas": 6,
+        "url": null
+      },
+      {
+        "label": "Practice sheet procedure",
+        "taal": "en",
+        "grootte": "600 KB",
+        "paginas": 6,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "wawy-brusselse-balie"
+    ],
+    "gerelateerd": [
+      "fiche-sogi-bewijs"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>Deze fiche begeleidt advocaten en begeleiders door elke fase van de procedure, van de registratie bij de Dienst Vreemdelingenzaken tot het beroep bij de Raad voor Vreemdelingenbetwistingen, met aandacht voor de momenten waarop SOGI-verzoekers extra kwetsbaar zijn.</p>"
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "De fasen"
+        },
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "vraag": "Registratie en eerste interview",
+              "antwoord": "<p>Aandachtspunten: veiligheid in de opvang, keuze van tolk, het recht om het geslacht van tolk en protection officer te vragen.</p>"
+            },
+            {
+              "vraag": "Persoonlijk onderhoud bij het CGVS",
+              "antwoord": "<p>Voorbereiding op vragen over zelfidentificatie, ervaringen in het land van herkomst en het leven in België.</p>"
+            },
+            {
+              "vraag": "Beslissing en beroep",
+              "antwoord": "<p>Termijnen, het belang van nieuwe elementen en de rol van een volgend verzoek.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fiche-sogi-bewijs",
+    "titel": {
+      "nl": "Praktijkfiche SOGI: bewijsvoering in het verzoek om internationale bescherming",
+      "fr": "Fiche pratique SOGI : la preuve dans la demande de protection internationale",
+      "en": "SOGI practice sheet: evidence in the application for international protection"
+    },
+    "origineleTaal": "nl",
+    "datum": "2025-06-24",
+    "type": "fiche",
+    "themas": [
+      "sogi"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr",
+      "en"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Over de moeilijkheden die SOGI-verzoekers ondervinden bij het staven van hun verzoek, en hoe advocaten hen daarin kunnen ondersteunen."
+    },
+    "bijlagen": [
+      {
+        "label": "Praktijkfiche bewijsvoering",
+        "taal": "nl",
+        "grootte": "580 KB",
+        "paginas": 6,
+        "url": null
+      },
+      {
+        "label": "Fiche pratique preuve",
+        "taal": "fr",
+        "grootte": "590 KB",
+        "paginas": 6,
+        "url": null
+      },
+      {
+        "label": "Practice sheet evidence",
+        "taal": "en",
+        "grootte": "570 KB",
+        "paginas": 6,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "wawy-brusselse-balie",
+      "clinic-sogi-bewijs"
+    ],
+    "gerelateerd": [
+      "fiche-sogi-procedure"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "kernpunten",
+          "titel": "Kernpunten",
+          "punten": [
+            "Laattijdige onthulling van seksuele oriëntatie is op zich geen reden om aan de geloofwaardigheid te twijfelen.",
+            "Schaamte, angst en de situatie in de opvang kunnen verklaren waarom iemand eerder zweeg.",
+            "Stereotiepe vragen over “bewustwording” zijn geen geschikte maatstaf."
+          ]
+        },
+        {
+          "type": "citaat",
+          "tekst": "Omar (alias) werd erkend als vluchteling bij zijn zevende verzoek, het eerste op basis van zijn seksuele oriëntatie. NANSEN documenteerde waarom hij die niet eerder had kenbaar gemaakt.",
+          "bron": "NANSEN",
+          "werk": "Jaarverslag 2025",
+          "variant": "case"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "enfants-palestiniens",
+    "titel": {
+      "fr": "Droits et statut des enfants mineurs d’origine palestinienne nés en Belgique"
+    },
+    "origineleTaal": "fr",
+    "datum": "2024-09-11",
+    "type": "nota",
+    "themas": [
+      "staatloosheid"
+    ],
+    "landen": [
+      "palestina"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Over het voorkomen van staatloosheid onder artikel 10 van het Wetboek van de Belgische Nationaliteit voor kinderen die in België geboren zijn uit ouders van Palestijnse origine.",
+      "fr": "Sur la prévention de l’apatridie au titre de l’article 10 du Code de la nationalité belge pour les enfants nés en Belgique de parents d’origine palestinienne."
+    },
+    "bijlagen": [
+      {
+        "label": "Note",
+        "taal": "fr",
+        "grootte": "760 KB",
+        "paginas": 18,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [
+      "pact-staatloosheid-aanbevelingen"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>Sinds 2023 worden verontrustende nieuwe praktijken vastgesteld rond artikel 10 van het Wetboek van de Belgische Nationaliteit. Deze nota analyseert de juridische positie van in België geboren kinderen van Palestijnse origine en de gevolgen van de gewijzigde praktijk.</p>"
+        },
+        {
+          "type": "bronnen",
+          "titel": "Bronnen",
+          "items": [
+            {
+              "soort": "Wetgeving",
+              "titel": "Wetboek van de Belgische Nationaliteit, artikel 10",
+              "url": "https://www.ejustice.just.fgov.be",
+              "datum": "1984-06-28"
+            },
+            {
+              "soort": "Verdrag",
+              "titel": "Verdrag betreffende de status van staatlozen (New York)",
+              "url": "https://www.unhcr.org",
+              "datum": "1954-09-28"
+            },
+            {
+              "soort": "Verdrag",
+              "titel": "Internationaal Verdrag inzake de Rechten van het Kind, artikel 7",
+              "url": "https://www.ohchr.org",
+              "datum": "1989-11-20"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "pact-staatloosheid-aanbevelingen",
+    "titel": {
+      "nl": "Staatloosheid en het Europees Migratie- en Asielpact: 10 aanbevelingen voor België",
+      "fr": "Apatridie et Pacte européen sur la migration et l’asile : 10 recommandations pour la Belgique",
+      "en": "Statelessness and the EU Pact on Migration and Asylum: 10 recommendations for Belgium"
+    },
+    "origineleTaal": "nl",
+    "datum": "2025-09-15",
+    "type": "beleid",
+    "themas": [
+      "staatloosheid",
+      "internationale-bescherming"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr",
+      "en"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Tien concrete aanbevelingen om ervoor te zorgen dat staatloosheid bij de uitvoering van het Pact correct wordt geïdentificeerd en geregistreerd."
+    },
+    "bijlagen": [
+      {
+        "label": "10 aanbevelingen",
+        "taal": "nl",
+        "grootte": "350 KB",
+        "paginas": 5,
+        "url": null
+      },
+      {
+        "label": "10 recommandations",
+        "taal": "fr",
+        "grootte": "350 KB",
+        "paginas": 5,
+        "url": null
+      },
+      {
+        "label": "10 recommendations",
+        "taal": "en",
+        "grootte": "340 KB",
+        "paginas": 5,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>Het Europees Migratie- en Asielpact roept belangrijke vragen op voor staatlozen. NANSEN analyseerde de gevolgen ervan voor België. Nu het Pact wordt uitgevoerd, volgt NANSEN van nabij op hoe deze waarborgen in de praktijk worden toegepast.</p>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "afghan-occidentalise",
+    "titel": {
+      "fr": "Demande ultérieure jeune homme afghan occidentalisé : évaluation du besoin de protection"
+    },
+    "origineleTaal": "fr",
+    "datum": "2024-08-30",
+    "type": "casus",
+    "themas": [
+      "internationale-bescherming"
+    ],
+    "landen": [
+      "afghanistan"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Casus over een volgend verzoek van een jonge Afghaanse man die als “verwesterd” kan worden gezien, en de beoordeling van zijn nood aan bescherming."
+    },
+    "bijlagen": [
+      {
+        "label": "Profil NANSEN",
+        "taal": "fr",
+        "grootte": "540 KB",
+        "paginas": 12,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "casus",
+          "titel": "NANSEN Profiel",
+          "profiel": {
+            "Land": "Afghanistan",
+            "Procedure": "Volgend verzoek"
+          },
+          "stappen": [
+            {
+              "label": "Profiel",
+              "tekst": "Jonge Afghaanse man, lang in Europa verbleven, eerste verzoek afgewezen."
+            },
+            {
+              "label": "Juridische vraag",
+              "tekst": "Kan “verwestering” een nieuw element vormen dat de kans op erkenning aanzienlijk vergroot?"
+            },
+            {
+              "label": "Argumentatie",
+              "tekst": "Analyse van recente informatie over het land van herkomst en van de rechtspraak over toegeschreven politieke of religieuze overtuiging."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "femmes-congolaises",
+    "titel": {
+      "fr": "Femmes congolaises victimes de violences sexuelles (RDC)"
+    },
+    "origineleTaal": "fr",
+    "datum": "2022-12-06",
+    "type": "casus",
+    "themas": [
+      "foltering",
+      "sogi"
+    ],
+    "landen": [
+      "congo"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "NANSEN Profiel over de beschermingsnood van Congolese vrouwen die slachtoffer werden van seksueel geweld, met aandacht voor bewijsvoering en kwetsbaarheid."
+    },
+    "bijlagen": [
+      {
+        "label": "Profil NANSEN",
+        "taal": "fr",
+        "grootte": "690 KB",
+        "paginas": 16,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>Dit profiel bundelt informatie over het land van herkomst, rechtspraak en aandachtspunten voor de beoordeling van verzoeken van vrouwen uit de Democratische Republiek Congo die seksueel geweld hebben meegemaakt.</p>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "casus-honduras",
+    "titel": {
+      "fr": "Étude de cas : femme hondurienne victime de violences sexuelles intrafamiliales"
+    },
+    "origineleTaal": "fr",
+    "datum": "2025-05-20",
+    "type": "casus",
+    "themas": [
+      "foltering"
+    ],
+    "landen": [
+      "honduras"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Case study over een Hondurese vrouw die intrafamiliaal seksueel geweld meemaakte: hoe medisch bewijs en kwetsbaarheid het verzoek kunnen dragen."
+    },
+    "bijlagen": [
+      {
+        "label": "Étude de cas",
+        "taal": "fr",
+        "grootte": "820 KB",
+        "paginas": 14,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "vorming-cgvs-istanbul"
+    ],
+    "gerelateerd": [
+      "casus-sahrawi"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>Een van twee case studies uit 2025 die illustreren wat individuele juridische bijstand aan slachtoffers van foltering in de praktijk betekent.</p>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "casus-sahrawi",
+    "titel": {
+      "fr": "Étude de cas : défenseur sahraoui des droits humains, victime de torture"
+    },
+    "origineleTaal": "fr",
+    "datum": "2025-07-08",
+    "type": "casus",
+    "themas": [
+      "foltering"
+    ],
+    "landen": [
+      "sahara"
+    ],
+    "documentTalen": [
+      "fr"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Case study over een Sahrawi mensenrechtenverdediger en slachtoffer van foltering, en de rol van een medisch verslag volgens het Protocol van Istanbul."
+    },
+    "bijlagen": [
+      {
+        "label": "Étude de cas",
+        "taal": "fr",
+        "grootte": "760 KB",
+        "paginas": 12,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "vorming-cgvs-istanbul"
+    ],
+    "gerelateerd": [
+      "casus-honduras"
+    ],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>De case study volgt het dossier van bij het eerste contact tot de beslissing, en toont hoe gespecialiseerde medische documentatie het verhaal van de verzoeker kan ondersteunen.</p>"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "griekenland-bip",
+    "titel": {
+      "nl": "Begunstigden van internationale bescherming in Griekenland die bescherming zoeken in België"
+    },
+    "origineleTaal": "nl",
+    "datum": "2025-04-03",
+    "type": "nota",
+    "themas": [
+      "internationale-bescherming"
+    ],
+    "landen": [
+      "griekenland"
+    ],
+    "documentTalen": [
+      "nl"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "Wanneer kan iemand die al bescherming kreeg in Griekenland toch gronden hebben om bescherming te zoeken in België? Met een analyse van de rechtspraak van de Nederlandstalige kamers van de RvV."
+    },
+    "bijlagen": [
+      {
+        "label": "Nota",
+        "taal": "nl",
+        "grootte": "1,2 MB",
+        "paginas": 31,
+        "url": null
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "kernpunten",
+          "titel": "Kernpunten",
+          "punten": [
+            "Recente informatie over de situatie van begunstigden van internationale bescherming in Griekenland.",
+            "Analyse van de rechtspraak van de Nederlandstalige kamers van de Raad voor Vreemdelingenbetwistingen.",
+            "Een praktisch instrument voor advocaten die mensen in deze situatie bijstaan."
+          ]
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Waarom deze nota"
+        },
+        {
+          "type": "tekst",
+          "html": "<p>De nota kwam tegemoet aan een concrete behoefte uit het dossierwerk: inzicht bieden in de omstandigheden waarin iemand die al internationale bescherming heeft gekregen in Griekenland, toch gronden kan hebben om bescherming te zoeken in België.</p>"
+        },
+        {
+          "type": "tussentitel",
+          "tekst": "Rechtspraak"
+        },
+        {
+          "type": "bronnen",
+          "titel": null,
+          "items": [
+            {
+              "soort": "Rechtspraak",
+              "titel": "HvJ EU, Ibrahim e.a., C-297/17, C-318/17, C-319/17 en C-438/17",
+              "url": "https://curia.europa.eu",
+              "datum": "2019-03-19"
+            },
+            {
+              "soort": "Rechtspraak",
+              "titel": "HvJ EU, Jawo, C-163/17",
+              "url": "https://curia.europa.eu",
+              "datum": "2019-03-19"
+            },
+            {
+              "soort": "Rapport",
+              "titel": "AIDA, Country Report Greece, update 2024",
+              "url": "https://asylumineurope.org",
+              "datum": "2025-06-01"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "gids-interdisciplinariteit",
+    "titel": {
+      "nl": "Interdisciplinariteit in dossiers internationale bescherming: een praktische gids",
+      "fr": "L’interdisciplinarité dans les dossiers de protection internationale : guide pratique"
+    },
+    "origineleTaal": "nl",
+    "datum": "2026-03-12",
+    "type": "gids",
+    "themas": [
+      "internationale-bescherming",
+      "foltering"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr"
+    ],
+    "auteurs": [
+      "NANSEN, met steun van Innoviris (PYSI-project)"
+    ],
+    "samenvatting": {
+      "nl": "Hoe juridische professionals de meerwaarde van interdisciplinariteit herkennen, samenwerken met experts uit andere disciplines en hun inzichten integreren in de juridische praktijk."
+    },
+    "bijlagen": [
+      {
+        "label": "Praktische gids",
+        "taal": "nl",
+        "grootte": "3,2 MB",
+        "paginas": 64,
+        "url": null
+      },
+      {
+        "label": "Guide pratique",
+        "taal": "fr",
+        "grootte": "3,3 MB",
+        "paginas": 66,
+        "url": null
+      }
+    ],
+    "evenementen": [
+      "studiedag-interdisciplinariteit"
+    ],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "tekst",
+          "html": "<p>In 2024 lanceerde NANSEN een Proof Your Social Innovation-project, gefinancierd door Innoviris, om te onderzoeken hoe interdisciplinariteit kan bijdragen aan een vollediger begrip van dossiers over internationale bescherming. Deze gids is het sluitstuk van twee jaar werk.</p>"
+        },
+        {
+          "type": "figuur",
+          "afbeelding": "vorming-aula",
+          "alt": "Presentatie van NANSEN in een aula",
+          "bijschrift": "Voorstelling van het PYSI-project tijdens een vorming."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "jaarverslag-2025",
+    "titel": {
+      "nl": "Jaarverslag 2025: Achter elke procedure schuilt een mens",
+      "fr": "Rapport annuel 2025 : Derrière chaque procédure, il y a une personne",
+      "en": "Annual report 2025: Behind every procedure is a person"
+    },
+    "origineleTaal": "nl",
+    "datum": "2026-05-28",
+    "type": "jaarverslag",
+    "themas": [
+      "internationale-bescherming",
+      "staatloosheid",
+      "foltering",
+      "detentie",
+      "sogi"
+    ],
+    "landen": [],
+    "documentTalen": [
+      "nl",
+      "fr",
+      "en"
+    ],
+    "auteurs": [],
+    "samenvatting": {
+      "nl": "171 individuele dossiers, vier publicaties over detentie, praktijkfiches SOGI en een procedure voor het Grondwettelijk Hof. Een terugblik op 2025.",
+      "fr": "171 dossiers individuels, quatre publications sur la détention, des fiches pratiques SOGI et un recours devant la Cour constitutionnelle. Retour sur 2025.",
+      "en": "171 individual cases, four publications on detention, SOGI practice sheets and a case before the Constitutional Court. Looking back on 2025."
+    },
+    "bijlagen": [
+      {
+        "label": "Jaarverslag 2025",
+        "taal": "nl",
+        "grootte": "12,8 MB",
+        "paginas": 18,
+        "url": "assets/docs/nansen-jaarverslag-2025-nl.pdf"
+      },
+      {
+        "label": "Rapport annuel 2025",
+        "taal": "fr",
+        "grootte": "12,9 MB",
+        "paginas": 18,
+        "url": "assets/docs/nansen-rapport-annuel-2025-fr.pdf"
+      },
+      {
+        "label": "Annual report 2025",
+        "taal": "en",
+        "grootte": "12,8 MB",
+        "paginas": 18,
+        "url": "assets/docs/nansen-annual-report-2025-en.pdf"
+      }
+    ],
+    "evenementen": [],
+    "gerelateerd": [],
+    "inhoud": {
+      "nl": [
+        {
+          "type": "citaat",
+          "tekst": "Achter elke procedure schuilt een mens met eigen noden en kwetsbaarheden, die een weg zoekt in een steeds complexer systeem dat draait om efficiëntie en snelheid.",
+          "bron": "NANSEN",
+          "werk": "Jaarverslag 2025"
+        },
+        {
+          "type": "tekst",
+          "html": "<p>2025 was in veel opzichten een jaar van ingrijpende verandering voor NANSEN. Met grote dankbaarheid namen we afscheid van onze directeur Julie Lejeune, en we verwelkomden Gert Bruininkx als nieuwe directeur.</p>"
+        }
+      ]
+    }
+  }
+]

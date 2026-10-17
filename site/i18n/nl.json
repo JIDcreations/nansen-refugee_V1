@@ -1,0 +1,237 @@
+{
+  "locale": "nl-BE",
+  "langName": "Nederlands",
+  "skip": "Naar de inhoud",
+  "nav": {
+    "nansen": "NANSEN",
+    "themes": "Thema's",
+    "services": "Diensten",
+    "knowledge": "Kennis",
+    "support": "Steun ons",
+    "menu": "Menu",
+    "close": "Sluiten",
+    "search": "Zoeken",
+    "home": "Home"
+  },
+  "anchors": {
+    "missie": "Missie",
+    "aanpak": "Aanpak",
+    "team": "Team",
+    "geschiedenis": "Geschiedenis",
+    "partners": "Partners",
+    "jaarverslagen": "Jaarverslagen",
+    "contact": "Contact"
+  },
+  "anchorsSub": {
+    "missie": "Waarvoor NANSEN bestaat",
+    "aanpak": "Interdisciplinair werken, drie strategische doelstellingen",
+    "team": "De juristen en experts achter NANSEN",
+    "geschiedenis": "Fridtjof Nansen en het Nansenpaspoort",
+    "partners": "UNHCR, balies, universiteiten en ngo’s",
+    "jaarverslagen": "Cijfers en werking per jaar",
+    "contact": "Adres en contact per dienst"
+  },
+  "services": {
+    "bijstand": "Juridische bijstand",
+    "bijstandSub": "Een dossier voorleggen als advocaat",
+    "vormingen": "Vormingen op maat",
+    "vormingenSub": "Voor balies, ngo’s en instanties"
+  },
+  "knowledge": {
+    "pubs": "Publicaties",
+    "pubsSub": "Nota’s, casussen, praktijkfiches, gidsen",
+    "events": "Evenementen, intervisies en archief",
+    "eventsSub": "Komende sessies en verslagen"
+  },
+  "megaTitle": "Thema's",
+  "megaIntro": "Vijf domeinen waarin NANSEN dossiers opvolgt, kennis bouwt en vormt.",
+  "allThemes": "Alle thema's",
+  "navPanels": {
+    "nansen": {
+      "intro": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid, sinds 2017 in Brussel.",
+      "more": "Over NANSEN"
+    },
+    "services": {
+      "intro": "Voor advocaten en organisaties die met complexe dossiers werken.",
+      "more": "dossiers@nansenrefugee.be"
+    },
+    "knowledge": {
+      "intro": "Nota’s, casussen, praktijkfiches en evenementen rond internationale bescherming en staatloosheid.",
+      "more": "Zoek in alle kennis"
+    }
+  },
+  "searchLabel": "Zoek in publicaties, evenementen en thema’s",
+  "searchPh": "Bv. staatloosheid, refoulement, Afghanistan",
+  "searchBtn": "Zoeken",
+  "searchTry": "Probeer:",
+  "footer": {
+    "tagline": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid.",
+    "contact": "Contact",
+    "general": "Algemeen",
+    "cases": "Dossiers",
+    "direction": "Directie",
+    "address": "Adres",
+    "links": "Snel naar",
+    "partner": "Partner",
+    "privacy": "Privacy",
+    "dpp": "Data Protection Policy (PDF, EN)",
+    "complaint": "Klacht indienen",
+    "rights": "NANSEN vzw. Ondernemingsnummer volgt.",
+    "unhcr": "Operationeel partner in België"
+  },
+  "newsletter": {
+    "title": "Blijf op de hoogte",
+    "text": "Nieuwe publicaties, vormingen en intervisies, ongeveer één keer per maand in uw mailbox.",
+    "label": "E-mailadres",
+    "btn": "Inschrijven",
+    "note": "U kunt zich altijd uitschrijven. We delen uw adres met niemand."
+  },
+  "complaint": {
+    "title": "Niet tevreden over onze dienstverlening?",
+    "text": "Laat het ons weten. Elke klacht wordt vertrouwelijk behandeld.",
+    "btn": "Klacht indienen"
+  },
+  "types": {
+    "theme": "Thema",
+    "themes": "Thema's",
+    "publication": "Publicatie",
+    "publications": "Publicaties",
+    "event": "Evenement",
+    "events": "Evenementen",
+    "page": "Pagina",
+    "pages": "Pagina's"
+  },
+  "filters": {
+    "title": "Filters",
+    "show": "Toon filters",
+    "hide": "Verberg filters",
+    "search": "Zoek binnen deze lijst",
+    "clear": "Wis alles",
+    "remove": "Verwijder filter",
+    "more": "Toon meer",
+    "less": "Toon minder",
+    "theme": "Thema",
+    "type": "Type",
+    "country": "Land",
+    "docLang": "Taal van het document",
+    "year": "Jaar",
+    "when": "Wanneer",
+    "upcoming": "Komend",
+    "past": "Archief",
+    "mode": "Formaat",
+    "audience": "Doelpubliek",
+    "all": "Alle"
+  },
+  "sort": {
+    "label": "Sorteer",
+    "newest": "Nieuwste eerst",
+    "oldest": "Oudste eerst",
+    "az": "Titel A–Z",
+    "soonest": "Eerstvolgend"
+  },
+  "results": {
+    "pub1": "publicatie",
+    "pubN": "publicaties",
+    "ev1": "evenement",
+    "evN": "evenementen",
+    "loadMore": "Meer laden",
+    "showing": "U ziet {n} van {total}",
+    "emptyTitle": "Geen resultaten voor deze combinatie",
+    "emptyText": "Verwijder een filter of wis alle filters om opnieuw te beginnen."
+  },
+  "meta": {
+    "type": "Type",
+    "date": "Publicatiedatum",
+    "themes": "Thema's",
+    "countries": "Landen",
+    "docLang": "Beschikbaar in",
+    "authors": "Auteur(s)",
+    "download": "Download",
+    "cite": "Citeer deze publicatie",
+    "copy": "Kopieer referentie",
+    "copied": "Referentie gekopieerd",
+    "print": "Afdrukken",
+    "share": "Deel link",
+    "toc": "Op deze pagina",
+    "readAlso": "Lees ook",
+    "linkedEvents": "Gelinkte evenementen",
+    "linkedPubs": "Gelinkte publicaties",
+    "related": "Gerelateerd",
+    "sameTheme": "Zelfde thema",
+    "pages": "p.",
+    "keypoints": "Kernpunten"
+  },
+  "event": {
+    "when": "Wanneer",
+    "where": "Waar",
+    "for": "Voor wie",
+    "partners": "Met",
+    "register": "Inschrijven",
+    "status": "Status",
+    "open": "Inschrijvingen open",
+    "full": "Volzet",
+    "past": "Afgelopen",
+    "upcoming": "Komend",
+    "archive": "Archief",
+    "report": "Verslag",
+    "material": "Materiaal",
+    "participants": "deelnemers",
+    "online": "Online",
+    "fysiek": "Ter plaatse",
+    "hybride": "Hybride",
+    "allDay": "Doorlopend",
+    "waitlist": "Wachtlijst"
+  },
+  "theme": {
+    "pubs": "Publicaties over dit thema",
+    "events": "Evenementen over dit thema",
+    "upcoming": "Komende evenementen",
+    "archive": "Archief",
+    "contact": "Contactpersoon",
+    "allPubs": "Alle publicaties over {t}",
+    "noUpcoming": "Er staan momenteel geen evenementen gepland rond dit thema.",
+    "countPub": "{n} publicaties",
+    "countEv": "{n} evenementen"
+  },
+  "search": {
+    "title": "Zoeken",
+    "resultsFor": "Resultaten voor",
+    "all": "Alles",
+    "showAll": "Toon alle {n} {type}",
+    "none": "Niets gevonden voor “{q}”.",
+    "noneHelp": "Controleer de spelling, gebruik een algemenere term of zoek op een land of thema.",
+    "otherLangs": "Ook zoeken in documenten in andere talen",
+    "matchedVia": "gevonden via thema"
+  },
+  "translationMissing": "Deze inhoud is enkel beschikbaar in het Nederlands.",
+  "docOnlyIn": "Dit document is enkel beschikbaar in het {l}.",
+  "breadcrumbHome": "Home",
+  "langNames": {
+    "nl": "Nederlands",
+    "fr": "Frans",
+    "en": "Engels"
+  },
+  "home": {
+    "title": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid",
+    "searchLabel": "Zoek in nota’s, casussen, praktijkfiches en vormingen",
+    "lawyer": "Advocaat met een complex dossier?",
+    "lawyerLink": "Leg het voor aan NANSEN",
+    "quote": "Achter elke procedure schuilt een mens.",
+    "quoteSrc": "NANSEN, jaarverslag 2025",
+    "themes": "Thema's",
+    "latest": "Recente publicaties",
+    "allPubs": "Alle publicaties",
+    "upcoming": "Komende evenementen",
+    "allEvents": "Alle evenementen en archief",
+    "noUpcoming": "Er staan op dit moment geen evenementen gepland."
+  },
+  "pages": {
+    "themasTitle": "Thema's",
+    "themasLead": "NANSEN werkt rond vijf domeinen. Per thema vindt u de publicaties, vormingen en intervisies, en wie u kunt contacteren.",
+    "pubsTitle": "Publicaties",
+    "pubsLead": "Nota’s, casussen, praktijkfiches, gidsen en beleidsaanbevelingen. Veel documenten bestaan enkel in het Frans; filter op taal van het document.",
+    "eventsTitle": "Evenementen, intervisies en archief",
+    "eventsLead": "Vormingen, intervisies en studiedagen voor advocaten, juristen en organisaties op het terrein. Na afloop vindt u hier het verslag en het materiaal.",
+    "notFound": "Deze pagina bestaat niet (meer)."
+  }
+}

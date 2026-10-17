@@ -1,0 +1,237 @@
+{
+  "locale": "en-GB",
+  "langName": "English",
+  "skip": "Skip to content",
+  "nav": {
+    "nansen": "NANSEN",
+    "themes": "Themes",
+    "services": "Services",
+    "knowledge": "Resources",
+    "support": "Support us",
+    "menu": "Menu",
+    "close": "Close",
+    "search": "Search",
+    "home": "Home"
+  },
+  "anchors": {
+    "missie": "Mission",
+    "aanpak": "Approach",
+    "team": "Team",
+    "geschiedenis": "History",
+    "partners": "Partners",
+    "jaarverslagen": "Annual reports",
+    "contact": "Contact"
+  },
+  "anchorsSub": {
+    "missie": "Why NANSEN exists",
+    "aanpak": "Interdisciplinarity and three strategic goals",
+    "team": "The lawyers and experts behind NANSEN",
+    "geschiedenis": "Fridtjof Nansen and the Nansen passport",
+    "partners": "UNHCR, bar associations, universities and NGOs",
+    "jaarverslagen": "Figures and activities by year",
+    "contact": "Address and contacts by service"
+  },
+  "services": {
+    "bijstand": "Legal assistance",
+    "bijstandSub": "Refer a case as a lawyer",
+    "vormingen": "Tailored training",
+    "vormingenSub": "For bar associations, NGOs and authorities"
+  },
+  "knowledge": {
+    "pubs": "Publications",
+    "pubsSub": "Notes, case studies, practice sheets, guides",
+    "events": "Events, peer sessions and archive",
+    "eventsSub": "Upcoming sessions and reports"
+  },
+  "megaTitle": "Themes",
+  "megaIntro": "Five areas in which NANSEN follows cases, builds knowledge and trains.",
+  "allThemes": "All themes",
+  "navPanels": {
+    "nansen": {
+      "intro": "Legal expertise centre on international protection and statelessness, based in Brussels since 2017.",
+      "more": "About NANSEN"
+    },
+    "services": {
+      "intro": "For lawyers and organisations working on complex cases.",
+      "more": "dossiers@nansenrefugee.be"
+    },
+    "knowledge": {
+      "intro": "Notes, case studies, practice sheets and events on international protection and statelessness.",
+      "more": "Search all resources"
+    }
+  },
+  "searchLabel": "Search publications, events and themes",
+  "searchPh": "E.g. statelessness, refoulement, Afghanistan",
+  "searchBtn": "Search",
+  "searchTry": "Try:",
+  "footer": {
+    "tagline": "Legal expertise centre on international protection and statelessness.",
+    "contact": "Contact",
+    "general": "General",
+    "cases": "Cases",
+    "direction": "Director",
+    "address": "Address",
+    "links": "Quick links",
+    "partner": "Partner",
+    "privacy": "Privacy",
+    "dpp": "Data Protection Policy (PDF)",
+    "complaint": "File a complaint",
+    "rights": "NANSEN vzw. Company number to be added.",
+    "unhcr": "Operational partner in Belgium"
+  },
+  "newsletter": {
+    "title": "Stay informed",
+    "text": "New publications, training and peer sessions, about once a month.",
+    "label": "Email address",
+    "btn": "Subscribe",
+    "note": "Unsubscribe at any time. We never share your address."
+  },
+  "complaint": {
+    "title": "Not satisfied with our services?",
+    "text": "Let us know. Every complaint is handled confidentially.",
+    "btn": "File a complaint"
+  },
+  "types": {
+    "theme": "Theme",
+    "themes": "Themes",
+    "publication": "Publication",
+    "publications": "Publications",
+    "event": "Event",
+    "events": "Events",
+    "page": "Page",
+    "pages": "Pages"
+  },
+  "filters": {
+    "title": "Filters",
+    "show": "Show filters",
+    "hide": "Hide filters",
+    "search": "Search this list",
+    "clear": "Clear all",
+    "remove": "Remove filter",
+    "more": "Show more",
+    "less": "Show less",
+    "theme": "Theme",
+    "type": "Type",
+    "country": "Country",
+    "docLang": "Document language",
+    "year": "Year",
+    "when": "When",
+    "upcoming": "Upcoming",
+    "past": "Archive",
+    "mode": "Format",
+    "audience": "Audience",
+    "all": "All"
+  },
+  "sort": {
+    "label": "Sort",
+    "newest": "Newest first",
+    "oldest": "Oldest first",
+    "az": "Title A–Z",
+    "soonest": "Soonest"
+  },
+  "results": {
+    "pub1": "publication",
+    "pubN": "publications",
+    "ev1": "event",
+    "evN": "events",
+    "loadMore": "Load more",
+    "showing": "Showing {n} of {total}",
+    "emptyTitle": "No results for this combination",
+    "emptyText": "Remove a filter or clear all filters to start again."
+  },
+  "meta": {
+    "type": "Type",
+    "date": "Published",
+    "themes": "Themes",
+    "countries": "Countries",
+    "docLang": "Available in",
+    "authors": "Author(s)",
+    "download": "Download",
+    "cite": "Cite this publication",
+    "copy": "Copy reference",
+    "copied": "Reference copied",
+    "print": "Print",
+    "share": "Share link",
+    "toc": "On this page",
+    "readAlso": "Read also",
+    "linkedEvents": "Linked events",
+    "linkedPubs": "Linked publications",
+    "related": "Related",
+    "sameTheme": "Same theme",
+    "pages": "pp.",
+    "keypoints": "Key points"
+  },
+  "event": {
+    "when": "When",
+    "where": "Where",
+    "for": "For",
+    "partners": "With",
+    "register": "Register",
+    "status": "Status",
+    "open": "Registration open",
+    "full": "Fully booked",
+    "past": "Ended",
+    "upcoming": "Upcoming",
+    "archive": "Archive",
+    "report": "Report",
+    "material": "Materials",
+    "participants": "participants",
+    "online": "Online",
+    "fysiek": "In person",
+    "hybride": "Hybrid",
+    "allDay": "Ongoing",
+    "waitlist": "Waiting list"
+  },
+  "theme": {
+    "pubs": "Publications on this theme",
+    "events": "Events on this theme",
+    "upcoming": "Upcoming events",
+    "archive": "Archive",
+    "contact": "Contact person",
+    "allPubs": "All publications on {t}",
+    "noUpcoming": "No events are currently planned on this theme.",
+    "countPub": "{n} publications",
+    "countEv": "{n} events"
+  },
+  "search": {
+    "title": "Search",
+    "resultsFor": "Results for",
+    "all": "All",
+    "showAll": "Show all {n} {type}",
+    "none": "Nothing found for “{q}”.",
+    "noneHelp": "Check the spelling, try a broader term or search for a country or theme.",
+    "otherLangs": "Also search documents in other languages",
+    "matchedVia": "matched via theme"
+  },
+  "translationMissing": "This content is only available in Dutch in this prototype.",
+  "docOnlyIn": "This document is only available in {l}.",
+  "breadcrumbHome": "Home",
+  "langNames": {
+    "nl": "Dutch",
+    "fr": "French",
+    "en": "English"
+  },
+  "home": {
+    "title": "Legal expertise centre on international protection and statelessness",
+    "searchLabel": "Search notes, case studies, practice sheets and training",
+    "lawyer": "A lawyer with a complex case?",
+    "lawyerLink": "Refer it to NANSEN",
+    "quote": "Behind every procedure is a person.",
+    "quoteSrc": "NANSEN, annual report 2025",
+    "themes": "Themes",
+    "latest": "Recent publications",
+    "allPubs": "All publications",
+    "upcoming": "Upcoming events",
+    "allEvents": "All events and archive",
+    "noUpcoming": "No events are scheduled at the moment."
+  },
+  "pages": {
+    "themasTitle": "Themes",
+    "themasLead": "NANSEN works in five areas. For each theme you will find publications, training, peer sessions and a contact person.",
+    "pubsTitle": "Publications",
+    "pubsLead": "Notes, case studies, practice sheets, guides and policy recommendations. Many documents exist only in French; filter by document language.",
+    "eventsTitle": "Events, peer sessions and archive",
+    "eventsLead": "Training, peer sessions and study days for lawyers, legal staff and field organisations. Afterwards you will find the report and materials here.",
+    "notFound": "This page does not exist (anymore)."
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stijlgids | NANSEN</title>
+<meta name="description" content="Design tokens en componenten van de NANSEN-website, voor review.">
+<meta property="og:site_name" content="NANSEN, the Belgian Refugee Council">
+<meta property="og:title" content="Stijlgids">
+<meta property="og:description" content="Design tokens en componenten van de NANSEN-website, voor review.">
+<meta property="og:image" content="assets/img/grens-hek-1280.jpg">
+<meta name="theme-color" content="#5F7362">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400..750;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="stijlgids" data-section="" data-prefooter="false">
+<div id="header"></div>
+<main id="main" tabindex="-1" class="sg">
+  <header class="page-head page-head--rule">
+    <div class="wrap">
+      <p class="type-label">Intern, voor review</p>
+      <h1>Stijlgids NANSEN V1</h1>
+      <p class="lead">Kleuren, typografie en componenten. Alles hieronder is live: dezelfde CSS en dezelfde partials als op de site, gevuld met de demo-inhoud.</p>
+    </div>
+  </header>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Kleur</h2><p class="muted">Charte p.2, aangevuld met afgeleide tinten voor tekst en vlakken. Oranje is accent: één actie per scherm en het bladwijzer-icoon.</p></header>
+    <div class="swatches">
+      <div class="sw" style="--c:#5F7362"><span></span><strong>green-700</strong><code>#5F7362</code><small>Hoofdkleur: header, footer, primaire knop</small></div>
+      <div class="sw" style="--c:#778F7A"><span></span><strong>green-500</strong><code>#778F7A</code><small>Lijnen, iconen. Geen kleine tekst op dit groen.</small></div>
+      <div class="sw" style="--c:#FAF0E6"><span></span><strong>cream</strong><code>#FAF0E6</code><small>Achtergrond</small></div>
+      <div class="sw" style="--c:#E27E27"><span></span><strong>orange-600</strong><code>#E27E27</code><small>Accent: Steun ons, bladwijzer, actieve staat</small></div>
+      <div class="sw" style="--c:#FF9734"><span></span><strong>orange-400</strong><code>#FF9734</code><small>Hover van accent</small></div>
+      <div class="sw" style="--c:#2F3A31"><span></span><strong>green-900</strong><code>#2F3A31</code><small>Titels</small></div>
+      <div class="sw" style="--c:#1F2620"><span></span><strong>ink</strong><code>#1F2620</code><small>Lopende tekst</small></div>
+      <div class="sw" style="--c:#FFFDF9"><span></span><strong>surface</strong><code>#FFFDF9</code><small>Kaders en velden op crème</small></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Typografie</h2><p class="muted">Source Serif 4 voor H1/H2. Public Sans (dicht bij Helvetica, gratis, sterke accenten) voor tekst en interface. Te vervangen door Helvetica World als die gelicentieerd is.</p></header>
+    <div class="type-specimen">
+      <p class="label">H1 · Source Serif 4, 500</p><h1 class="mt-0">Achter elke procedure schuilt een mens</h1>
+      <p class="label">H2 · Source Serif 4, 500</p><h2>Detentie aan de grens</h2>
+      <p class="label">H3 · Public Sans, 650</p><h3>Het WAWY-netwerk</h3>
+      <p class="label">Lead · 20px</p><p class="lead">Zonder nationaliteit kunnen staatlozen ernstige moeilijkheden ondervinden om hun identiteit vast te stellen.</p>
+      <p class="label">Body · 17px / 1.62, max. ±70 tekens</p>
+      <p style="max-width:var(--measure)">De procedures die staatlozen moeten doorlopen om hun status vast te stellen en bescherming te zoeken in België, zijn complex, langdurig en gekenmerkt door structurele drempels die vaak uiterst moeilijk, en soms simpelweg onmogelijk, te overkomen zijn.</p>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Knoppen, tags, badges</h2></header>
+    <div class="stack-lg">
+      <div class="btn-row"><a class="btn btn--primary" href="#">Primair</a><a class="btn btn--secondary" href="#">Secundair</a><a class="btn btn--accent" href="#">Steun ons</a><a class="btn btn--secondary btn--small" href="#">Klein</a></div>
+      <div id="sg-tags"></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Publicatie-register</h2><p class="muted">Bladwijzer, type en datum, titel in de taal van het document, samenvatting, thema's, beschikbare talen (actieve taal gemarkeerd).</p></header>
+    <div id="sg-pubs"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Evenementen</h2><p class="muted">Datumblok, status automatisch op datum.</p></header>
+    <div id="sg-events"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Thematiek-tegels</h2></header>
+    <div id="sg-themes"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Contentblokken</h2><p class="muted">Kernpunten, citaat, casus, bronnenlijst, accordion. Een publicatie wordt opgebouwd uit deze blokken (ACF flexible content).</p></header>
+    <div class="blocks" id="sg-blocks"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Downloads</h2></header>
+    <div style="max-width:var(--measure)" id="sg-downloads"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap split">
+    <header><h2>Meldingen</h2></header>
+    <div class="stack-lg">
+      <div class="notice" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg><p>Dit document is enkel beschikbaar in het Frans.</p></div>
+      <p class="todo"><strong>Placeholder:</strong> zo markeren we in het prototype inhoud die NANSEN nog moet aanleveren.</p>
+    </div>
+  </div></section>
+</main>
+<div id="footer"></div>
+</body>
+</html>

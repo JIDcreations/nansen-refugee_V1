@@ -1,0 +1,169 @@
+{
+  "publicatieType": {
+    "nota": {
+      "nl": "Nota",
+      "fr": "Note",
+      "en": "Note"
+    },
+    "casus": {
+      "nl": "Casus (NANSEN Profiel)",
+      "fr": "Étude de cas (Profil NANSEN)",
+      "en": "Case study (NANSEN Profile)"
+    },
+    "bronnen": {
+      "nl": "Bronnencompilatie",
+      "fr": "Compilation de sources",
+      "en": "Source compilation"
+    },
+    "fiche": {
+      "nl": "Praktijkfiche",
+      "fr": "Fiche pratique",
+      "en": "Practice sheet"
+    },
+    "gids": {
+      "nl": "Gids",
+      "fr": "Guide",
+      "en": "Guide"
+    },
+    "beleid": {
+      "nl": "Beleidsnota / aanbeveling",
+      "fr": "Note politique / recommandation",
+      "en": "Policy note / recommendation"
+    },
+    "jaarverslag": {
+      "nl": "Jaarverslag",
+      "fr": "Rapport annuel",
+      "en": "Annual report"
+    }
+  },
+  "evenementType": {
+    "intervisie": {
+      "nl": "Intervisie",
+      "fr": "Intervision",
+      "en": "Peer session"
+    },
+    "vorming": {
+      "nl": "Vorming",
+      "fr": "Formation",
+      "en": "Training"
+    },
+    "studiedag": {
+      "nl": "Studiedag / conferentie",
+      "fr": "Journée d’étude / conférence",
+      "en": "Study day / conference"
+    },
+    "clinic": {
+      "nl": "Legal clinic",
+      "fr": "Legal clinic",
+      "en": "Legal clinic"
+    },
+    "andere": {
+      "nl": "Andere",
+      "fr": "Autre",
+      "en": "Other"
+    }
+  },
+  "land": {
+    "afghanistan": {
+      "nl": "Afghanistan",
+      "fr": "Afghanistan",
+      "en": "Afghanistan"
+    },
+    "congo": {
+      "nl": "DR Congo",
+      "fr": "RD Congo",
+      "en": "DR Congo"
+    },
+    "griekenland": {
+      "nl": "Griekenland",
+      "fr": "Grèce",
+      "en": "Greece"
+    },
+    "honduras": {
+      "nl": "Honduras",
+      "fr": "Honduras",
+      "en": "Honduras"
+    },
+    "irak": {
+      "nl": "Irak",
+      "fr": "Irak",
+      "en": "Iraq"
+    },
+    "palestina": {
+      "nl": "Palestina",
+      "fr": "Palestine",
+      "en": "Palestine"
+    },
+    "rwanda": {
+      "nl": "Rwanda",
+      "fr": "Rwanda",
+      "en": "Rwanda"
+    },
+    "sahara": {
+      "nl": "Westelijke Sahara",
+      "fr": "Sahara occidental",
+      "en": "Western Sahara"
+    }
+  },
+  "doelpubliek": {
+    "advocaten": {
+      "nl": "Advocaten",
+      "fr": "Avocat·es",
+      "en": "Lawyers"
+    },
+    "juristen": {
+      "nl": "Juristen en ngo-medewerkers",
+      "fr": "Juristes et ONG",
+      "en": "Legal staff and NGOs"
+    },
+    "instanties": {
+      "nl": "Asielinstanties",
+      "fr": "Instances d’asile",
+      "en": "Asylum authorities"
+    },
+    "studenten": {
+      "nl": "Studenten",
+      "fr": "Étudiant·es",
+      "en": "Students"
+    },
+    "terrein": {
+      "nl": "Terreinwerkers en tolken",
+      "fr": "Acteurs de terrain et interprètes",
+      "en": "Field workers and interpreters"
+    }
+  },
+  "formaat": {
+    "fysiek": {
+      "nl": "Ter plaatse",
+      "fr": "En présentiel",
+      "en": "In person"
+    },
+    "online": {
+      "nl": "Online",
+      "fr": "En ligne",
+      "en": "Online"
+    },
+    "hybride": {
+      "nl": "Hybride",
+      "fr": "Hybride",
+      "en": "Hybrid"
+    }
+  },
+  "taal": {
+    "nl": {
+      "nl": "NL",
+      "fr": "NL",
+      "en": "NL"
+    },
+    "fr": {
+      "nl": "FR",
+      "fr": "FR",
+      "en": "FR"
+    },
+    "en": {
+      "nl": "EN",
+      "fr": "EN",
+      "en": "EN"
+    }
+  }
+}
