@@ -45,14 +45,22 @@ async function home() {
   </section>
 
   <section class="home-block" aria-labelledby="h-themes">
-    <div class="wrap">
-      <header class="section-head"><h2 id="h-themes">${t('home.themes')}</h2><a class="more" href="${url('themas.html')}">${t('allThemes')}</a></header>
-      <ul class="home-themes" role="list">${data().themas.map((th) => `
-        <li><a href="${url('thema.html', { slug: th.slug })}">
-          ${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 15rem, 50vw', widths: [640] })}
-          <span class="home-theme-name">${esc(themeName(th))}</span>
-          <small>${t('theme.countPub', { n: pubsForTheme(th.slug).length })}</small>
-        </a></li>`).join('')}</ul>
+    <div class="wrap home-themes">
+      <div class="home-themes-media" aria-hidden="true">${data().themas.map((th, i) => `<div class="home-themes-img${i === 0 ? ' is-active' : ''}">${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 40vw, 100vw', widths: [640, 1280] })}<span class="home-themes-cap"><span>${String(i + 1).padStart(2, '0')}</span>${esc(themeName(th))}</span></div>`).join('')}</div>
+      <div class="home-themes-body">
+        <header class="section-head"><h2 id="h-themes">${t('home.themes')}</h2><a class="more" href="${url('themas.html')}">${t('allThemes')}</a></header>
+        <p class="home-themes-intro">${t('megaIntro')}</p>
+        <ol class="theme-list" role="list">${data().themas.map((th, i) => `
+          <li><a href="${url('thema.html', { slug: th.slug })}" data-i="${i}">
+            <span class="theme-list-num">${String(i + 1).padStart(2, '0')}</span>
+            <span class="theme-list-text">
+              <span class="theme-list-name">${esc(themeName(th))}</span>
+              <span class="theme-list-kort">${esc(tr(th.kort))}</span>
+              <span class="theme-list-counts">${t('theme.countPub', { n: pubsForTheme(th.slug).length })} · ${t('theme.countEv', { n: eventsForTheme(th.slug).length })}</span>
+            </span>
+            <span class="theme-list-arrow">${icon.arrow}</span>
+          </a></li>`).join('')}</ol>
+      </div>
     </div>
   </section>
 
@@ -69,6 +77,12 @@ async function home() {
       ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
     </div>
   </section>`;
+
+  const imgs = main().querySelectorAll('.home-themes-img');
+  const show = (e) => { const a = e.target.closest('[data-i]'); if (!a) return; imgs.forEach((el, i) => el.classList.toggle('is-active', i === +a.dataset.i)); };
+  const list = main().querySelector('.theme-list');
+  list.addEventListener('mouseover', show);
+  list.addEventListener('focusin', show);
 }
 
 /* ---------------- Thema-overzicht ---------------- */
