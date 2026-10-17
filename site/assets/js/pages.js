@@ -24,7 +24,7 @@ function notFound() {
 
 /* ---------------- Home: hub, geen scroll-verhaal ---------------- */
 async function home() {
-  const latest = pubsSorted().slice(0, 5);
+  const latest = pubsSorted().slice(0, 4);
   const upcoming = upcomingEvents().slice(0, 3);
   setMeta({ title: t('home.title'), description: t('home.title') });
   document.title = 'NANSEN | The Belgian Refugee Council';
@@ -32,33 +32,41 @@ async function home() {
   main().innerHTML = `
   <section class="hero">
     <div class="wrap hero-grid">
-      <div class="hero-text">
+      <figure class="hero-photo">
+        ${picture('zaal', 'Advocaten en juristen volgen een vorming van NANSEN in een volle zaal', { sizes: '(min-width: 64em) 62vw, 100vw', eager: true })}
+      </figure>
+      <div class="hero-panel">
+        <p class="hero-quote" lang="${lang}">${t('home.quote')}</p>
         <h1>${t('home.title')}</h1>
         <div class="hero-search">${searchForm('home')}</div>
         <p class="hero-aside">${t('home.lawyer')} <a href="${url('bijstand.html')}">${t('home.lawyerLink')}</a></p>
       </div>
-      <figure class="hero-photo">
-        ${picture('grens-hek', 'Omheining met prikkeldraad rond een terrein aan de grens, in zwart-wit', { sizes: '(min-width: 64em) 36vw, 100vw', eager: true })}
-        <figcaption><blockquote lang="${lang}">${t('home.quote')}</blockquote><p>${t('home.quoteSrc')}</p></figcaption>
-      </figure>
-    </div>
-    <div class="wrap">
-      <nav class="theme-index" aria-label="${t('home.themes')}">
-        <ul role="list">${data().themas.map((th) => `<li><a href="${url('thema.html', { slug: th.slug })}"><span>${esc(themeName(th))}</span><small>${t('theme.countPub', { n: pubsForTheme(th.slug).length })}</small></a></li>`).join('')}</ul>
-      </nav>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap home-columns">
-      <div>
-        <header class="section-head"><h2>${t('home.latest')}</h2><a class="more" href="${url('publicaties.html')}">${t('home.allPubs')}</a></header>
-        <ul class="register" role="list">${latest.map((p) => pubItem(p)).join('')}</ul>
-      </div>
-      <div>
-        <header class="section-head"><h2>${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
-        ${upcoming.length ? `<ul class="event-list event-list--narrow" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
-      </div>
+  <section class="home-block" aria-labelledby="h-themes">
+    <div class="wrap">
+      <header class="section-head"><h2 id="h-themes">${t('home.themes')}</h2><a class="more" href="${url('themas.html')}">${t('allThemes')}</a></header>
+      <ul class="home-themes" role="list">${data().themas.map((th) => `
+        <li><a href="${url('thema.html', { slug: th.slug })}">
+          ${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 15rem, 50vw', widths: [640] })}
+          <span class="home-theme-name">${esc(themeName(th))}</span>
+          <small>${t('theme.countPub', { n: pubsForTheme(th.slug).length })}</small>
+        </a></li>`).join('')}</ul>
+    </div>
+  </section>
+
+  <section class="home-block" aria-labelledby="h-latest">
+    <div class="wrap home-narrow">
+      <header class="section-head"><h2 id="h-latest">${t('home.latest')}</h2><a class="more" href="${url('publicaties.html')}">${t('home.allPubs')}</a></header>
+      <ul class="register register--compact" role="list">${latest.map((p) => pubItem(p, { compact: true })).join('')}</ul>
+    </div>
+  </section>
+
+  <section class="home-block home-block--band" aria-labelledby="h-upcoming">
+    <div class="wrap">
+      <header class="section-head"><h2 id="h-upcoming">${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
+      ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
     </div>
   </section>`;
 }
