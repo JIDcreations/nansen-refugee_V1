@@ -52,7 +52,7 @@ async function home() {
           ${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 15rem, (min-width: 40em) 33vw, 100vw', widths: [640] })}
           <span class="theme-card-name">${esc(themeName(th))}</span>
           <span class="theme-card-kort">${esc(tr(th.kort))}</span>
-          <span class="theme-card-counts">${t('theme.countPub', { n: pubsForTheme(th.slug).length })} · ${t('theme.countEv', { n: eventsForTheme(th.slug).length })}</span>
+          <span class="theme-card-counts">${t('theme.countPub', { n: pubsForTheme(th.slug).length })}</span>
         </a></li>`).join('')}</ul>
     </div>
   </section>
