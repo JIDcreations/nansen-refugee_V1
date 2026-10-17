@@ -212,6 +212,9 @@
     "en": "Engels"
   },
   "home": {
+    "pickTheme": "Kies een thema",
+    "toTheme": "Over dit thema",
+    "allThemesBtn": "Alle",
     "title": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid",
     "searchLabel": "Zoek in nota’s, casussen, praktijkfiches en vormingen",
     "lawyer": "Advocaat met een complex dossier?",

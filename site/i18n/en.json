@@ -212,6 +212,9 @@
     "en": "English"
   },
   "home": {
+    "pickTheme": "Choose a theme",
+    "toTheme": "About this theme",
+    "allThemesBtn": "All",
     "title": "Legal expertise centre on international protection and statelessness",
     "searchLabel": "Search notes, case studies, practice sheets and training",
     "lawyer": "A lawyer with a complex case?",

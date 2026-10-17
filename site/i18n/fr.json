@@ -212,6 +212,9 @@
     "en": "anglais"
   },
   "home": {
+    "pickTheme": "Choisissez une thématique",
+    "toTheme": "À propos de cette thématique",
+    "allThemesBtn": "Toutes",
     "title": "Centre d’expertise juridique en matière de protection internationale et d’apatridie",
     "searchLabel": "Rechercher dans les notes, études de cas, fiches pratiques et formations",
     "lawyer": "Avocat·e avec un dossier complexe ?",

@@ -24,7 +24,6 @@ function notFound() {
 
 /* ---------------- Home: hub, geen scroll-verhaal ---------------- */
 async function home() {
-  const latest = pubsSorted().slice(0, 4);
   const upcoming = upcomingEvents().slice(0, 3);
   setMeta({ title: t('home.title'), description: t('home.title') });
   document.title = 'NANSEN | The Belgian Refugee Council';
@@ -44,23 +43,15 @@ async function home() {
     </div>
   </section>
 
-  <section class="home-block" aria-labelledby="h-themes">
-    <div class="wrap">
-      <header class="section-head"><h2 id="h-themes">${t('home.themes')}</h2><a class="more" href="${url('themas.html')}">${t('allThemes')}</a></header>
-      <ul class="theme-cards" role="list">${data().themas.map((th) => `
-        <li><a href="${url('thema.html', { slug: th.slug })}">
-          ${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 15rem, (min-width: 40em) 33vw, 100vw', widths: [640] })}
-          <span class="theme-card-name">${esc(themeName(th))}</span>
-          <span class="theme-card-kort">${esc(tr(th.kort))}</span>
-          <span class="theme-card-counts">${t('theme.countPub', { n: pubsForTheme(th.slug).length })}</span>
-        </a></li>`).join('')}</ul>
-    </div>
-  </section>
-
   <section class="home-block" aria-labelledby="h-latest">
     <div class="wrap">
       <header class="section-head"><h2 id="h-latest">${t('home.latest')}</h2><a class="more" href="${url('publicaties.html')}">${t('home.allPubs')}</a></header>
-      <ul class="register register--compact" role="list">${latest.map((p) => pubItem(p, { compact: true })).join('')}</ul>
+      <div class="theme-filter" role="group" aria-label="${t('home.pickTheme')}">
+        <button type="button" data-theme="" aria-pressed="true">${t('home.allThemesBtn')}</button>
+        ${data().themas.map((th) => `<button type="button" data-theme="${th.slug}" aria-pressed="false">${esc(themeName(th))}</button>`).join('')}
+      </div>
+      <div class="theme-context" hidden></div>
+      <div aria-live="polite"><ul class="register register--compact" role="list"></ul></div>
     </div>
   </section>
 
@@ -71,6 +62,20 @@ async function home() {
     </div>
   </section>`;
 
+  // Thema-knoppen filteren de recente publicaties (geen aparte themasectie)
+  const list = main().querySelector('.register');
+  const ctx = main().querySelector('.theme-context');
+  const btns = main().querySelectorAll('.theme-filter button');
+  const render = (slug) => {
+    const th = slug && theme(slug);
+    const pubs = (th ? pubsForTheme(slug).filter((p) => p.type !== 'jaarverslag') : pubsSorted()).slice(0, 5);
+    list.innerHTML = pubs.map((p) => pubItem(p, { compact: true })).join('');
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === slug)));
+    ctx.hidden = !th;
+    if (th) ctx.innerHTML = `<p>${esc(tr(th.kort))}</p><p class="theme-context-links"><a href="${url('thema.html', { slug })}">${t('home.toTheme')}</a><a href="${url('publicaties.html', { thema: slug })}">${t('theme.allPubs', { t: themeName(th) })} (${pubsForTheme(slug).length})</a></p>`;
+  };
+  btns.forEach((b) => b.addEventListener('click', () => render(b.dataset.theme)));
+  render('');
 }
 
 /* ---------------- Thema-overzicht ---------------- */
