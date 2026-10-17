@@ -63,7 +63,7 @@ async function home() {
     </div>
   </section>
 
-  <section class="home-block home-block--band" aria-labelledby="h-upcoming">
+  <section class="home-block home-block--green" aria-labelledby="h-upcoming">
     <div class="wrap">
       <header class="section-head"><h2 id="h-upcoming">${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
       ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
