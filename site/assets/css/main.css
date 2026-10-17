@@ -706,7 +706,6 @@ mark { background: rgba(226,126,39,.25); color: inherit; padding: 0 .08em; borde
 @media (min-width: 64em) { .home-block { padding-block: var(--s-9); } }
 .home-block--band { background: var(--surface); border-top: 1px solid var(--line); }
 .home-block .section-head { margin-bottom: var(--s-7); }
-.home-narrow { max-width: calc(60rem + 2 * var(--gutter)); }
 
 /* Hero: foto met overlappend groen paneel (verfijnd uit de Figma) */
 .hero { padding: var(--s-7) 0 var(--s-4); }

@@ -57,7 +57,7 @@ async function home() {
   </section>
 
   <section class="home-block" aria-labelledby="h-latest">
-    <div class="wrap home-narrow">
+    <div class="wrap">
       <header class="section-head"><h2 id="h-latest">${t('home.latest')}</h2><a class="more" href="${url('publicaties.html')}">${t('home.allPubs')}</a></header>
       <ul class="register register--compact" role="list">${latest.map((p) => pubItem(p, { compact: true })).join('')}</ul>
     </div>
