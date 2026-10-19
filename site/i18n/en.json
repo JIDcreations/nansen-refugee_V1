@@ -11,7 +11,8 @@
     "menu": "Menu",
     "close": "Close",
     "search": "Search",
-    "home": "Home"
+    "home": "Home",
+    "submenu": "{t} submenu"
   },
   "anchors": {
     "missie": "Mission",
@@ -178,7 +179,15 @@
     "allPubs": "All publications on {t}",
     "noUpcoming": "No events are currently planned on this theme.",
     "countPub": "{n} publications",
-    "countEv": "{n} events"
+    "countEv": "{n} events",
+    "latestPub": "Latest publication",
+    "nextEvent": "Next event",
+    "caseTitle": "A case on this theme?",
+    "caseText": "Lawyers can submit a case to us. Together we look at whether and how NANSEN can support.",
+    "upcomingShort": "Upcoming",
+    "pastShort": "Earlier",
+    "allPast": "All past events on {t} ({n})",
+    "others": "Other themes"
   },
   "search": {
     "title": "Search",

@@ -45,12 +45,12 @@ async function boot() {
 function initHeader() {
   const hdr = document.getElementById('site-header');
   const items = [...hdr.querySelectorAll('[data-dropdown]')];
-  const close = (except) => items.forEach((it) => { if (it !== except) { it.classList.remove('is-open'); it.querySelector('.nav-trigger').setAttribute('aria-expanded', 'false'); } });
-  const open = (it) => { close(it); it.classList.add('is-open'); it.querySelector('.nav-trigger').setAttribute('aria-expanded', 'true'); };
+  const close = (except) => items.forEach((it) => { if (it !== except) { it.classList.remove('is-open'); it.querySelector('[aria-controls]').setAttribute('aria-expanded', 'false'); } });
+  const open = (it) => { close(it); it.classList.add('is-open'); it.querySelector('[aria-controls]').setAttribute('aria-expanded', 'true'); };
   const hoverable = matchMedia('(hover: hover)').matches;
 
   items.forEach((it) => {
-    const btn = it.querySelector('.nav-trigger');
+    const btn = it.querySelector('button[aria-controls]');
     let timer, hoverOpenedAt = 0;
     btn.addEventListener('click', () => {
       // Klik vlak na hover-open: paneel open laten i.p.v. meteen weer te sluiten

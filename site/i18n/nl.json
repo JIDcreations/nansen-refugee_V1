@@ -11,7 +11,8 @@
     "menu": "Menu",
     "close": "Sluiten",
     "search": "Zoeken",
-    "home": "Home"
+    "home": "Home",
+    "submenu": "Submenu {t}"
   },
   "anchors": {
     "missie": "Missie",
@@ -178,7 +179,15 @@
     "allPubs": "Alle publicaties over {t}",
     "noUpcoming": "Er staan momenteel geen evenementen gepland rond dit thema.",
     "countPub": "{n} publicaties",
-    "countEv": "{n} evenementen"
+    "countEv": "{n} evenementen",
+    "latestPub": "Recentste publicatie",
+    "nextEvent": "Volgend evenement",
+    "caseTitle": "Een dossier rond dit thema?",
+    "caseText": "Advocaten kunnen een dossier voorleggen. We bekijken samen of en hoe NANSEN kan ondersteunen.",
+    "upcomingShort": "Komend",
+    "pastShort": "Eerder",
+    "allPast": "Alle afgelopen evenementen over {t} ({n})",
+    "others": "Andere thema's"
   },
   "search": {
     "title": "Zoeken",

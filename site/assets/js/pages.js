@@ -87,17 +87,19 @@ async function themas() {
   <section class="wrap" style="padding-bottom:var(--s-9)">
     <ul class="theme-rows" role="list">${data().themas.map((th) => {
       const pubs = pubsForTheme(th.slug), latestPub = pubs.find((p) => p.type !== 'jaarverslag'), evs = eventsForTheme(th.slug), next = evs.filter((e) => !isPast(e)).sort((a, b) => a.start.localeCompare(b.start))[0];
+      const arrow = icon.arrow.replace('<svg', '<svg class="icon-inline"');
+      /* Hele rij klikbaar via de titellink (::after); tellers en recente items blijven eigen links */
       return `<li class="theme-row">
-        <a class="theme-row-media" href="${url('thema.html', { slug: th.slug })}" tabindex="-1" aria-hidden="true">${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 22rem, 100vw', widths: [640, 1280] })}</a>
+        <div class="theme-row-media">${picture(th.afbeelding, '', { sizes: '(min-width: 64em) 22rem, 100vw', widths: [640, 1280] })}</div>
         <div class="theme-row-body">
-          <h2><a href="${url('thema.html', { slug: th.slug })}">${esc(themeName(th))}</a></h2>
+          <h2><a class="theme-row-link" href="${url('thema.html', { slug: th.slug })}">${esc(themeName(th))}</a></h2>
           ${th.naamLang ? `<p class="muted small mb-0">${esc(tr(th.naamLang))}</p>` : ''}
           <p>${esc(tr(th.intro))}</p>
-          <p class="theme-row-counts"><a href="${url('publicaties.html', { thema: th.slug })}">${t('theme.countPub', { n: pubs.length })}</a><a href="${url('evenementen.html', { thema: th.slug })}">${t('theme.countEv', { n: evs.length })}</a></p>
+          <p class="count-links"><a href="${url('publicaties.html', { thema: th.slug })}">${t('theme.countPub', { n: pubs.length })} ${arrow}</a><a href="${url('evenementen.html', { thema: th.slug })}">${t('theme.countEv', { n: evs.length })} ${arrow}</a></p>
         </div>
         <div class="theme-row-latest">
-          ${latestPub ? `<p class="label">${t('home.latest')}</p><a href="${url('publicatie.html', { slug: latestPub.slug })}"${pubTitle(latestPub).attr}>${esc(pubTitle(latestPub).text)}</a>` : ''}
-          ${next ? `<p class="label mt-5">${t('theme.upcoming')}</p><a href="${url('evenement.html', { slug: next.slug })}">${esc(tr(next.titel))}</a><br><span class="small muted">${fmtDate(next.start)}</span>` : ''}
+          ${latestPub ? `<div><p class="label">${t('theme.latestPub')}</p><a href="${url('publicatie.html', { slug: latestPub.slug })}"${pubTitle(latestPub).attr}>${esc(pubTitle(latestPub).text)}</a></div>` : ''}
+          ${next ? `<div><p class="label">${t('theme.nextEvent')}</p><a href="${url('evenement.html', { slug: next.slug })}">${esc(tr(next.titel))}</a><span class="small muted">${fmtDate(next.start)}</span></div>` : ''}
         </div>
       </li>`;
     }).join('')}</ul>
@@ -109,11 +111,15 @@ async function thema() {
   const th = theme(param('slug'));
   if (!th) return notFound();
   const pubs = pubsForTheme(th.slug);
+  // Jaarverslagen dragen alle thema's: niet bovenaan elke themalijst, wel via "Alle publicaties"
+  const themePubs = pubs.filter((p) => p.type !== 'jaarverslag');
   const evs = eventsForTheme(th.slug);
   const up = evs.filter((e) => !isPast(e)).sort((a, b) => a.start.localeCompare(b.start));
   const past = evs.filter(isPast).sort((a, b) => b.start.localeCompare(a.start));
   const body = trInfo(th.inhoud);
   const contact = th.contactpersoon && person(th.contactpersoon);
+  const others = data().themas.filter((x) => x.slug !== th.slug);
+  const down = icon.chevron.replace('<svg', '<svg class="icon-inline"');
   setMeta({ title: themeName(th), description: tr(th.kort) });
 
   main().innerHTML = `
@@ -125,7 +131,7 @@ async function thema() {
         <h1>${esc(themeName(th))}</h1>
         ${th.naamLang ? `<p class="muted">${esc(tr(th.naamLang))}</p>` : ''}
         <p class="lead">${esc(tr(th.intro))}</p>
-        <p class="theme-jump"><a href="#publicaties">${t('theme.countPub', { n: pubs.length })}</a><a href="#evenementen">${t('theme.countEv', { n: evs.length })}</a></p>
+        <p class="count-links"><a href="#publicaties">${t('theme.countPub', { n: themePubs.length })} ${down}</a><a href="#evenementen">${t('theme.countEv', { n: evs.length })} ${down}</a></p>
       </div>
       ${picture(th.afbeelding, '', { cls: 'theme-head-photo', sizes: '(min-width: 64em) 40vw, 100vw', eager: true })}
     </div>
@@ -137,12 +143,12 @@ async function thema() {
       <div class="blocks">${blocks(body.value)}</div>
     </div>
     <div class="detail-aside">
-      <div class="meta-card">
-        <dl>
-          <div><dt>${t('theme.contact')}</dt><dd>${contact ? `<strong>${esc(contact.naam)}</strong><br>${esc(tr(contact.functie))}` : `NANSEN`}<br><a href="mailto:info@nansenrefugee.be">info@nansenrefugee.be</a></dd></div>
-        </dl>
-        <hr>
+      <div class="meta-card theme-cta">
+        ${contact ? `<p class="label">${t('theme.contact')}</p><p><strong>${esc(contact.naam)}</strong><br>${esc(tr(contact.functie))}${contact.email ? `<br><a href="mailto:${contact.email}">${contact.email}</a>` : ''}</p><hr>` : ''}
+        <h2 class="theme-cta-title">${t('theme.caseTitle')}</h2>
+        <p>${t('theme.caseText')}</p>
         <a class="btn btn--primary" href="${url('bijstand.html')}">${t('services.bijstand')}</a>
+        <p class="theme-cta-mail"><a href="mailto:dossiers@nansenrefugee.be">dossiers@nansenrefugee.be</a></p>
       </div>
     </div>
   </div>
@@ -150,22 +156,32 @@ async function thema() {
   <section class="section section--band" id="publicaties">
     <div class="wrap">
       <header class="section-head"><h2>${t('theme.pubs')}</h2><a class="more" href="${url('publicaties.html', { thema: th.slug })}">${t('theme.allPubs', { t: themeName(th) })} (${pubs.length})</a></header>
-      <ul class="register" role="list">${pubs.slice(0, 6).map((p) => pubItem(p)).join('')}</ul>
+      <ul class="register" role="list">${themePubs.slice(0, 6).map((p) => pubItem(p)).join('')}</ul>
     </div>
   </section>
 
   <section class="section" id="evenementen">
-    <div class="wrap split split--even">
-      <div>
-        <h2>${t('theme.upcoming')}</h2>
-        ${up.length ? `<ul class="event-list" role="list">${up.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('theme.noUpcoming')}</p>`}
-      </div>
-      <div>
-        <h2>${t('theme.archive')}</h2>
-        ${past.length ? `<ul class="event-list" role="list">${past.map((e) => eventItem(e)).join('')}</ul>` : ''}
-      </div>
+    <div class="wrap">
+      <header class="section-head"><h2>${t('theme.events')}</h2></header>
+      <h3 class="label theme-events-label">${t('theme.upcomingShort')}</h3>
+      ${up.length ? `<ul class="event-list" role="list">${up.map((e) => eventItem(e, { headingLevel: 4 })).join('')}</ul>` : `<p class="muted">${t('theme.noUpcoming')}</p>`}
+      ${past.length ? `
+      <h3 class="label theme-events-label theme-events-label--past">${t('theme.pastShort')}</h3>
+      <ul class="archive-list" role="list">${past.slice(0, 3).map((e) => `<li>
+        <time datetime="${e.start}">${fmtDate(e.start)}</time>
+        <span class="type-label">${esc(term('evenementType', e.type))}</span>
+        <a href="${url('evenement.html', { slug: e.slug })}">${esc(tr(e.titel))}</a>
+      </li>`).join('')}</ul>
+      <p class="mt-5"><a class="link-more" href="${url('evenementen.html', { thema: th.slug, wanneer: 'archief' })}">${t('theme.allPast', { t: themeName(th), n: past.length })} ${icon.arrow.replace('<svg', '<svg class="icon-inline"')}</a></p>` : ''}
     </div>
-  </section>`;
+  </section>
+
+  <nav class="section section--band theme-others" aria-labelledby="h-others">
+    <div class="wrap">
+      <h2 id="h-others" class="section-head">${t('theme.others')}</h2>
+      <ul role="list">${others.map((x) => `<li><a href="${url('thema.html', { slug: x.slug })}"><strong>${esc(themeName(x))}</strong><span>${esc(tr(x.kort))}</span></a></li>`).join('')}</ul>
+    </div>
+  </nav>`;
 }
 
 /* ---------------- Facet-helpers (gedeeld) ---------------- */

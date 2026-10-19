@@ -39,6 +39,9 @@
   /* Ruimte (4px basis) */
   --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.5rem;
   --s-6: 2rem; --s-7: 3rem; --s-8: 4rem; --s-9: 6rem; --s-10: 8rem;
+  /* Verticaal ritme tussen secties: groeit mee met het scherm */
+  --section-y: clamp(4rem, 2.5rem + 5vw, 7rem);
+  --section-y-tight: clamp(3rem, 2rem + 3vw, 5rem);
 
   /* Layout */
   --wrap: 78rem;        /* 1248 */

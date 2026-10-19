@@ -53,7 +53,13 @@ export function subnav(anchors = NANSEN_ANCHORS) {
 export async function header(active = '') {
   const logo = await inlineLogo('nansen');
   const themes = data().themas;
-  const navItem = (id, label, panel, isActive) => `
+  /* Met href: label is een link naar het overzicht, het pijltje opent het paneel (hover opent ook) */
+  const navItem = (id, label, panel, isActive, href) => href ? `
+    <li class="nav-item nav-item--split" data-dropdown>
+      <a class="nav-trigger" href="${href}" ${isActive ? 'aria-current="page"' : ''}>${label}</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="dd-${id}" aria-label="${t('nav.submenu', { t: label })}">${icon.chevron}</button>
+      ${panel(`dd-${id}`)}
+    </li>` : `
     <li class="nav-item" data-dropdown>
       <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="dd-${id}" ${isActive ? 'aria-current="page"' : ''}>${label}${icon.chevron}</button>
       ${panel(`dd-${id}`)}
@@ -110,7 +116,7 @@ export async function header(active = '') {
       <nav class="primary-nav" aria-label="Hoofdnavigatie">
         <ul class="nav-list" role="list">
           ${navLink(url('nansen.html'), t('nav.nansen'), active === 'nansen')}
-          ${navItem('themes', t('nav.themes'), ddThemes, active === 'themas')}
+          ${navItem('themes', t('nav.themes'), ddThemes, active === 'themas', url('themas.html'))}
           ${navItem('services', t('nav.services'), ddServices, active === 'diensten')}
           ${navItem('knowledge', t('nav.knowledge'), ddKnowledge, active === 'kennis')}
         </ul>

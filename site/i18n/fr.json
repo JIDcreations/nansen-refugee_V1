@@ -11,7 +11,8 @@
     "menu": "Menu",
     "close": "Fermer",
     "search": "Rechercher",
-    "home": "Accueil"
+    "home": "Accueil",
+    "submenu": "Sous-menu {t}"
   },
   "anchors": {
     "missie": "Mission",
@@ -178,7 +179,15 @@
     "allPubs": "Toutes les publications sur {t}",
     "noUpcoming": "Aucun événement n’est prévu pour le moment sur cette thématique.",
     "countPub": "{n} publications",
-    "countEv": "{n} événements"
+    "countEv": "{n} événements",
+    "latestPub": "Publication la plus récente",
+    "nextEvent": "Prochain événement",
+    "caseTitle": "Un dossier sur cette thématique ?",
+    "caseText": "Les avocats peuvent nous soumettre un dossier. Nous examinons ensemble si et comment NANSEN peut apporter son soutien.",
+    "upcomingShort": "À venir",
+    "pastShort": "Passés",
+    "allPast": "Tous les événements passés sur {t} ({n})",
+    "others": "Autres thématiques"
   },
   "search": {
     "title": "Rechercher",
