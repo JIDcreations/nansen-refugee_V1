@@ -194,7 +194,7 @@ async function publicaties() {
   const items = data().publicaties;
   setMeta({ title: t('pages.pubsTitle'), description: t('pages.pubsLead') });
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('nav.knowledge') }, { label: t('pages.pubsTitle') }])}</div>
+  <div class="wrap">${breadcrumb([{ label: t('pages.pubsTitle') }])}</div>
   <header class="page-head"><div class="wrap"><h1>${t('pages.pubsTitle')}</h1><p class="lead">${t('pages.pubsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
@@ -243,7 +243,7 @@ async function publicatie() {
 
   // Gerelateerd: zelfde thema, andere CPT + andere publicaties
   const relEvents = data().evenementen.filter((e) => e.themas.some((s) => p.themas.includes(s)) && !evs.includes(e)).sort((a, b) => b.start.localeCompare(a.start)).slice(0, 3);
-  const relPubs = pubsSorted().filter((x) => x !== p && !readAlso.includes(x) && x.themas.some((s) => p.themas.includes(s))).slice(0, 4);
+  const relPubs = pubsSorted().filter((x) => x !== p && x.type !== 'jaarverslag' && !readAlso.includes(x) && x.themas.some((s) => p.themas.includes(s))).slice(0, 4);
 
   main().innerHTML = `
   <div class="wrap">${breadcrumb([{ label: t('knowledge.pubs'), href: url('publicaties.html') }, { label: term('publicatieType', p.type), href: url('publicaties.html', { type: p.type }) }, { label: ti.text.length > 60 ? `${ti.text.slice(0, 58)}…` : ti.text }])}</div>
@@ -324,7 +324,7 @@ async function evenementen() {
   const items = data().evenementen;
   setMeta({ title: t('pages.eventsTitle'), description: t('pages.eventsLead') });
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('nav.knowledge') }, { label: t('pages.eventsTitle') }])}</div>
+  <div class="wrap">${breadcrumb([{ label: t('pages.eventsTitle') }])}</div>
   <header class="page-head"><div class="wrap"><h1>${t('pages.eventsTitle')}</h1><p class="lead">${t('pages.eventsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
@@ -373,7 +373,7 @@ async function evenement() {
   const past = isPast(e);
   const status = eventStatus(e);
   const pubs = pubsForEvent(e.slug);
-  const relPubs = pubsSorted().filter((p) => p.themas.some((s) => e.themas.includes(s)) && !pubs.includes(p)).slice(0, 4);
+  const relPubs = pubsSorted().filter((p) => p.type !== 'jaarverslag' && p.themas.some((s) => e.themas.includes(s)) && !pubs.includes(p)).slice(0, 4);
   const relEvents = data().evenementen.filter((x) => x !== e && x.themas.some((s) => e.themas.includes(s))).sort((a, b) => b.start.localeCompare(a.start)).slice(0, 3);
   const desc = trInfo(e.beschrijving);
   const when = e.heleDag ? `${t('event.allDay')} ${fmtDate(e.start).toLowerCase()}` : `${fmtDate(e.start, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}<br>${fmtTime(e.start)}${e.einde ? `–${fmtTime(e.einde)}` : ''}`;
