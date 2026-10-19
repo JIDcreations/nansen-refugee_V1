@@ -1,0 +1,4 @@
+# Statisch prototype: geen build, de site staat in /site
+[build]
+  publish = "site"
+  command = ""
