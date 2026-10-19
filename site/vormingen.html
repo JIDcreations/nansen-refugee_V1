@@ -40,15 +40,15 @@
     <div class="wrap split">
       <header><h2>Wat we aanbieden</h2></header>
       <div class="format-list">
-        <article><h3>Vorming</h3><p>Een sessie van een halve of volledige dag rond één thema, met theorie en casussen. Bijvoorbeeld: het Protocol van Istanbul voor 60 protection officers van het CGVS.</p></article>
-        <article><h3>Intervisie</h3><p>Een gesprek tussen praktijkjuristen op basis van concrete dossiers. Bijvoorbeeld: non-refoulement aan de grens, samen met ECRE, met meer dan 60 deelnemers.</p></article>
-        <article><h3>Online module</h3><p>Een opgenomen module die deelnemers zelf volgen. Bijvoorbeeld: staatloosheid op het leerplatform van de Orde van Vlaamse Balies.</p></article>
-        <article><h3>Gastcollege of legal clinic</h3><p>Voor rechtenstudenten en jonge juristen, in samenwerking met universiteiten zoals UCLouvain en UGent.</p></article>
+        <article><h3>Vorming</h3><p>Een sessie van een halve of volledige dag rond één thema, met theorie en casussen. Bijvoorbeeld: het Protocol van Istanbul voor 60 protection officers van het CGVS.</p><a class="link-more" href="#aanvraag" data-prefill="v-format" data-value="Vorming">Aanvragen <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5l5 5-5 5"/></svg></a></article>
+        <article><h3>Intervisie</h3><p>Een gesprek tussen praktijkjuristen op basis van concrete dossiers. Bijvoorbeeld: non-refoulement aan de grens, samen met ECRE, met meer dan 60 deelnemers.</p><a class="link-more" href="#aanvraag" data-prefill="v-format" data-value="Intervisie">Aanvragen <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5l5 5-5 5"/></svg></a></article>
+        <article><h3>Online module</h3><p>Een opgenomen module die deelnemers zelf volgen. Bijvoorbeeld: staatloosheid op het leerplatform van de Orde van Vlaamse Balies.</p><a class="link-more" href="#aanvraag" data-prefill="v-format" data-value="Online module">Aanvragen <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5l5 5-5 5"/></svg></a></article>
+        <article><h3>Gastcollege of legal clinic</h3><p>Voor rechtenstudenten en jonge juristen, in samenwerking met universiteiten zoals UCLouvain en UGent.</p><a class="link-more" href="#aanvraag" data-prefill="v-format" data-value="Gastcollege / legal clinic">Aanvragen <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5l5 5-5 5"/></svg></a></article>
       </div>
     </div>
   </section>
 
-  <section class="section section--band">
+  <section class="section section--band" id="aanvraag">
     <div class="wrap split">
       <header><h2>Een vorming aanvragen</h2><p class="muted">Vertel ons voor wie de vorming is en wat u wilt bereiken. We nemen binnen enkele werkdagen contact op.</p></header>
       <form class="form-grid form-grid--2" action="#" onsubmit="event.preventDefault(); this.querySelector('[role=status]').textContent='Demo: in de definitieve site wordt deze aanvraag verstuurd naar info@nansenrefugee.be.';">
@@ -56,9 +56,9 @@
         <div><label for="v-name">Contactpersoon</label><input class="field" id="v-name" name="naam" autocomplete="name" required></div>
         <div><label for="v-mail">E-mailadres</label><input class="field" id="v-mail" name="email" type="email" autocomplete="email" required></div>
         <div><label for="v-theme">Thema</label>
-          <select class="field select" id="v-theme" name="thema"><option>Internationale bescherming</option><option>Staatloosheid</option><option>Slachtoffers van foltering</option><option>Detentie</option><option>SOGI</option><option>Interdisciplinariteit</option><option>Ander thema</option></select></div>
+          <select class="field select" id="v-theme" name="thema"><option value="" selected disabled>Kies een thema</option><option>Internationale bescherming</option><option>Staatloosheid</option><option>Slachtoffers van foltering</option><option>Detentie</option><option>SOGI</option><option>Interdisciplinariteit</option><option>Ander thema</option></select></div>
         <div><label for="v-format">Formaat</label>
-          <select class="field select" id="v-format" name="formaat"><option>Vorming</option><option>Intervisie</option><option>Online module</option><option>Gastcollege / legal clinic</option></select></div>
+          <select class="field select" id="v-format" name="formaat"><option value="" selected disabled>Kies een formaat</option><option>Vorming</option><option>Intervisie</option><option>Online module</option><option>Gastcollege / legal clinic</option></select></div>
         <div><label for="v-n">Aantal deelnemers (geschat)</label><input class="field" id="v-n" name="deelnemers" type="number" min="1" inputmode="numeric"></div>
         <div class="span-2"><label for="v-msg">Wat wilt u bereiken?</label><textarea class="field" id="v-msg" name="bericht" rows="5"></textarea></div>
         <div class="span-2"><button class="btn btn--primary" type="submit">Aanvraag versturen</button><p class="form-note" role="status"></p></div>

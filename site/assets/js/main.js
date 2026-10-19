@@ -101,6 +101,13 @@ function initHeader() {
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 }
 
+/* ---------- Prefill: <a data-prefill="veld-id" data-value="..."> vult een formulierveld in ---------- */
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('[data-prefill]');
+  const field = a && document.getElementById(a.dataset.prefill);
+  if (field) field.value = a.dataset.value;
+});
+
 /* ---------- Anchors & scrollspy (inhoudstafel, /nansen subnav) ---------- */
 function initAnchors() {
   const navs = document.querySelectorAll('[data-scrollspy]');

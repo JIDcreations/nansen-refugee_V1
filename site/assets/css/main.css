@@ -554,7 +554,7 @@ fieldset.filter-group legend + * { clear: both; }
 
 /* Duotone fotostrook */
 .photo-strip { display: grid; grid-template-columns: 2fr 1fr 1.4fr; gap: 4px; }
-.photo-strip img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; min-height: 14rem; max-height: 22rem; }
+.photo-strip img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; min-height: 10rem; max-height: 15rem; }
 @media (max-width: 40em) { .photo-strip { grid-template-columns: 1fr 1fr; } .photo-strip picture:first-child { grid-column: 1 / -1; } }
 
 /* NANSEN-pagina subnav */
@@ -614,6 +614,8 @@ fieldset.filter-group legend + * { clear: both; }
 
 .checklist { list-style: none; padding: 0; margin: 0; }
 .checklist li { display: grid; grid-template-columns: 1.5rem 1fr; gap: var(--s-2); padding: var(--s-2) 0; border-bottom: 1px solid var(--line); font-size: var(--fs-sm); }
+.checklist a { color: inherit; }
+.checklist a:hover strong { color: var(--green-900); }
 .checklist svg { width: 1rem; height: 1rem; color: var(--green-700); margin-top: .2rem; }
 
 .form-grid { display: grid; gap: var(--s-4); max-width: 40rem; }
@@ -731,6 +733,7 @@ mark { background: rgba(226,126,39,.25); color: inherit; padding: 0 .08em; borde
 .format-list article { padding: var(--s-5) var(--s-5) var(--s-5) 0; border-bottom: 1px solid var(--line); }
 .format-list h3 { font-family: var(--font-serif); font-weight: 500; font-size: var(--fs-lg); color: var(--green-900); margin-bottom: var(--s-2); }
 .format-list p { margin: 0; color: var(--ink-soft); font-size: var(--fs-sm); }
+.format-list .link-more { margin-top: var(--s-3); font-size: var(--fs-sm); color: var(--green-800); }
 .bank { margin: 0; display: grid; gap: var(--s-4); border-top: 1px solid var(--line-strong); padding-top: var(--s-4); }
 .bank dt { font-size: var(--fs-xs); font-weight: 700; color: var(--ink-soft); }
 .bank dd { margin: 0; font-size: var(--fs-md); }
