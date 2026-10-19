@@ -22,15 +22,6 @@
     "jaarverslagen": "Annual reports",
     "contact": "Contact"
   },
-  "anchorsSub": {
-    "missie": "Why NANSEN exists",
-    "aanpak": "Interdisciplinarity and three strategic goals",
-    "team": "The lawyers and experts behind NANSEN",
-    "geschiedenis": "Fridtjof Nansen and the Nansen passport",
-    "partners": "UNHCR, bar associations, universities and NGOs",
-    "jaarverslagen": "Figures and activities by year",
-    "contact": "Address and contacts by service"
-  },
   "services": {
     "bijstand": "Legal assistance",
     "bijstandSub": "Refer a case as a lawyer",
@@ -47,10 +38,6 @@
   "megaIntro": "Five areas in which NANSEN follows cases, builds knowledge and trains.",
   "allThemes": "All themes",
   "navPanels": {
-    "nansen": {
-      "intro": "Legal expertise centre on international protection and statelessness, based in Brussels since 2017.",
-      "more": "About NANSEN"
-    },
     "services": {
       "intro": "For lawyers and organisations working on complex cases.",
       "more": "dossiers@nansenrefugee.be"

@@ -9,7 +9,7 @@ import {
 } from './core.js';
 import {
   icon, breadcrumb, pubItem, eventItem, themeTile, themeTags, countryTags, langBadges, pubTitle,
-  downloads, notice, blocks, toc, searchForm, statusBadge
+  downloads, notice, blocks, toc, searchForm, statusBadge, subnav
 } from './partials.js';
 import { createListing } from './filters.js';
 
@@ -505,6 +505,8 @@ async function zoeken() {
 
 /* ---------------- /nansen: jaarverslagen + team uit data ---------------- */
 async function nansen() {
+  const nav = document.getElementById('subnav');
+  if (nav) nav.outerHTML = subnav();
   const reports = pubsSorted().filter((p) => p.type === 'jaarverslag');
   const el = document.getElementById('jaarverslagen-list');
   if (el) el.innerHTML = `<ul class="register" role="list">${reports.map((p) => pubItem(p)).join('')}</ul>`;

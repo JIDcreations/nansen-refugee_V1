@@ -22,15 +22,6 @@
     "jaarverslagen": "Jaarverslagen",
     "contact": "Contact"
   },
-  "anchorsSub": {
-    "missie": "Waarvoor NANSEN bestaat",
-    "aanpak": "Interdisciplinair werken, drie strategische doelstellingen",
-    "team": "De juristen en experts achter NANSEN",
-    "geschiedenis": "Fridtjof Nansen en het Nansenpaspoort",
-    "partners": "UNHCR, balies, universiteiten en ngo’s",
-    "jaarverslagen": "Cijfers en werking per jaar",
-    "contact": "Adres en contact per dienst"
-  },
   "services": {
     "bijstand": "Juridische bijstand",
     "bijstandSub": "Een dossier voorleggen als advocaat",
@@ -47,10 +38,6 @@
   "megaIntro": "Vijf domeinen waarin NANSEN dossiers opvolgt, kennis bouwt en vormt.",
   "allThemes": "Alle thema's",
   "navPanels": {
-    "nansen": {
-      "intro": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid, sinds 2017 in Brussel.",
-      "more": "Over NANSEN"
-    },
     "services": {
       "intro": "Voor advocaten en organisaties die met complexe dossiers werken.",
       "more": "dossiers@nansenrefugee.be"

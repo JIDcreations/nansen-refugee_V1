@@ -42,6 +42,13 @@ export async function inlineLogo(name) {
 /* ---------- Navigatieconfig (makkelijk aanpasbaar) ---------- */
 export const NANSEN_ANCHORS = ['missie', 'aanpak', 'team', 'geschiedenis', 'partners', 'jaarverslagen', 'contact'];
 
+/* ---------- Subnav /nansen (sticky, scrollspy) ---------- */
+export function subnav(anchors = NANSEN_ANCHORS) {
+  return `<nav class="subnav" aria-label="${t('meta.toc')}" data-scrollspy>
+    <div class="wrap"><ul>${anchors.map((a) => `<li><a href="#${a}">${t(`anchors.${a}`)}</a></li>`).join('')}</ul></div>
+  </nav>`;
+}
+
 /* ---------- Header ---------- */
 export async function header(active = '') {
   const logo = await inlineLogo('nansen');
@@ -51,6 +58,9 @@ export async function header(active = '') {
       <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="dd-${id}" ${isActive ? 'aria-current="page"' : ''}>${label}${icon.chevron}</button>
       ${panel(`dd-${id}`)}
     </li>`;
+  /* NANSEN is één pagina: gewone link, de secties zitten in de sticky subnav op /nansen */
+  const navLink = (href, label, isActive) => `
+    <li class="nav-item"><a class="nav-trigger" href="${href}" ${isActive ? 'aria-current="page"' : ''}>${label}</a></li>`;
 
   /* Mega-dropdown: intro links, items rechts. Eén partial voor alle hoofdmenu's. */
   const mega = ({ title, intro, more, items }) => (id) => `<div class="dropdown dropdown--mega" id="${id}">
@@ -58,11 +68,6 @@ export async function header(active = '') {
       <ul role="list" class="${items.length > 5 ? 'mega-list--cols' : ''}">${items.map((it) => `<li><a href="${it.href}"><span>${it.label}</span><small>${it.sub}</small></a></li>`).join('')}</ul>
     </div>`;
 
-  const ddNansen = mega({
-    title: t('nav.nansen'), intro: t('navPanels.nansen.intro'),
-    more: { href: url('nansen.html'), label: t('navPanels.nansen.more') },
-    items: NANSEN_ANCHORS.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`), sub: t(`anchorsSub.${a}`) }))
-  });
   const ddThemes = mega({
     title: t('megaTitle'), intro: t('megaIntro'),
     more: { href: url('themas.html'), label: t('allThemes') },
@@ -90,7 +95,7 @@ export async function header(active = '') {
   const mobileGroup = (label, links) => `<details><summary>${label}${icon.chevron}</summary><ul>${links}</ul></details>`;
   const mobile = `
     <div class="mobile-menu" id="mobile-menu" aria-label="${t('nav.menu')}">
-      ${mobileGroup(t('nav.nansen'), NANSEN_ANCHORS.map((a) => `<li><a href="${url(`nansen.html#${a}`)}">${t(`anchors.${a}`)}</a></li>`).join(''))}
+      <a class="mobile-link" href="${url('nansen.html')}" ${active === 'nansen' ? 'aria-current="page"' : ''}>${t('nav.nansen')}</a>
       ${mobileGroup(t('nav.themes'), themes.map((th) => `<li><a href="${url('thema.html', { slug: th.slug })}">${esc(themeName(th))}</a></li>`).join('') + `<li><a href="${url('themas.html')}">${t('allThemes')}</a></li>`)}
       ${mobileGroup(t('nav.services'), `<li><a href="${url('bijstand.html')}">${t('services.bijstand')}</a></li><li><a href="${url('vormingen.html')}">${t('services.vormingen')}</a></li>`)}
       ${mobileGroup(t('nav.knowledge'), `<li><a href="${url('publicaties.html')}">${t('knowledge.pubs')}</a></li><li><a href="${url('evenementen.html')}">${t('knowledge.events')}</a></li>`)}
@@ -104,7 +109,7 @@ export async function header(active = '') {
       <a class="brand" href="${url('index.html')}" aria-label="NANSEN, the Belgian Refugee Council: ${t('nav.home')}">${logo}</a>
       <nav class="primary-nav" aria-label="Hoofdnavigatie">
         <ul class="nav-list" role="list">
-          ${navItem('nansen', t('nav.nansen'), ddNansen, active === 'nansen')}
+          ${navLink(url('nansen.html'), t('nav.nansen'), active === 'nansen')}
           ${navItem('themes', t('nav.themes'), ddThemes, active === 'themas')}
           ${navItem('services', t('nav.services'), ddServices, active === 'diensten')}
           ${navItem('knowledge', t('nav.knowledge'), ddKnowledge, active === 'kennis')}

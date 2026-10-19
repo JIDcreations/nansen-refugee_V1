@@ -206,6 +206,10 @@ abbr.lang { text-decoration: none; cursor: help; }
   padding: var(--s-4) 0; font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--green-900); cursor: pointer;
 }
 .mobile-menu summary::-webkit-details-marker { display: none; }
+.mobile-menu .mobile-link {
+  display: block; padding: var(--s-4) 0; border-bottom: 1px solid var(--line);
+  font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--green-900); text-decoration: none;
+}
 .mobile-menu summary svg { width: .9rem; transition: transform .15s; }
 .mobile-menu details[open] summary svg { transform: rotate(180deg); }
 .mobile-menu ul { list-style: none; margin: 0 0 var(--s-4); padding: 0; }
