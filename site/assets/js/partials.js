@@ -64,9 +64,6 @@ export async function header(active = '') {
       <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="dd-${id}" ${isActive ? 'aria-current="page"' : ''}>${label}${icon.chevron}</button>
       ${panel(`dd-${id}`)}
     </li>`;
-  /* NANSEN is één pagina: gewone link, de secties zitten in de sticky subnav op /nansen */
-  const navLink = (href, label, isActive) => `
-    <li class="nav-item"><a class="nav-trigger" href="${href}" ${isActive ? 'aria-current="page"' : ''}>${label}</a></li>`;
 
   /* Mega-dropdown: intro links, items rechts. Eén partial voor alle hoofdmenu's. */
   const mega = ({ title, intro, more, items }) => (id) => `<div class="dropdown dropdown--mega" id="${id}">
@@ -74,6 +71,12 @@ export async function header(active = '') {
       <ul role="list" class="${items.length > 5 ? 'mega-list--cols' : ''}">${items.map((it) => `<li><a href="${it.href}"><span>${it.label}</span><small>${it.sub}</small></a></li>`).join('')}</ul>
     </div>`;
 
+  /* NANSEN is één pagina: de dropdown linkt naar de anchors (ook in de sticky subnav op /nansen) */
+  const ddNansen = mega({
+    title: t('nav.nansen'), intro: t('navPanels.nansen.intro'),
+    more: { href: url('nansen.html'), label: t('navPanels.nansen.more') },
+    items: NANSEN_ANCHORS.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`), sub: t(`anchorsSub.${a}`) }))
+  });
   const ddThemes = mega({
     title: t('megaTitle'), intro: t('megaIntro'),
     more: { href: url('themas.html'), label: t('allThemes') },
@@ -81,7 +84,7 @@ export async function header(active = '') {
   });
   const ddServices = mega({
     title: t('nav.services'), intro: t('navPanels.services.intro'),
-    more: { href: 'mailto:dossiers@nansenrefugee.be', label: t('navPanels.services.more') },
+    more: { href: url('diensten.html'), label: t('navPanels.services.more') },
     items: [
       { href: url('bijstand.html'), label: t('services.bijstand'), sub: t('services.bijstandSub') },
       { href: url('vormingen.html'), label: t('services.vormingen'), sub: t('services.vormingenSub') }
@@ -101,9 +104,9 @@ export async function header(active = '') {
   const mobileGroup = (label, links) => `<details><summary>${label}${icon.chevron}</summary><ul>${links}</ul></details>`;
   const mobile = `
     <div class="mobile-menu" id="mobile-menu" aria-label="${t('nav.menu')}">
-      <a class="mobile-link" href="${url('nansen.html')}" ${active === 'nansen' ? 'aria-current="page"' : ''}>${t('nav.nansen')}</a>
+      ${mobileGroup(t('nav.nansen'), NANSEN_ANCHORS.map((a) => `<li><a href="${url(`nansen.html#${a}`)}">${t(`anchors.${a}`)}</a></li>`).join('') + `<li><a href="${url('nansen.html')}">${t('navPanels.nansen.more')}</a></li>`)}
       ${mobileGroup(t('nav.themes'), themes.map((th) => `<li><a href="${url('thema.html', { slug: th.slug })}">${esc(themeName(th))}</a></li>`).join('') + `<li><a href="${url('themas.html')}">${t('allThemes')}</a></li>`)}
-      ${mobileGroup(t('nav.services'), `<li><a href="${url('bijstand.html')}">${t('services.bijstand')}</a></li><li><a href="${url('vormingen.html')}">${t('services.vormingen')}</a></li>`)}
+      ${mobileGroup(t('nav.services'), `<li><a href="${url('bijstand.html')}">${t('services.bijstand')}</a></li><li><a href="${url('vormingen.html')}">${t('services.vormingen')}</a></li><li><a href="${url('diensten.html')}">${t('navPanels.services.more')}</a></li>`)}
       ${mobileGroup(t('nav.knowledge'), `<li><a href="${url('publicaties.html')}">${t('knowledge.pubs')}</a></li><li><a href="${url('evenementen.html')}">${t('knowledge.events')}</a></li>`)}
       <div class="mobile-foot">${langSwitch}<a class="btn btn--accent" href="${url('steun-ons.html')}">${t('nav.support')}</a></div>
     </div>`;
@@ -115,9 +118,9 @@ export async function header(active = '') {
       <a class="brand" href="${url('index.html')}" aria-label="NANSEN, the Belgian Refugee Council: ${t('nav.home')}">${logo}</a>
       <nav class="primary-nav" aria-label="Hoofdnavigatie">
         <ul class="nav-list" role="list">
-          ${navLink(url('nansen.html'), t('nav.nansen'), active === 'nansen')}
+          ${navItem('nansen', t('nav.nansen'), ddNansen, active === 'nansen', url('nansen.html'))}
           ${navItem('themes', t('nav.themes'), ddThemes, active === 'themas', url('themas.html'))}
-          ${navItem('services', t('nav.services'), ddServices, active === 'diensten')}
+          ${navItem('services', t('nav.services'), ddServices, active === 'diensten', url('diensten.html'))}
           ${navItem('knowledge', t('nav.knowledge'), ddKnowledge, active === 'kennis')}
         </ul>
       </nav>
@@ -150,7 +153,7 @@ export function searchForm(variant = 'panel', q = '') {
     </form>`;
 }
 
-/* ---------- Pre-footer: newsletter + klachtenbalk ---------- */
+/* ---------- Pre-footer: newsletter + foto ---------- */
 export function prefooter() {
   return `
   <section class="prefooter" aria-label="${t('newsletter.title')}">
@@ -165,11 +168,7 @@ export function prefooter() {
         </form>
         <p class="form-note">${t('newsletter.note')}</p>
       </div>
-      <div class="complaint">
-        <h2>${t('complaint.title')}</h2>
-        <p>${t('complaint.text')}</p>
-        <a class="btn btn--secondary" href="${url('klacht.html')}">${t('complaint.btn')}</a>
-      </div>
+      <div class="prefooter-photo">${picture('vorming-aula', '', { sizes: '(min-width: 56em) 40vw, 100vw', widths: [640, 1280] })}</div>
     </div>
   </section>`;
 }
@@ -201,7 +200,7 @@ export async function footer() {
           <h2>${t('footer.address')}</h2>
           <address>NANSEN vzw<br>Rue Émile Féron 153<br>1060 Brussel</address>
           <h2 class="mt-6">${t('footer.partner')}</h2>
-          <div class="unhcr" title="Officieel UNHCR-logo aan te leveren"><span>UNHCR<small>${t('footer.unhcr')}</small></span></div>
+          <a class="unhcr" href="https://www.unhcr.org/be/" rel="noopener"><img src="assets/logo/unhcr.svg" alt="UNHCR, The UN Refugee Agency" width="2048" height="600"><small>${t('footer.unhcr')}</small></a>
         </div>
         <div>
           <h2>${t('footer.links')}</h2>
@@ -220,7 +219,6 @@ export async function footer() {
         <ul>
           <li><a href="${url('privacy.html')}">${t('footer.privacy')}</a></li>
           <li><a href="${url('privacy.html#dpp')}">${t('footer.dpp')}</a></li>
-          <li><a href="${url('klacht.html')}">${t('footer.complaint')}</a></li>
         </ul>
       </div>
     </div>

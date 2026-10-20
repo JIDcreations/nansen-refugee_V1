@@ -48,6 +48,7 @@
   --measure: 40rem;     /* ~70 tekens leesbreedte */
   --gutter: clamp(1rem, .5rem + 2.5vw, 2.5rem);
   --header-h: 4.5rem;
+  --control-h: 2.875rem; /* knoppen én invoervelden: altijd even hoog */
 
   --radius: 3px;
   --focus: 0 0 0 3px var(--cream), 0 0 0 5px var(--green-800);

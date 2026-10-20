@@ -23,11 +23,24 @@
     "jaarverslagen": "Jaarverslagen",
     "contact": "Contact"
   },
+  "anchorsSub": {
+    "missie": "Waarvoor NANSEN bestaat",
+    "aanpak": "Interdisciplinair werken, drie strategische doelstellingen",
+    "team": "De juristen en experts achter NANSEN",
+    "geschiedenis": "Fridtjof Nansen en het Nansenpaspoort",
+    "partners": "UNHCR, balies, universiteiten en ngo’s",
+    "jaarverslagen": "Cijfers en werking per jaar",
+    "contact": "Adres en contact per dienst"
+  },
   "services": {
     "bijstand": "Juridische bijstand",
     "bijstandSub": "Een dossier voorleggen als advocaat",
     "vormingen": "Vormingen op maat",
-    "vormingenSub": "Voor balies, ngo’s en instanties"
+    "vormingenSub": "Voor balies, ngo’s en instanties",
+    "bijstandIntro": "Voor advocaten die een dossier willen voorleggen. We kiezen dossiers waarin onze expertise het verschil maakt: detentie aan de grens, staatloosheid, foltering, SOGI en bijzondere kwetsbaarheid.",
+    "vormingenIntro": "Vormingen, intervisies en online modules voor balies, ngo’s, asielinstanties en universiteiten, afgestemd op uw vragen en uw publiek.",
+    "bijstandMore": "Hoe een dossier voorleggen",
+    "vormingenMore": "Vorming aanvragen"
   },
   "knowledge": {
     "pubs": "Publicaties",
@@ -39,9 +52,13 @@
   "megaIntro": "Vijf domeinen waarin NANSEN dossiers opvolgt, kennis bouwt en vormt.",
   "allThemes": "Alle thema's",
   "navPanels": {
+    "nansen": {
+      "intro": "Juridisch expertisecentrum inzake internationale bescherming en staatloosheid, sinds 2017 in Brussel.",
+      "more": "Over NANSEN"
+    },
     "services": {
       "intro": "Voor advocaten en organisaties die met complexe dossiers werken.",
-      "more": "dossiers@nansenrefugee.be"
+      "more": "Alle diensten"
     },
     "knowledge": {
       "intro": "Nota’s, casussen, praktijkfiches en evenementen rond internationale bescherming en staatloosheid.",
@@ -231,6 +248,8 @@
     "pubsLead": "Nota’s, casussen, praktijkfiches, gidsen en beleidsaanbevelingen. Veel documenten bestaan enkel in het Frans; filter op taal van het document.",
     "eventsTitle": "Evenementen, intervisies en archief",
     "eventsLead": "Vormingen, intervisies en studiedagen voor advocaten, juristen en organisaties op het terrein. Na afloop vindt u hier het verslag en het materiaal.",
-    "notFound": "Deze pagina bestaat niet (meer)."
+    "notFound": "Deze pagina bestaat niet (meer).",
+    "dienstenTitle": "Diensten",
+    "dienstenLead": "NANSEN ondersteunt advocaten in individuele dossiers en deelt wat het daaruit leert via vormingen op maat."
   }
 }

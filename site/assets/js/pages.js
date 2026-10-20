@@ -106,6 +106,36 @@ async function themas() {
   </section>`;
 }
 
+/* ---------------- Diensten-overzicht (zelfde rijen als thema's) ---------------- */
+async function diensten() {
+  setMeta({ title: t('pages.dienstenTitle'), description: t('pages.dienstenLead') });
+  const arrow = icon.arrow.replace('<svg', '<svg class="icon-inline"');
+  const next = data().evenementen.filter((e) => !isPast(e) && ['vorming', 'intervisie'].includes(e.type)).sort((a, b) => a.start.localeCompare(b.start))[0];
+  const rows = [
+    { href: url('bijstand.html'), img: 'centrum', title: t('services.bijstand'), sub: t('services.bijstandSub'), intro: t('services.bijstandIntro'),
+      links: [[url('bijstand.html'), t('services.bijstandMore')]],
+      aside: `<div><p class="label">${t('footer.cases')}</p><a href="mailto:dossiers@nansenrefugee.be">dossiers@nansenrefugee.be</a></div>` },
+    { href: url('vormingen.html'), img: 'zaal', title: t('services.vormingen'), sub: t('services.vormingenSub'), intro: t('services.vormingenIntro'),
+      links: [[url('vormingen.html#aanvraag'), t('services.vormingenMore')]],
+      aside: next ? `<div><p class="label">${t('theme.nextEvent')}</p><a href="${url('evenement.html', { slug: next.slug })}">${esc(tr(next.titel))}</a><span class="small muted">${fmtDate(next.start)}</span></div>` : '' }
+  ];
+  main().innerHTML = `
+  <div class="wrap">${breadcrumb([{ label: t('pages.dienstenTitle') }])}</div>
+  <header class="page-head"><div class="wrap"><h1>${t('pages.dienstenTitle')}</h1><p class="lead">${t('pages.dienstenLead')}</p></div></header>
+  <section class="wrap" style="padding-bottom:var(--s-9)">
+    <ul class="theme-rows" role="list">${rows.map((r) => `<li class="theme-row">
+        <div class="theme-row-media">${picture(r.img, '', { sizes: '(min-width: 64em) 22rem, 100vw', widths: [640, 1280] })}</div>
+        <div class="theme-row-body">
+          <h2><a class="theme-row-link" href="${r.href}">${r.title}</a></h2>
+          <p class="muted small mb-0">${r.sub}</p>
+          <p>${r.intro}</p>
+          <p class="count-links">${r.links.map(([h, l]) => `<a href="${h}">${l} ${arrow}</a>`).join('')}</p>
+        </div>
+        <div class="theme-row-latest">${r.aside}</div>
+      </li>`).join('')}</ul>
+  </section>`;
+}
+
 /* ---------------- Thema-detail ---------------- */
 async function thema() {
   const th = theme(param('slug'));
@@ -541,4 +571,4 @@ async function stijlgids() {
   fill('sg-tags', `${themeTags(['sogi', 'detentie', 'staatloosheid'])}<div class="mt-5">${countryTags(['afghanistan', 'palestina'])}</div><div class="mt-5">${langBadges(['nl', 'fr', 'en'])} ${statusBadge(upcomingEvents()[0])} ${statusBadge(pastEvents()[0])}</div>`);
 }
 
-export const pages = { home, themas, thema, publicaties, publicatie, evenementen, evenement, zoeken, nansen, stijlgids };
+export const pages = { home, themas, diensten, thema, publicaties, publicatie, evenementen, evenement, zoeken, nansen, stijlgids };

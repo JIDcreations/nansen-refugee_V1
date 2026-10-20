@@ -10,6 +10,16 @@
     }
   },
   {
+    "slug": "diensten",
+    "titel": {
+      "nl": "Diensten"
+    },
+    "url": "diensten.html",
+    "tekst": {
+      "nl": "Juridische bijstand voor advocaten, een dossier voorleggen. Vormingen op maat, intervisies, online modules."
+    }
+  },
+  {
     "slug": "bijstand",
     "titel": {
       "nl": "Juridische bijstand voor advocaten"

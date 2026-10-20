@@ -23,11 +23,24 @@
     "jaarverslagen": "Rapports annuels",
     "contact": "Contact"
   },
+  "anchorsSub": {
+    "missie": "La raison d’être de NANSEN",
+    "aanpak": "L’interdisciplinarité et trois objectifs stratégiques",
+    "team": "Les juristes et expert·es de NANSEN",
+    "geschiedenis": "Fridtjof Nansen et le passeport Nansen",
+    "partners": "HCR, barreaux, universités et ONG",
+    "jaarverslagen": "Chiffres et activités par année",
+    "contact": "Adresse et contacts par service"
+  },
   "services": {
     "bijstand": "Aide juridique",
     "bijstandSub": "Soumettre un dossier en tant qu’avocat",
     "vormingen": "Formations sur mesure",
-    "vormingenSub": "Pour barreaux, ONG et instances"
+    "vormingenSub": "Pour barreaux, ONG et instances",
+    "bijstandIntro": "Pour les avocats qui souhaitent soumettre un dossier. Nous retenons les dossiers où notre expertise fait la différence : détention à la frontière, apatridie, torture, SOGI et vulnérabilité particulière.",
+    "vormingenIntro": "Formations, intervisions et modules en ligne pour les barreaux, ONG, instances d’asile et universités, adaptés à vos questions et à votre public.",
+    "bijstandMore": "Comment soumettre un dossier",
+    "vormingenMore": "Demander une formation"
   },
   "knowledge": {
     "pubs": "Publications",
@@ -39,9 +52,13 @@
   "megaIntro": "Cinq domaines dans lesquels NANSEN suit des dossiers, développe et partage son expertise.",
   "allThemes": "Toutes les thématiques",
   "navPanels": {
+    "nansen": {
+      "intro": "Centre d’expertise juridique en matière de protection internationale et d’apatridie, à Bruxelles depuis 2017.",
+      "more": "À propos de NANSEN"
+    },
     "services": {
       "intro": "Pour les avocats et organisations qui traitent des dossiers complexes.",
-      "more": "dossiers@nansenrefugee.be"
+      "more": "Tous les services"
     },
     "knowledge": {
       "intro": "Notes, études de cas, fiches pratiques et événements sur la protection internationale et l’apatridie.",
@@ -231,6 +248,8 @@
     "pubsLead": "Notes, études de cas, fiches pratiques, guides et recommandations. De nombreux documents existent uniquement en français ; filtrez par langue du document.",
     "eventsTitle": "Événements, intervisions et archives",
     "eventsLead": "Formations, intervisions et journées d’étude pour avocat·es, juristes et acteurs de terrain. Après chaque événement : compte rendu et supports.",
-    "notFound": "Cette page n’existe pas (ou plus)."
+    "notFound": "Cette page n’existe pas (ou plus).",
+    "dienstenTitle": "Services",
+    "dienstenLead": "NANSEN soutient les avocats dans des dossiers individuels et partage ce qu’il en apprend par des formations sur mesure."
   }
 }
