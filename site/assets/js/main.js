@@ -39,7 +39,23 @@ async function boot() {
   initHeader();
   if (pages[page]) await pages[page]();
   initAnchors();
+  if (page !== 'home') initReveal();
   document.documentElement.classList.add('is-ready');
+}
+
+/* ---------- Rustige scroll-entrees op inhoudspagina's ----------
+   Alleen blokken die bij het laden nog onder de vouw staan; lijsten, filters en formulieren nooit. */
+function initReveal() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  const sel = 'main .anchor-section > .wrap > *, main .section > .wrap > *, main .related, main .theme-row, .prefooter-grid';
+  document.querySelectorAll(sel).forEach((el) => {
+    if (el.closest('#listing, form, .filters') || el.querySelector('form, #listing')) return;
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    el.classList.add('reveal-soft'); io.observe(el);
+  });
 }
 
 /* ---------- Header: dropdowns, zoeken, mobiel menu, krimpen ---------- */

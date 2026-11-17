@@ -332,9 +332,9 @@ async function publicatie() {
   const relPubs = pubsSorted().filter((x) => x !== p && x.type !== 'jaarverslag' && !readAlso.includes(x) && x.themas.some((s) => p.themas.includes(s))).slice(0, 4);
 
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('knowledge.pubs'), href: url('publicaties.html') }, { label: term('publicatieType', p.type), href: url('publicaties.html', { type: p.type }) }, { label: ti.text.length > 60 ? `${ti.text.slice(0, 58)}…` : ti.text }])}</div>
   <article class="wrap">
     <header class="doc-head">
+      ${breadcrumb([{ label: t('knowledge.pubs'), href: url('publicaties.html') }, { label: term('publicatieType', p.type), href: url('publicaties.html', { type: p.type }) }, { label: ti.text.length > 60 ? `${ti.text.slice(0, 58)}…` : ti.text }])}
       <span class="ribbon-big" aria-hidden="true">${icon.ribbon}</span>
       <p class="doc-kicker"><a class="type-label" href="${url('publicaties.html', { type: p.type })}">${esc(term('publicatieType', p.type))}</a><time datetime="${p.datum}">${fmtDate(p.datum)}</time>${langBadges(p.documentTalen)}</p>
       <h1${ti.attr}>${esc(ti.text)}</h1>
@@ -470,9 +470,9 @@ async function evenement() {
   });
 
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('knowledge.events'), href: url('evenementen.html') }, { label: past ? t('event.archive') : t('event.upcoming'), href: url('evenementen.html', { wanneer: past ? 'archief' : 'komend' }) }, { label: tr(e.titel) }])}</div>
   <article class="wrap">
     <header class="doc-head">
+      ${breadcrumb([{ label: t('knowledge.events'), href: url('evenementen.html') }, { label: past ? t('event.archive') : t('event.upcoming'), href: url('evenementen.html', { wanneer: past ? 'archief' : 'komend' }) }, { label: tr(e.titel) }])}
       <p class="doc-kicker"><a class="type-label" href="${url('evenementen.html', { type: e.type })}">${esc(term('evenementType', e.type))}</a>${statusBadge(e)}</p>
       <h1>${esc(tr(e.titel))}</h1>
       <p class="lead">${esc(tr(e.samenvatting))}</p>
@@ -565,8 +565,7 @@ async function zoeken() {
   const total = groups.reduce((s, g) => s + g.n, 0);
 
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('search.title') }])}</div>
-  <section class="search-hero"><div class="wrap">
+  <section class="search-hero"><div class="wrap">${breadcrumb([{ label: t('search.title') }])}
     <h1>${q ? `${t('search.resultsFor')} <span class="serif">“${esc(q)}”</span>` : t('search.title')}</h1>
     <div class="mt-5">${searchForm('page', q)}</div>
     ${q && otherLangCount ? `<label class="check mt-5"><input type="checkbox" id="alle" ${allLang ? 'checked' : ''}><span>${t('search.otherLangs')}</span><span class="count">+${otherLangCount}</span></label>` : ''}
