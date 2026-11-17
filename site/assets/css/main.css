@@ -272,30 +272,57 @@ body.menu-open { overflow: hidden; }
 .field:focus, .inline-form input:focus { outline: none; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(95,115,98,.25); }
 .form-note { font-size: var(--fs-xs); color: var(--ink-soft); margin-top: var(--s-2); }
 
-.site-footer { background: var(--green-700); color: var(--cream); padding: var(--s-9) 0 var(--s-5); font-size: var(--fs-sm); }
+.site-footer { background: var(--green-700); color: var(--cream); padding-top: var(--s-9); font-size: var(--fs-sm); overflow: hidden; }
 .site-footer a { color: var(--cream); }
 .site-footer a:hover { color: #fff; }
-.footer-grid { display: grid; gap: var(--s-7) var(--s-6); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-.footer-brand svg { height: 3.6rem; width: auto; color: var(--cream); }
-.footer-brand p { margin-top: var(--s-4); max-width: 18rem; color: var(--cream); }
-.site-footer h2 { font-family: var(--font-sans); font-size: var(--fs-sm); font-weight: 700; color: var(--cream); margin-bottom: var(--s-3); padding-bottom: var(--s-2); border-bottom: 1px solid rgba(250,240,230,.3); }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
-.site-footer li + li { margin-top: var(--s-2); }
-.site-footer dl { margin: 0; }
-.site-footer dt { font-weight: 600; }
-.site-footer dd { margin: 0 0 var(--s-3); }
+.site-footer p { margin: 0; }
+
+/* Bovenaan: uitnodiging + twee mailadressen als hoofdactie */
+.footer-top { display: grid; gap: var(--s-6); padding-bottom: var(--s-8); }
+@media (min-width: 56em) { .footer-top { grid-template-columns: 5fr 7fr; gap: var(--s-8); align-items: end; } }
+.footer-eyebrow { font-size: var(--fs-xs); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .75; margin-bottom: var(--s-3) !important; }
+.footer-statement { font-family: var(--font-serif); font-size: var(--fs-xl); line-height: 1.2; max-width: 22ch; text-wrap: balance; }
+.footer-mails { border-top: 1px solid rgba(250,240,230,.3); }
+.footer-mails li { border-bottom: 1px solid rgba(250,240,230,.3); }
+.footer-mail { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "label icon" "addr icon"; align-items: center; column-gap: var(--s-4); padding: var(--s-5) 0; text-decoration: none; }
+@media (min-width: 40em) { .footer-mail { grid-template-columns: 7rem 1fr auto; grid-template-areas: "label addr icon"; } }
+.footer-mail-label { grid-area: label; font-size: var(--fs-xs); font-weight: 600; opacity: .75; }
+.footer-mail-addr { grid-area: addr; font-family: var(--font-serif); font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); line-height: 1.25; overflow-wrap: anywhere;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat; transition: background-size .45s var(--ease); justify-self: start; }
+.footer-mail svg { grid-area: icon; width: 1.4rem; height: 1.4rem; transition: transform .35s var(--ease); }
+.footer-mail:hover .footer-mail-addr, .footer-mail:focus-visible .footer-mail-addr { background-size: 100% 1px; }
+.footer-mail:hover svg, .footer-mail:focus-visible svg { transform: translateX(.35rem); }
+
+/* Midden: vier gelijke kolommen */
+.footer-cols { display: grid; gap: var(--s-7) var(--s-6); grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 56em) { .footer-cols { grid-template-columns: repeat(4, 1fr); } }
+.footer-cols h2 { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--cream); opacity: .75; margin-bottom: var(--s-4); }
+.footer-cols li + li { margin-top: var(--s-2); }
+.footer-cols .socials li + li { margin-top: 0; }
+.footer-cols a { text-decoration: none; background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat; transition: background-size .3s var(--ease); }
+.footer-cols a:hover, .footer-cols a:focus-visible { background-size: 100% 1px; }
 .site-footer address { font-style: normal; }
-.unhcr { display: inline-block; background: #fff; padding: var(--s-3) var(--s-4); border-radius: var(--radius); text-decoration: none; }
-.unhcr img { display: block; width: 9.5rem; height: auto; }
-.unhcr small { display: block; color: var(--ink-soft); font-weight: 500; font-size: .6875rem; margin-top: var(--s-2); }
-.site-footer .unhcr:hover small { color: var(--ink); }
-.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-4); margin-top: var(--s-8); padding-top: var(--s-4); border-top: 1px solid rgba(250,240,230,.3); color: var(--cream); font-size: var(--fs-xs); }
-.footer-bottom ul { display: flex; gap: var(--s-4); flex-wrap: wrap; }
-.footer-bottom li + li { margin: 0; }
-.socials { display: flex; gap: var(--s-2); margin-top: var(--s-4); }
-.socials a { display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; border: 1px solid rgba(250,240,230,.4); border-radius: var(--radius); }
-.socials a:hover { background: var(--cream); color: var(--green-900); }
+.footer-route { display: inline-block; margin-top: var(--s-3); text-decoration: underline !important; text-underline-offset: 3px; background: none !important; }
+.footer-todo { opacity: .7; }
+.socials { display: flex; gap: var(--s-2); margin-top: var(--s-4) !important; }
+.socials a { display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; border: 1px solid rgba(250,240,230,.4); border-radius: var(--radius); background: none !important; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.socials a:hover { background: var(--cream) !important; color: var(--green-900); }
 .socials svg { width: 1rem; height: 1rem; }
+
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-4); margin-top: var(--s-8); padding: var(--s-4) 0; border-top: 1px solid rgba(250,240,230,.3); font-size: var(--fs-xs); }
+.footer-bottom ul { display: flex; gap: var(--s-4); flex-wrap: wrap; }
+
+/* Onderaan: woordmerk over de volle breedte. Letters schuiven op, de hoed valt op zijn plaats */
+.site-footer .footer-mark, .site-footer .footer-mark:hover { display: block; padding-top: var(--s-6); color: var(--green-500); line-height: 0; }
+.footer-mark svg { display: block; width: 100%; height: auto; overflow: visible; margin-bottom: -.4%; }
+.footer-mark path { transform-box: fill-box; transition: transform .9s var(--ease), opacity .9s var(--ease); }
+.footer-mark .fm-hat { transform-origin: 30% 100%; transition-duration: .7s; }
+.footer-mark.is-ready .fm-letter { transform: translateY(70%); opacity: 0; }
+.footer-mark.is-ready .fm-hat { transform: translate(-6%, -140%) rotate(-14deg); opacity: 0; }
+.footer-mark.is-in .fm-letter { transform: none; opacity: 1; transition-delay: calc(var(--i) * 70ms); }
+.footer-mark.is-in .fm-hat { transform: none; opacity: 1; transition-delay: .55s; }
+.footer-mark.is-in:hover .fm-hat { transform: translateY(-18%) rotate(-7deg); transition-delay: 0s; transition-duration: .4s; }
 
 /* 7. Lijsten --------------------------------------------- */
 /* Publicatie-register */
@@ -765,6 +792,17 @@ mark { background: rgba(226,126,39,.25); color: inherit; padding: 0 .08em; borde
 .home-block--green .more:hover { color: #fff; }
 .home-block--green :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--green-700), 0 0 0 5px var(--cream); }
 .home-block .section-head { margin-bottom: var(--s-7); }
+
+/* Partners op home: logo's in een lijnenraster, naam als woordbeeld zolang er geen logo is */
+.partner-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+@media (min-width: 40em) { .partner-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 64em) { .partner-grid { grid-template-columns: repeat(4, 1fr); } }
+.partner-grid li { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.partner-tile { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--s-3); height: 100%; min-height: 9rem; padding: var(--s-6) var(--s-5); text-decoration: none; color: var(--ink); transition: background-color .15s ease; }
+a.partner-tile:hover { background: var(--surface); }
+.partner-tile img { display: block; height: 2.75rem; width: auto; max-width: 100%; object-fit: contain; object-position: left center; }
+.partner-name { font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.2; color: var(--green-700); font-weight: 600; }
+.partner-role { font-size: var(--fs-xs); color: var(--ink-soft); line-height: 1.4; }
 
 /* Hero: foto met overlappend groen paneel (verfijnd uit de Figma) */
 .hero { padding: var(--s-7) 0 var(--s-4); }

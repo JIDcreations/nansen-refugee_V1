@@ -3,7 +3,7 @@
    <body data-page="..." data-section="..."> bepaalt de controller.
    ========================================================= */
 import { load, lang, LANGS, DEFAULT_LANG, t } from './core.js';
-import { header, footer, prefooter, notice } from './partials.js';
+import { header, footer, prefooter, notice, initFooter } from './partials.js';
 import { pages } from './pages.js';
 
 async function boot() {
@@ -20,6 +20,7 @@ async function boot() {
   document.getElementById('header').outerHTML = await header(body.dataset.section || '');
   const foot = document.getElementById('footer');
   foot.outerHTML = (body.dataset.prefooter === 'false' ? '' : prefooter()) + await footer();
+  initFooter();
 
   // hreflang (in WP via Polylang/WPML)
   LANGS.forEach((l) => {

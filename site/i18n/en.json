@@ -77,12 +77,13 @@
     "direction": "Director",
     "address": "Address",
     "links": "Quick links",
-    "partner": "Partner",
     "privacy": "Privacy",
     "dpp": "Data Protection Policy (PDF)",
     "complaint": "File a complaint",
     "rights": "NANSEN vzw. Company number to be added.",
-    "unhcr": "Operational partner in Belgium"
+    "route": "Get directions",
+    "follow": "Follow us",
+    "statement": "A case, a question about a training or a publication? Write to us."
   },
   "newsletter": {
     "title": "Stay informed",
@@ -239,7 +240,9 @@
     "allPubs": "All publications",
     "upcoming": "Upcoming events",
     "allEvents": "All events and archive",
-    "noUpcoming": "No events are scheduled at the moment."
+    "noUpcoming": "No events are scheduled at the moment.",
+    "partners": "Partners",
+    "allPartners": "About our partners"
   },
   "pages": {
     "themasTitle": "Themes",

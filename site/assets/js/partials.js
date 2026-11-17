@@ -174,55 +174,78 @@ export function prefooter() {
 }
 
 /* ---------- Footer ---------- */
+const MAIL = (label, addr) => `<li><a class="footer-mail" href="mailto:${addr}"><span class="footer-mail-label">${label}</span><span class="footer-mail-addr">${addr}</span>${icon.arrow}</a></li>`;
+
 export async function footer() {
-  const logo = await inlineLogo('nansen-baseline');
+  /* Woordmerk: elke letter een eigen pad, de hoed apart, voor de reveal-animatie */
+  let i = 0;
+  const mark = (await inlineLogo('nansen')).replace(/<path /g, () => (i++ === 0 ? '<path class="fm-hat" ' : `<path class="fm-letter" style="--i:${i - 2}" `));
   return `
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="${url('index.html')}" aria-label="NANSEN">${logo}</a>
-          <p>${t('footer.tagline')}</p>
-          <div class="socials">
-            <a href="https://www.linkedin.com/company/nansen-refugee/" aria-label="LinkedIn">${icon.linkedin}</a>
-            <a href="https://www.facebook.com/nansenrefugee/" aria-label="Facebook">${icon.facebook}</a>
-          </div>
+      <div class="footer-top">
+        <div class="footer-lead">
+          <p class="footer-eyebrow">${t('footer.contact')}</p>
+          <p class="footer-statement">${t('footer.statement')}</p>
         </div>
-        <div>
-          <h2>${t('footer.contact')}</h2>
-          <dl>
-            <dt>${t('footer.general')}</dt><dd><a href="mailto:info@nansenrefugee.be">info@nansenrefugee.be</a></dd>
-            <dt>${t('footer.cases')}</dt><dd><a href="mailto:dossiers@nansenrefugee.be">dossiers@nansenrefugee.be</a></dd>
-            <dt>${t('footer.direction')}</dt><dd>Gert Bruininkx<br><span>[e-mail directie volgt]</span></dd>
-          </dl>
-        </div>
-        <div>
-          <h2>${t('footer.address')}</h2>
-          <address>NANSEN vzw<br>Rue Émile Féron 153<br>1060 Brussel</address>
-          <h2 class="mt-6">${t('footer.partner')}</h2>
-          <a class="unhcr" href="https://www.unhcr.org/be/" rel="noopener"><img src="assets/logo/unhcr.svg" alt="UNHCR, The UN Refugee Agency" width="2048" height="600"><small>${t('footer.unhcr')}</small></a>
-        </div>
-        <div>
-          <h2>${t('footer.links')}</h2>
+        <ul class="footer-mails" role="list">
+          ${MAIL(t('footer.general'), 'info@nansenrefugee.be')}
+          ${MAIL(t('footer.cases'), 'dossiers@nansenrefugee.be')}
+        </ul>
+      </div>
+
+      <div class="footer-cols">
+        <nav aria-labelledby="f-kennis">
+          <h2 id="f-kennis">${t('nav.knowledge')}</h2>
           <ul>
             <li><a href="${url('publicaties.html')}">${t('knowledge.pubs')}</a></li>
             <li><a href="${url('evenementen.html')}">${t('types.events')}</a></li>
+            <li><a href="${url('nansen.html#jaarverslagen')}">${t('anchors.jaarverslagen')}</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-diensten">
+          <h2 id="f-diensten">${t('nav.services')}</h2>
+          <ul>
             <li><a href="${url('bijstand.html')}">${t('services.bijstand')}</a></li>
             <li><a href="${url('vormingen.html')}">${t('services.vormingen')}</a></li>
-            <li><a href="${url('nansen.html#jaarverslagen')}">${t('anchors.jaarverslagen')}</a></li>
             <li><a href="${url('steun-ons.html')}">${t('nav.support')}</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>${t('footer.address')}</h2>
+          <address>NANSEN vzw<br>Rue Émile Féron 153<br>1060 Brussel</address>
+          <a class="footer-route" href="https://www.google.com/maps/search/?api=1&query=Rue+%C3%89mile+F%C3%A9ron+153+1060+Brussel" rel="noopener">${t('footer.route')}</a>
+        </div>
+        <div>
+          <h2>${t('footer.direction')}</h2>
+          <p>Gert Bruininkx<br><span class="footer-todo">[e-mail directie volgt]</span></p>
+          <ul class="socials" role="list" aria-label="${t('footer.follow')}">
+            <li><a href="https://www.linkedin.com/company/nansen-refugee/" aria-label="LinkedIn">${icon.linkedin}</a></li>
+            <li><a href="https://www.facebook.com/nansenrefugee/" aria-label="Facebook">${icon.facebook}</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p class="mb-0">© ${new Date().getFullYear()} ${t('footer.rights')}</p>
-        <ul>
+        <p>© ${new Date().getFullYear()} ${t('footer.rights')}</p>
+        <ul role="list">
           <li><a href="${url('privacy.html')}">${t('footer.privacy')}</a></li>
           <li><a href="${url('privacy.html#dpp')}">${t('footer.dpp')}</a></li>
         </ul>
       </div>
     </div>
+    <a class="footer-mark wrap" href="${url('index.html')}" aria-label="NANSEN, home" tabindex="-1">${mark}</a>
   </footer>`;
+}
+
+/* Woordmerk verschijnt één keer wanneer de footer in beeld komt */
+export function initFooter() {
+  const el = document.querySelector('.footer-mark');
+  if (!el) return;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { el.classList.add('is-in'); return; }
+  el.classList.add('is-ready');
+  const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add('is-in'); io.disconnect(); } }, { threshold: 0.35 });
+  io.observe(el);
 }
 
 /* ---------- Breadcrumb ---------- */

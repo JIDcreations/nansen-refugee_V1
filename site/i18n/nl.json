@@ -77,12 +77,13 @@
     "direction": "Directie",
     "address": "Adres",
     "links": "Snel naar",
-    "partner": "Partner",
     "privacy": "Privacy",
     "dpp": "Data Protection Policy (PDF, EN)",
     "complaint": "Klacht indienen",
     "rights": "NANSEN vzw. Ondernemingsnummer volgt.",
-    "unhcr": "Operationeel partner in België"
+    "route": "Route plannen",
+    "follow": "Volg ons",
+    "statement": "Een dossier, een vraag over een vorming of een publicatie? Schrijf ons."
   },
   "newsletter": {
     "title": "Blijf op de hoogte",
@@ -239,7 +240,9 @@
     "allPubs": "Alle publicaties",
     "upcoming": "Komende evenementen",
     "allEvents": "Alle evenementen en archief",
-    "noUpcoming": "Er staan op dit moment geen evenementen gepland."
+    "noUpcoming": "Er staan op dit moment geen evenementen gepland.",
+    "partners": "Partners",
+    "allPartners": "Over onze partners"
   },
   "pages": {
     "themasTitle": "Thema's",

@@ -1,0 +1,10 @@
+[
+  { "slug": "unhcr", "naam": "UNHCR", "logo": "assets/logo/unhcr.svg", "url": "https://www.unhcr.org/be/", "rol": { "nl": "Operationeel partner in België", "fr": "Partenaire opérationnel en Belgique", "en": "Operational partner in Belgium" } },
+  { "slug": "ecre", "naam": "ECRE", "logo": "", "url": "https://ecre.org/", "rol": { "nl": "European Council on Refugees and Exiles", "fr": "European Council on Refugees and Exiles", "en": "European Council on Refugees and Exiles" } },
+  { "slug": "move", "naam": "MOVE Coalition", "logo": "", "url": "", "rol": { "nl": "Detentiebezoeken en doorverwijzing", "fr": "Visites en détention et orientation", "en": "Detention visits and referral" } },
+  { "slug": "ens", "naam": "European Network on Statelessness", "logo": "", "url": "https://www.statelessness.eu/", "rol": { "nl": "Statelessness Index", "fr": "Statelessness Index", "en": "Statelessness Index" } },
+  { "slug": "ovb", "naam": "Orde van Vlaamse Balies", "logo": "", "url": "https://www.advocaat.be/", "rol": { "nl": "Online vormingsmodule", "fr": "Module de formation en ligne", "en": "Online training module" } },
+  { "slug": "uclouvain", "naam": "UCLouvain", "logo": "", "url": "https://uclouvain.be/", "rol": { "nl": "Opleiding en legal clinics", "fr": "Formation et cliniques juridiques", "en": "Training and legal clinics" } },
+  { "slug": "ugent", "naam": "UGent", "logo": "", "url": "https://www.ugent.be/", "rol": { "nl": "Gastcolleges en legal clinics", "fr": "Cours invités et cliniques juridiques", "en": "Guest lectures and legal clinics" } },
+  { "slug": "wawy", "naam": "WAWY-netwerk", "logo": "", "url": "", "rol": { "nl": "We Are With You, LGBTQIA+", "fr": "We Are With You, LGBTQIA+", "en": "We Are With You, LGBTQIA+" } }
+]

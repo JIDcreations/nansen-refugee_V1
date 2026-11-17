@@ -18,17 +18,18 @@ async function getJSON(path) {
 }
 
 export async function load() {
-  const [i18n, themas, publicaties, evenementen, taxonomieen, team, paginas] = await Promise.all([
+  const [i18n, themas, publicaties, evenementen, taxonomieen, team, paginas, partners] = await Promise.all([
     getJSON(`i18n/${lang}.json`),
     getJSON('data/themas.json'),
     getJSON('data/publicaties.json'),
     getJSON('data/evenementen.json'),
     getJSON('data/taxonomieen.json'),
     getJSON('data/team.json'),
-    getJSON('data/paginas.json')
+    getJSON('data/paginas.json'),
+    getJSON('data/partners.json')
   ]);
   state.i18n = i18n;
-  state.data = { themas, publicaties, evenementen, taxonomieen, team, paginas };
+  state.data = { themas, publicaties, evenementen, taxonomieen, team, paginas, partners };
   buildIndex();
   return state;
 }

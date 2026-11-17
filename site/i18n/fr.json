@@ -77,12 +77,13 @@
     "direction": "Direction",
     "address": "Adresse",
     "links": "Accès rapide",
-    "partner": "Partenaire",
     "privacy": "Vie privée",
     "dpp": "Data Protection Policy (PDF, EN)",
     "complaint": "Déposer une plainte",
     "rights": "NANSEN asbl. Numéro d’entreprise à compléter.",
-    "unhcr": "Partenaire opérationnel en Belgique"
+    "route": "Itinéraire",
+    "follow": "Suivez-nous",
+    "statement": "Un dossier, une question sur une formation ou une publication ? Écrivez-nous."
   },
   "newsletter": {
     "title": "Restez informé·e",
@@ -239,7 +240,9 @@
     "allPubs": "Toutes les publications",
     "upcoming": "Événements à venir",
     "allEvents": "Tous les événements et archives",
-    "noUpcoming": "Aucun événement n’est prévu pour le moment."
+    "noUpcoming": "Aucun événement n’est prévu pour le moment.",
+    "partners": "Partenaires",
+    "allPartners": "À propos de nos partenaires"
   },
   "pages": {
     "themasTitle": "Thématiques",

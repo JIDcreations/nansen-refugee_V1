@@ -60,6 +60,19 @@ async function home() {
       <header class="section-head"><h2 id="h-upcoming">${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
       ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
     </div>
+  </section>
+
+  <section class="home-block home-partners" aria-labelledby="h-partners">
+    <div class="wrap">
+      <header class="section-head"><h2 id="h-partners">${t('home.partners')}</h2><a class="more" href="${url('nansen.html#partners')}">${t('home.allPartners')}</a></header>
+      <ul class="partner-grid" role="list">${data().partners.map((p) => {
+        const inner = p.logo
+          ? `<img src="${p.logo}" alt="${esc(p.naam)}" loading="lazy">`
+          : `<span class="partner-name">${esc(p.naam)}</span>`;
+        const tag = p.url ? `a href="${p.url}" rel="noopener"` : 'div';
+        return `<li><${tag} class="partner-tile">${inner}<span class="partner-role">${esc(tr(p.rol))}</span></${p.url ? 'a' : 'div'}></li>`;
+      }).join('')}</ul>
+    </div>
   </section>`;
 
   // Thema-knoppen filteren de recente publicaties (geen aparte themasectie)
