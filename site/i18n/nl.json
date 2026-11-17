@@ -241,8 +241,34 @@
     "upcoming": "Komende evenementen",
     "allEvents": "Alle evenementen en archief",
     "noUpcoming": "Er staan op dit moment geen evenementen gepland.",
-    "partners": "Partners",
-    "allPartners": "Over onze partners"
+    "partners": "Partners en financiers",
+    "allPartners": "Over onze partners",
+    "mission": "We versterken de rechtsbescherming van vluchtelingen en staatlozen.",
+    "model": {
+      "label": "Ons programmamodel",
+      "steps": [
+        {
+          "label": "Probleem",
+          "text": "Procedures worden complexer en sneller. Wie bescherming zoekt, staat er vaak alleen voor.",
+          "stat": "34.439",
+          "statLabel": "verzoeken om bescherming in België in 2025 (CGVS)"
+        },
+        {
+          "label": "Oplossing",
+          "text": "We volgen complexe dossiers op en delen onze juridische kennis met advocaten en beleidsmakers."
+        },
+        {
+          "label": "Impact",
+          "text": "Tegen 2036 vindt elke advocaat met een complex dossier de expertise die het vraagt.",
+          "todo": "Cijfer volgt (NANSEN)"
+        },
+        {
+          "label": "Visie",
+          "text": "Eerlijke procedures, met oog voor de mens achter elk dossier."
+        }
+      ]
+    },
+    "fundersTodo": "Logo’s van financiers volgen: NANSEN bezorgt de lijst van financiers die vermeld mogen worden."
   },
   "pages": {
     "themasTitle": "Thema's",

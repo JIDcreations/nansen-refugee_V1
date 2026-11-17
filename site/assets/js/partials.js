@@ -3,7 +3,7 @@
    (get_template_part('parts/pub-item') enz.).
    ========================================================= */
 import {
-  t, tr, trInfo, url, langUrl, lang, LANGS, esc, data, theme, term, themeName, langName,
+  t, tRaw, tr, trInfo, url, langUrl, lang, LANGS, esc, data, theme, term, themeName, langName,
   fmtDate, fmtShort, fmtTime, fmtMonth, parseDate, eventStatus, isPast, pubsForTheme, eventsForTheme, picture
 } from './core.js';
 
@@ -372,4 +372,21 @@ export function toc(list = [], { inline = false } = {}) {
   const hs = list.filter((b) => b.type === 'tussentitel');
   if (hs.length < 2) return '';
   return `<nav class="toc ${inline ? 'toc-inline' : ''}" aria-label="${t('meta.toc')}"><h2>${t('meta.toc')}</h2><ol>${hs.map((h) => `<li><a href="#${slugify(h.tekst)}">${esc(h.tekst)}</a></li>`).join('')}</ol></nav>`;
+}
+
+/* Programmamodel: probleem → oplossing → impact → visie (FUNCAP-model). WP: template part. */
+export function programModel() {
+  const steps = tRaw('home.model.steps') || [];
+  if (!steps.length) return '';
+  return `<div class="wrap program" role="region" aria-labelledby="h-program">
+    <h2 id="h-program" class="program-label">${t('home.model.label')}</h2>
+    <ol class="program-steps" role="list">${steps.map((s, i) => `
+      <li class="program-step program-step--${i + 1}">
+        <p class="program-name">${esc(s.label)}</p>
+        <p class="program-text">${esc(s.text)}</p>
+        ${s.stat ? `<p class="program-stat"><strong>${esc(s.stat)}</strong> ${esc(s.statLabel)}</p>` : ''}
+        ${s.todo ? `<p class="program-todo">${esc(s.todo)}</p>` : ''}
+      </li>`).join('')}
+    </ol>
+  </div>`;
 }

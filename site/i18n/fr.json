@@ -241,8 +241,34 @@
     "upcoming": "Événements à venir",
     "allEvents": "Tous les événements et archives",
     "noUpcoming": "Aucun événement n’est prévu pour le moment.",
-    "partners": "Partenaires",
-    "allPartners": "À propos de nos partenaires"
+    "partners": "Partenaires et bailleurs de fonds",
+    "allPartners": "À propos de nos partenaires",
+    "mission": "Nous renforçons la protection juridique des réfugiés et apatrides.",
+    "model": {
+      "label": "Notre modèle d’action",
+      "steps": [
+        {
+          "label": "Problème",
+          "text": "Les procédures deviennent plus complexes et plus rapides. Les personnes en quête de protection sont souvent seules.",
+          "stat": "34.439",
+          "statLabel": "demandes de protection en Belgique en 2025 (CGRA)"
+        },
+        {
+          "label": "Solution",
+          "text": "Nous suivons des dossiers complexes et partageons notre expertise juridique avec avocats et décideurs."
+        },
+        {
+          "label": "Impact",
+          "text": "D’ici 2036, chaque avocat face à un dossier complexe trouve l’expertise nécessaire.",
+          "todo": "Chiffre à venir (NANSEN)"
+        },
+        {
+          "label": "Vision",
+          "text": "Des procédures justes, attentives à la personne derrière chaque dossier."
+        }
+      ]
+    },
+    "fundersTodo": "Logos des bailleurs à venir : NANSEN fournit la liste des bailleurs pouvant être mentionnés."
   },
   "pages": {
     "themasTitle": "Thématiques",

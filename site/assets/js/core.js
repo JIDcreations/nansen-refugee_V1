@@ -44,6 +44,11 @@ export function t(path, vars = {}) {
   return v.replace(/\{(\w+)\}/g, (_, k) => (k in vars ? vars[k] : `{${k}}`));
 }
 
+/** Ruwe i18n-waarde (object/array), bv. voor herhaalbare blokken. */
+export function tRaw(path) {
+  return path.split('.').reduce((o, k) => (o ? o[k] : undefined), state.i18n);
+}
+
 /** Meertalig contentveld {nl, fr, en} -> waarde in actieve taal, met terugval. */
 export function tr(field) {
   return trInfo(field).value;

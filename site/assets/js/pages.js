@@ -9,7 +9,7 @@ import {
 } from './core.js';
 import {
   icon, breadcrumb, pubItem, eventItem, themeTile, themeTags, countryTags, langBadges, pubTitle,
-  downloads, notice, blocks, toc, searchForm, statusBadge, subnav
+  downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel
 } from './partials.js';
 import { createListing } from './filters.js';
 
@@ -35,12 +35,13 @@ async function home() {
         ${picture('zaal', 'Advocaten en juristen volgen een vorming van NANSEN in een volle zaal', { sizes: '(min-width: 64em) 62vw, 100vw', eager: true })}
       </figure>
       <div class="hero-panel">
-        <p class="hero-quote" lang="${lang}">${t('home.quote')}</p>
-        <h1>${t('home.title')}</h1>
+        <p class="hero-eyebrow">${t('home.title')}</p>
+        <h1>${t('home.mission')}</h1>
         <div class="hero-search">${searchForm('home')}</div>
         <p class="hero-aside">${t('home.lawyer')} <a href="${url('bijstand.html')}">${t('home.lawyerLink')}</a></p>
       </div>
     </div>
+    ${programModel()}
   </section>
 
   <section class="home-block" aria-labelledby="h-latest">
@@ -72,6 +73,7 @@ async function home() {
         const tag = p.url ? `a href="${p.url}" rel="noopener"` : 'div';
         return `<li><${tag} class="partner-tile">${inner}<span class="partner-role">${esc(tr(p.rol))}</span></${p.url ? 'a' : 'div'}></li>`;
       }).join('')}</ul>
+      <p class="todo partners-todo">${t('home.fundersTodo')}</p>
     </div>
   </section>`;
 

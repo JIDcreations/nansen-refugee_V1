@@ -241,8 +241,34 @@
     "upcoming": "Upcoming events",
     "allEvents": "All events and archive",
     "noUpcoming": "No events are scheduled at the moment.",
-    "partners": "Partners",
-    "allPartners": "About our partners"
+    "partners": "Partners and funders",
+    "allPartners": "About our partners",
+    "mission": "We strengthen legal protection for refugees and stateless people.",
+    "model": {
+      "label": "Our programme model",
+      "steps": [
+        {
+          "label": "Problem",
+          "text": "Procedures are getting more complex and faster. People seeking protection are often on their own.",
+          "stat": "34,439",
+          "statLabel": "applications for protection in Belgium in 2025 (CGRS)"
+        },
+        {
+          "label": "Solution",
+          "text": "We follow complex cases and share our legal expertise with lawyers and policymakers."
+        },
+        {
+          "label": "Impact",
+          "text": "By 2036, every lawyer with a complex case finds the expertise it requires.",
+          "todo": "Figure to follow (NANSEN)"
+        },
+        {
+          "label": "Vision",
+          "text": "Fair procedures that see the person behind every case."
+        }
+      ]
+    },
+    "fundersTodo": "Funder logos to follow: NANSEN will provide the list of funders that may be shown."
   },
   "pages": {
     "themasTitle": "Themes",
