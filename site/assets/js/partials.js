@@ -289,6 +289,20 @@ export function pubItem(p, { headingLevel = 3, compact = false } = {}) {
   </li>`;
 }
 
+/* Uitgelichte publicatie (home): grote kaart met hangende bladwijzer */
+export function pubFeature(p) {
+  const ti = pubTitle(p);
+  return `
+  <a class="pub-feature" href="${url('publicatie.html', { slug: p.slug })}">
+    <span class="pub-feature-ribbon" aria-hidden="true"></span>
+    <p class="pub-meta"><span class="type-label">${esc(term('publicatieType', p.type))}</span><time datetime="${p.datum}">${fmtShort(p.datum)}</time>${langBadges(p.documentTalen)}</p>
+    <h3 class="pub-feature-title"${ti.attr}>${esc(ti.text)}</h3>
+    <p class="pub-feature-summary">${esc(tr(p.samenvatting))}</p>
+    ${themeTags(p.themas, { link: false })}
+    <span class="pub-feature-more">${t('home.readPub')}</span>
+  </a>`;
+}
+
 /* ---------- Lijstitem evenement ---------- */
 export function statusBadge(e) {
   const s = eventStatus(e);

@@ -9,7 +9,7 @@ import {
 } from './core.js';
 import {
   icon, breadcrumb, pubItem, eventItem, themeTile, themeTags, countryTags, langBadges, pubTitle,
-  downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel
+  downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel, pubFeature
 } from './partials.js';
 import { createListing } from './filters.js';
 
@@ -33,6 +33,7 @@ async function home() {
     <div class="wrap hero-grid">
       <figure class="hero-photo">
         ${picture('zaal', 'Advocaten en juristen volgen een vorming van NANSEN in een volle zaal', { sizes: '(min-width: 64em) 62vw, 100vw', eager: true })}
+        <figcaption class="hero-caption" lang="${lang}">${t('home.quote')}</figcaption>
       </figure>
       <div class="hero-panel">
         <p class="hero-eyebrow">${t('home.title')}</p>
@@ -52,11 +53,12 @@ async function home() {
         ${data().themas.map((th) => `<button type="button" data-theme="${th.slug}" aria-pressed="false">${esc(themeName(th))}</button>`).join('')}
       </div>
       <div class="theme-context" hidden></div>
-      <div aria-live="polite"><ul class="register register--compact" role="list"></ul></div>
+      <div class="latest-grid" aria-live="polite"><div class="latest-feature"></div><ul class="register register--compact" role="list"></ul></div>
     </div>
   </section>
 
   <section class="home-block home-block--green" aria-labelledby="h-upcoming">
+    <svg class="hat-mark" viewBox="248 384 92 46" aria-hidden="true" focusable="false"><path fill="currentColor" d="M 337.78 404.62 C 326.63 402.42 317.37 407.44 308.35 412.39 C 295.98 419.19 282.92 423.03 268.96 424.73 C 262.76 425.48 256.77 427.88 250.15 428.39 C 254.66 426.64 259.05 424.45 263.70 423.30 C 267.39 422.38 268.97 421.34 268.30 417.17 C 267.49 412.170 265.65 405.89 267.79 402.25 C 269.91 398.66 276.43 397.67 281.03 395.55 C 286.65 392.94 292.36 390.51 297.88 387.70 C 301.23 385.99 303.34 386.74 305.09 389.86 C 307.23 393.69 309.69 397.33 311.64 401.25 C 313.58 405.14 315.82 406.55 320.28 404.80 C 323.96 403.35 328.07 402.88 332.04 402.39 C 333.91 402.17 335.90 402.92 337.83 403.24 C 337.82 403.70 337.80 404.16 337.78 404.62"/></svg>
     <div class="wrap">
       <header class="section-head"><h2 id="h-upcoming">${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
       ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
@@ -79,26 +81,67 @@ async function home() {
 
   // Thema-knoppen filteren de recente publicaties (geen aparte themasectie)
   const list = main().querySelector('.register');
+  const feature = main().querySelector('.latest-feature');
   const ctx = main().querySelector('.theme-context');
   const btns = main().querySelectorAll('.theme-filter button');
-  const render = (slug) => {
+  const render = (slug, first = false) => {
     const th = slug && theme(slug);
     const pubs = (th ? pubsForTheme(slug).filter((p) => p.type !== 'jaarverslag') : pubsSorted()).slice(0, 5);
-    list.innerHTML = pubs.map((p) => pubItem(p, { compact: true })).join('');
+    feature.innerHTML = pubs[0] ? pubFeature(pubs[0]) : '';
+    list.innerHTML = pubs.slice(1).map((p) => pubItem(p, { compact: true })).join('');
+    stagger(list);
+    if (!first) [feature, list].forEach((el) => { el.classList.remove('is-swapped'); void el.offsetWidth; el.classList.add('is-swapped'); });
     btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === slug)));
     ctx.hidden = !th;
     if (th) ctx.innerHTML = `<p>${esc(tr(th.kort))}</p><p class="theme-context-links"><a href="${url('thema.html', { slug })}">${t('home.toTheme')}</a><a href="${url('publicaties.html', { thema: slug })}">${t('theme.allPubs', { t: themeName(th) })} (${pubsForTheme(slug).length})</a></p>`;
   };
   btns.forEach((b) => b.addEventListener('click', () => render(b.dataset.theme)));
-  render('');
+  render('', true);
+  homeMotion();
+}
+
+/* Subtiele beweging op home: bladwijzers vallen in, cijfer telt op. Inhoud is altijd zichtbaar. */
+const stagger = (el) => [...el.children].forEach((c, i) => c.style.setProperty('--i', i));
+function homeMotion() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (!en.isIntersecting) return;
+    en.target.classList.add('is-in');
+    if (en.target.classList.contains('program')) countUp(en.target.querySelector('.program-stat strong'));
+    io.unobserve(en.target);
+  }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.home-block .section-head, .theme-filter, .latest-grid, .home-partners .partner-grid, .prefooter-grid').forEach((el) => {
+    el.classList.add('reveal'); io.observe(el);
+  });
+  main().querySelectorAll('.register, .event-grid, .program').forEach((el) => {
+    stagger(el.matches('.program') ? el.querySelector('.program-steps') : el);
+    el.classList.add('motion-ready');
+    io.observe(el);
+  });
+}
+function countUp(el) {
+  if (!el) return;
+  const txt = el.textContent.trim();
+  const sep = (txt.match(/[.,\u202f ]/) || [''])[0];
+  const target = Number(txt.replace(/\D/g, ''));
+  if (!target) return;
+  const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+  const t0 = performance.now() + 700, dur = 1400;
+  el.style.minWidth = `${txt.length}ch`;
+  const tick = (now) => {
+    const k = Math.min(1, Math.max(0, (now - t0) / dur));
+    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - k, 3))));
+    if (k < 1) requestAnimationFrame(tick);
+  };
+  el.textContent = fmt(0);
+  requestAnimationFrame(tick);
 }
 
 /* ---------------- Thema-overzicht ---------------- */
 async function themas() {
   setMeta({ title: t('pages.themasTitle'), description: t('pages.themasLead') });
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('pages.themasTitle') }])}</div>
-  <header class="page-head"><div class="wrap"><h1>${t('pages.themasTitle')}</h1><p class="lead">${t('pages.themasLead')}</p></div></header>
+  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.themasTitle') }])}<h1>${t('pages.themasTitle')}</h1><p class="lead">${t('pages.themasLead')}</p></div></header>
   <section class="wrap" style="padding-bottom:var(--s-9)">
     <ul class="theme-rows" role="list">${data().themas.map((th) => {
       const pubs = pubsForTheme(th.slug), latestPub = pubs.find((p) => p.type !== 'jaarverslag'), evs = eventsForTheme(th.slug), next = evs.filter((e) => !isPast(e)).sort((a, b) => a.start.localeCompare(b.start))[0];
@@ -135,8 +178,7 @@ async function diensten() {
       aside: next ? `<div><p class="label">${t('theme.nextEvent')}</p><a href="${url('evenement.html', { slug: next.slug })}">${esc(tr(next.titel))}</a><span class="small muted">${fmtDate(next.start)}</span></div>` : '' }
   ];
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('pages.dienstenTitle') }])}</div>
-  <header class="page-head"><div class="wrap"><h1>${t('pages.dienstenTitle')}</h1><p class="lead">${t('pages.dienstenLead')}</p></div></header>
+  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.dienstenTitle') }])}<h1>${t('pages.dienstenTitle')}</h1><p class="lead">${t('pages.dienstenLead')}</p></div></header>
   <section class="wrap" style="padding-bottom:var(--s-9)">
     <ul class="theme-rows" role="list">${rows.map((r) => `<li class="theme-row">
         <div class="theme-row-media">${picture(r.img, '', { sizes: '(min-width: 64em) 22rem, 100vw', widths: [640, 1280] })}</div>
@@ -168,8 +210,8 @@ async function thema() {
   setMeta({ title: themeName(th), description: tr(th.kort) });
 
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('pages.themasTitle'), href: url('themas.html') }, { label: themeName(th) }])}</div>
   <header class="theme-head">
+    <div class="wrap">${breadcrumb([{ label: t('pages.themasTitle'), href: url('themas.html') }, { label: themeName(th) }])}</div>
     <div class="wrap theme-head-grid">
       <div>
         <p class="type-label">${t('types.theme')}</p>
@@ -239,8 +281,7 @@ async function publicaties() {
   const items = data().publicaties;
   setMeta({ title: t('pages.pubsTitle'), description: t('pages.pubsLead') });
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('pages.pubsTitle') }])}</div>
-  <header class="page-head"><div class="wrap"><h1>${t('pages.pubsTitle')}</h1><p class="lead">${t('pages.pubsLead')}</p></div></header>
+  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.pubsTitle') }])}<h1>${t('pages.pubsTitle')}</h1><p class="lead">${t('pages.pubsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
   /* FILTERCONFIG publicaties. Klant levert de definitieve 3–7 filters (open vraag 2). */
@@ -369,8 +410,7 @@ async function evenementen() {
   const items = data().evenementen;
   setMeta({ title: t('pages.eventsTitle'), description: t('pages.eventsLead') });
   main().innerHTML = `
-  <div class="wrap">${breadcrumb([{ label: t('pages.eventsTitle') }])}</div>
-  <header class="page-head"><div class="wrap"><h1>${t('pages.eventsTitle')}</h1><p class="lead">${t('pages.eventsLead')}</p></div></header>
+  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.eventsTitle') }])}<h1>${t('pages.eventsTitle')}</h1><p class="lead">${t('pages.eventsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
   const soonest = (a, b) => {

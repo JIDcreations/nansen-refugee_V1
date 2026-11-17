@@ -18,6 +18,10 @@
   --line:      rgba(95,115,98,.28);
   --line-strong: rgba(95,115,98,.55);
   --orange-ink:#96460F;   /* oranje als tekst (AA op crème) */
+  --sage-100:  #EEF2EA;   /* lichtgroen, zachte vlakken */
+  --sage-200:  #DFE6DA;   /* lichtgroen: paginakoppen, hero-band */
+  --sage-300:  #C6D2C1;   /* lichtgroen, lijnen op sage */
+  --beige-200: #F1E3D1;   /* beige band */
 
   /* Typografie */
   --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
