@@ -878,3 +878,25 @@ a.partner-tile:hover { background: var(--surface); }
 .event-grid .event-facts { flex-direction: column; font-size: var(--fs-xs); }
 .event-grid .event-facts span:nth-child(3), .event-grid .tags { display: none; }
 .event-grid .event-side { grid-column: 2; text-align: left; }
+
+/* Steun ons: twee wegen (individuen / fondsen) */
+.mt-3 { margin-top: var(--s-3); }
+.eyebrow { font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--green-800); margin: 0 0 var(--s-2); }
+.support-choice { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+@media (min-width: 48em) { .support-choice { grid-template-columns: 1fr 1fr; gap: var(--s-6); } }
+.support-option { display: flex; flex-direction: column; gap: .3rem; padding: var(--s-4) 0 var(--s-4); border-top: 6px solid var(--green-500); text-decoration: none; color: var(--ink); }
+.support-option + .support-option { border-top-color: var(--green-900); }
+.support-option-label { font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--green-800); }
+.support-option-label::after { content: " ↓"; font-family: var(--font-sans); font-size: .8em; }
+.support-option-text { font-size: var(--fs-sm); color: var(--ink-soft); }
+.support-option:hover .support-option-label { text-decoration: underline; text-underline-offset: .2em; }
+.support-option:focus-visible { outline: none; box-shadow: var(--focus); }
+.support-figures { margin: var(--s-4) 0 0; display: grid; gap: var(--s-4); border-top: 1px solid var(--line-strong); padding-top: var(--s-4); }
+@media (min-width: 40em) { .support-figures { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.support-figures dt { font-family: var(--font-serif); font-size: var(--fs-xl); line-height: 1; color: var(--green-800); }
+.support-figures dd { margin: .35rem 0 0; font-size: var(--fs-sm); color: var(--ink-soft); }
+.support-contact { border-top: 1px solid var(--line-strong); padding-top: var(--s-4); }
+.support-contact p { margin: 0; }
+.support-contact-name { font-family: var(--font-serif); font-size: var(--fs-md); }
+.support-contact-role { font-size: var(--fs-sm); color: var(--ink-soft); }
+#individuen, #fondsen { scroll-margin-top: calc(var(--header-h) + var(--s-4)); }
