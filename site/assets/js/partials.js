@@ -41,6 +41,8 @@ export async function inlineLogo(name) {
 
 /* ---------- Navigatieconfig (makkelijk aanpasbaar) ---------- */
 export const NANSEN_ANCHORS = ['missie', 'aanpak', 'team', 'geschiedenis', 'partners', 'jaarverslagen', 'contact'];
+/* Menu toont enkel de essentie (zoals in het navigatievoorstel van de klant); de subnav op /nansen toont alle hoofdstukken */
+export const NANSEN_NAV = ['missie', 'team', 'contact'];
 
 /* ---------- Subnav /nansen (sticky, scrollspy) ---------- */
 export function subnav(anchors = NANSEN_ANCHORS) {
@@ -75,7 +77,7 @@ export async function header(active = '') {
     </div>`;
 
   /* NANSEN is één pagina: de dropdown linkt naar de anchors (ook in de sticky subnav op /nansen) */
-  const ddNansen = panel(NANSEN_ANCHORS.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`) })));
+  const ddNansen = panel(NANSEN_NAV.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`) })));
   const ddThemes = panel(
     themes.map((th) => ({ href: url('thema.html', { slug: th.slug }), label: esc(themeName(th)) })),
     { href: url('themas.html'), label: t('allThemes') }
@@ -94,7 +96,7 @@ export async function header(active = '') {
   const mobileGroup = (label, links) => `<details><summary>${label}${icon.chevron}</summary><ul>${links}</ul></details>`;
   const mobile = `
     <div class="mobile-menu" id="mobile-menu" aria-label="${t('nav.menu')}">
-      ${mobileGroup(t('nav.nansen'), NANSEN_ANCHORS.map((a) => `<li><a href="${url(`nansen.html#${a}`)}">${t(`anchors.${a}`)}</a></li>`).join('') + `<li><a href="${url('nansen.html')}">${t('navPanels.nansen.more')}</a></li>`)}
+      ${mobileGroup(t('nav.nansen'), NANSEN_NAV.map((a) => `<li><a href="${url(`nansen.html#${a}`)}">${t(`anchors.${a}`)}</a></li>`).join('') + `<li><a href="${url('nansen.html')}">${t('navPanels.nansen.more')}</a></li>`)}
       ${mobileGroup(t('nav.themes'), themes.map((th) => `<li><a href="${url('thema.html', { slug: th.slug })}">${esc(themeName(th))}</a></li>`).join('') + `<li><a href="${url('themas.html')}">${t('allThemes')}</a></li>`)}
       ${mobileGroup(t('nav.services'), `<li><a href="${url('bijstand.html')}">${t('services.bijstand')}</a></li><li><a href="${url('vormingen.html')}">${t('services.vormingen')}</a></li><li><a href="${url('diensten.html')}">${t('navPanels.services.more')}</a></li>`)}
       ${mobileGroup(t('nav.knowledge'), `<li><a href="${url('publicaties.html')}">${t('knowledge.pubs')}</a></li><li><a href="${url('evenementen.html')}">${t('knowledge.events')}</a></li>`)}

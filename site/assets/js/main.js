@@ -56,6 +56,26 @@ function initReveal() {
     if (el.getBoundingClientRect().top < innerHeight) return;
     el.classList.add('reveal-soft'); io.observe(el);
   });
+  // Kerncijfers tellen op wanneer ze in beeld komen (jaartallen niet)
+  const cio = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (en.isIntersecting) { countUp(en.target); cio.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('main .figures-inline strong, main .support-figures dt').forEach((el) => { const v = el.textContent.trim(); if (/^[\d.,\u202f ]+$/.test(v) && !/^(19|20)\d\d$/.test(v)) cio.observe(el); });
+}
+function countUp(el) {
+  const txt = el.textContent.trim();
+  const sep = (txt.match(/[.,\u202f ]/) || [''])[0];
+  const target = Number(txt.replace(/\D/g, ''));
+  if (!target) return;
+  const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+  const t0 = performance.now() + 200, dur = 1400;
+  el.style.minWidth = `${txt.length}ch`;
+  const tick = (now) => {
+    const k = Math.min(1, Math.max(0, (now - t0) / dur));
+    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - k, 3))));
+    if (k < 1) requestAnimationFrame(tick);
+  };
+  el.textContent = fmt(0); requestAnimationFrame(tick);
 }
 
 /* ---------- Header: dropdowns, zoeken, mobiel menu, krimpen ---------- */

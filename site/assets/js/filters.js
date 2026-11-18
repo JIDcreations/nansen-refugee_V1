@@ -122,6 +122,10 @@ export function createListing(cfg) {
       ${g.title ? `<h2 class="year-sep" style="list-style:none">${esc(g.title)}</h2>` : ''}
       <ul class="${cfg.listClass}" role="list">${g.items.map((it) => render(it, { headingLevel: g.title ? 3 : 2 })).join('')}</ul>`).join('')
       + (total > shown ? `<div class="pager"><p>${t('results.showing', { n: shown, total })}</p><button class="btn btn--secondary" type="button" data-loadmore>${t('results.loadMore')}</button></div>` : '');
+    // Rijen komen gespreid binnen, ook na elke filterwissel (CSS: .list-anim)
+    let i = 0;
+    list.querySelectorAll(`.${cfg.listClass} > li, .year-sep`).forEach((el) => el.style.setProperty('--i', Math.min(i++, 12)));
+    list.classList.remove('list-anim'); void list.offsetWidth; list.classList.add('list-anim');
   }
 
   function update({ resetPaging = true } = {}) {
