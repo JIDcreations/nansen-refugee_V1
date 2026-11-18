@@ -65,39 +65,29 @@ export async function header(active = '') {
       ${panel(`dd-${id}`)}
     </li>`;
 
-  /* Mega-dropdown: intro links, items rechts. Eén partial voor alle hoofdmenu's. */
-  const mega = ({ title, intro, more, items }) => (id) => `<div class="dropdown dropdown--mega" id="${id}">
-      <div class="mega-intro"><strong>${title}</strong><p>${intro}</p><a class="link-more" href="${more.href}">${more.label} ${icon.arrow.replace('<svg', '<svg class="icon-inline"')}</a></div>
-      <ul role="list" class="${items.length > 5 ? 'mega-list--cols' : ''}">${items.map((it) => `<li><a href="${it.href}"><span>${it.label}</span><small>${it.sub}</small></a></li>`).join('')}</ul>
+  /* Uitklapbalk: enkel de links, geen titels of intro's (feedback: zo weinig mogelijk tekst).
+     Eén partial voor alle hoofdmenu's; 'more' is een optionele slotlink. */
+  const panel = (items, more) => (id) => `<div class="dropdown" id="${id}">
+      <ul role="list" class="dropdown-list">
+        ${items.map((it, i) => `<li style="--i:${i}"><a href="${it.href}">${it.label}</a></li>`).join('')}
+        ${more ? `<li class="dropdown-more" style="--i:${items.length}"><a href="${more.href}">${more.label}${icon.arrow}</a></li>` : ''}
+      </ul>
     </div>`;
 
   /* NANSEN is één pagina: de dropdown linkt naar de anchors (ook in de sticky subnav op /nansen) */
-  const ddNansen = mega({
-    title: t('nav.nansen'), intro: t('navPanels.nansen.intro'),
-    more: { href: url('nansen.html'), label: t('navPanels.nansen.more') },
-    items: NANSEN_ANCHORS.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`), sub: t(`anchorsSub.${a}`) }))
-  });
-  const ddThemes = mega({
-    title: t('megaTitle'), intro: t('megaIntro'),
-    more: { href: url('themas.html'), label: t('allThemes') },
-    items: themes.map((th) => ({ href: url('thema.html', { slug: th.slug }), label: esc(themeName(th)), sub: esc(tr(th.kort)) }))
-  });
-  const ddServices = mega({
-    title: t('nav.services'), intro: t('navPanels.services.intro'),
-    more: { href: url('diensten.html'), label: t('navPanels.services.more') },
-    items: [
-      { href: url('bijstand.html'), label: t('services.bijstand'), sub: t('services.bijstandSub') },
-      { href: url('vormingen.html'), label: t('services.vormingen'), sub: t('services.vormingenSub') }
-    ]
-  });
-  const ddKnowledge = mega({
-    title: t('nav.knowledge'), intro: t('navPanels.knowledge.intro'),
-    more: { href: url('zoeken.html'), label: t('navPanels.knowledge.more') },
-    items: [
-      { href: url('publicaties.html'), label: t('knowledge.pubs'), sub: t('knowledge.pubsSub') },
-      { href: url('evenementen.html'), label: t('knowledge.events'), sub: t('knowledge.eventsSub') }
-    ]
-  });
+  const ddNansen = panel(NANSEN_ANCHORS.map((a) => ({ href: url(`nansen.html#${a}`), label: t(`anchors.${a}`) })));
+  const ddThemes = panel(
+    themes.map((th) => ({ href: url('thema.html', { slug: th.slug }), label: esc(themeName(th)) })),
+    { href: url('themas.html'), label: t('allThemes') }
+  );
+  const ddServices = panel([
+    { href: url('bijstand.html'), label: t('services.bijstand') },
+    { href: url('vormingen.html'), label: t('services.vormingen') }
+  ]);
+  const ddKnowledge = panel([
+    { href: url('publicaties.html'), label: t('knowledge.pubs') },
+    { href: url('evenementen.html'), label: t('knowledge.events') }
+  ]);
 
   const langSwitch = `<ul class="lang-switch" aria-label="Taal / Langue / Language">${LANGS.map((l) => `<li><a href="${langUrl(l)}" hreflang="${l}" lang="${l}" ${l === lang ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a></li>`).join('')}</ul>`;
 
@@ -123,6 +113,7 @@ export async function header(active = '') {
           ${navItem('services', t('nav.services'), ddServices, active === 'diensten', url('diensten.html'))}
           ${navItem('knowledge', t('nav.knowledge'), ddKnowledge, active === 'kennis')}
         </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
       </nav>
       <div class="header-tools">
         <button class="icon-btn" type="button" id="search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="${t('nav.search')}">${icon.search}</button>

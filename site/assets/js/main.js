@@ -66,9 +66,10 @@ function initHeader() {
   const open = (it) => { close(it); it.classList.add('is-open'); it.querySelector('[aria-controls]').setAttribute('aria-expanded', 'true'); };
   const hoverable = matchMedia('(hover: hover)').matches;
 
+  let timer; // gedeeld: een sluit-timer van het vorige item mag het nieuwe paneel niet dichtdoen
   items.forEach((it) => {
     const btn = it.querySelector('button[aria-controls]');
-    let timer, hoverOpenedAt = 0;
+    let hoverOpenedAt = 0;
     btn.addEventListener('click', () => {
       // Klik vlak na hover-open: paneel open laten i.p.v. meteen weer te sluiten
       if (it.classList.contains('is-open') && Date.now() - hoverOpenedAt > 600) close(); else open(it);
@@ -87,6 +88,27 @@ function initHeader() {
     it.addEventListener('focusout', (e) => { if (!it.contains(e.relatedTarget)) close(); });
   });
   document.addEventListener('click', (e) => { if (!e.target.closest('[data-dropdown]')) close(); });
+
+  // Schuivende indicator onder het actieve/gehoverde menu-item
+  const nav = hdr.querySelector('.primary-nav');
+  const ind = hdr.querySelector('.nav-indicator');
+  if (nav && ind) {
+    const current = () => items.find((it) => it.querySelector('[aria-current="page"]'));
+    const moveTo = (it) => {
+      if (!it) { ind.classList.remove('is-on'); return; }
+      const n = hdr.getBoundingClientRect(), r = it.getBoundingClientRect();
+      ind.style.setProperty('--x', `${r.left - n.left}px`);
+      ind.style.setProperty('--w', `${r.width}px`);
+      ind.classList.add('is-on');
+    };
+    const align = () => {
+      moveTo(hdr.querySelector('.nav-item.is-open') || current());
+    };
+    items.forEach((it) => { it.addEventListener('mouseenter', () => moveTo(it)); it.addEventListener('focusin', () => moveTo(it)); });
+    nav.addEventListener('mouseleave', () => setTimeout(() => moveTo(hdr.querySelector('.nav-item.is-open') || current()), 170));
+    hdr.addEventListener('focusout', (e) => { if (!nav.contains(e.relatedTarget)) moveTo(current()); });
+    addEventListener('resize', align); document.fonts?.ready.then(align); align();
+  }
 
   // Zoekpaneel
   const sBtn = document.getElementById('search-toggle');
