@@ -381,19 +381,45 @@ export function toc(list = [], { inline = false } = {}) {
   return `<nav class="toc ${inline ? 'toc-inline' : ''}" aria-label="${t('meta.toc')}"><h2>${t('meta.toc')}</h2><ol>${hs.map((h) => `<li><a href="#${slugify(h.tekst)}">${esc(h.tekst)}</a></li>`).join('')}</ol></nav>`;
 }
 
-/* Programmamodel: probleem → oplossing → impact → visie (FUNCAP-model). WP: template part. */
+/* Hero: programmamodel probleem → oplossing → impact → visie (FUNCAP-model).
+   Vier panelen, gescheiden door een gebogen diagonaal + horizontale voeg (pillars.js tekent
+   de vormen als clip-path). Hover/focus verschuift het kruispunt: dat paneel groeit en toont
+   zijn tekst. Op gsm en zonder JS: vier blokken onder elkaar. WP: template part. */
 export function programModel() {
   const steps = tRaw('home.model.steps') || [];
   if (!steps.length) return '';
-  return `<div class="wrap program" role="region" aria-labelledby="h-program">
-    <h2 id="h-program" class="program-label">${t('home.model.label')}</h2>
-    <ol class="program-steps" role="list">${steps.map((s, i) => `
-      <li class="program-step program-step--${i + 1}">
-        <p class="program-name">${esc(s.label)}</p>
-        <p class="program-text">${esc(s.text)}</p>
-        ${s.stat ? `<p class="program-stat"><strong>${esc(s.stat)}</strong> ${esc(s.statLabel)}</p>` : ''}
-        ${s.todo ? `<p class="program-todo">${esc(s.todo)}</p>` : ''}
-      </li>`).join('')}
-    </ol>
+  const partners = (data().partners || []).map((p) => `<li>${esc(p.naam)}</li>`).join('');
+  const dots = `<span class="lx-dots" aria-hidden="true">${steps.map(() => '<i></i>').join('')}</span>`;
+  const label = (s) => `<span class="lx-initial">${esc(s.label.charAt(0))}</span>${esc(s.label.slice(1))}`;
+  const pos = ['tl', 'tr', 'bl', 'br'];
+  return `<section class="lx" aria-labelledby="h-home">
+    <div class="wrap lx-wrap">
+      <div class="lx-stage">${steps.map((s, i) => `
+        <article class="lx-panel lx-panel--${pos[i]}${i === 0 ? ' is-open' : ''}" data-i="${i}">
+          ${i === 1 ? `<span class="lx-photo" aria-hidden="true" style="background-image:url('assets/img/grens-hek-1280.webp')"></span>` : ''}
+          <div class="lx-box">
+            <h2 class="lx-head">
+              <button type="button" class="lx-btn" id="lx-btn-${i}" aria-expanded="${i === 0}" aria-controls="lx-body-${i}">
+                <span class="lx-label">${label(s)}</span>
+              </button>
+            </h2>
+            <div class="lx-body" id="lx-body-${i}" role="region" aria-labelledby="lx-btn-${i}"><div class="lx-body-inner">
+              <p class="lx-text">${esc(s.text)}</p>
+              ${s.stat ? `<p class="lx-stat"><strong>${esc(s.stat)}</strong> <span>${esc(s.statLabel)}</span></p>` : ''}
+              ${s.todo ? `<p class="lx-todo">${esc(s.todo)}</p>` : ''}
+            </div></div>
+          </div>
+          ${i === 0 ? `${dots}<dl class="lx-meta"><dt>NANSEN :</dt><dd><h1 id="h-home" class="lx-h1">${t('home.title')}</h1></dd></dl>` : ''}
+          ${i === 3 ? `${dots}<dl class="lx-meta lx-meta--end"><dt>Sinds :</dt><dd>2017</dd><dt>Partner :</dt><dd>UNHCR</dd></dl>` : ''}
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>
+  <div class="ph-funders">
+    <div class="wrap ph-funders-inner">
+      <h2 class="ph-funders-label">${t('home.partners')}</h2>
+      <ul role="list">${partners}</ul>
+      <p class="ph-funders-todo">${t('home.fundersTodo')}</p>
+    </div>
   </div>`;
 }

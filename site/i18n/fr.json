@@ -266,7 +266,10 @@
           "label": "Vision",
           "text": "Des procédures justes, attentives à la personne derrière chaque dossier."
         }
-      ]
+      ],
+      "hint": "Survolez un mot",
+      "hintTouch": "Touchez un mot",
+      "modelNav": "Problème, solution, impact, vision"
     },
     "fundersTodo": "Logos des bailleurs à venir : NANSEN fournit la liste des bailleurs pouvant être mentionnés.",
     "readPub": "Lire la publication"

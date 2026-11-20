@@ -266,7 +266,10 @@
           "label": "Vision",
           "text": "Fair procedures that see the person behind every case."
         }
-      ]
+      ],
+      "hint": "Hover over a word",
+      "hintTouch": "Tap a word",
+      "modelNav": "Problem, solution, impact, vision"
     },
     "fundersTodo": "Funder logos to follow: NANSEN will provide the list of funders that may be shown.",
     "readPub": "Read the publication"

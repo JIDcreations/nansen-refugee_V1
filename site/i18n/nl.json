@@ -266,7 +266,10 @@
           "label": "Visie",
           "text": "Eerlijke procedures, met oog voor de mens achter elk dossier."
         }
-      ]
+      ],
+      "hint": "Beweeg over een woord",
+      "hintTouch": "Tik op een woord",
+      "modelNav": "Probleem, oplossing, impact, visie"
     },
     "fundersTodo": "Logo’s van financiers volgen: NANSEN bezorgt de lijst van financiers die vermeld mogen worden.",
     "readPub": "Lees de publicatie"

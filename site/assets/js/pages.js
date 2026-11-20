@@ -12,6 +12,7 @@ import {
   downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel, pubFeature
 } from './partials.js';
 import { createListing } from './filters.js';
+import { initPillars } from './pillars.js';
 
 const main = () => document.getElementById('main');
 const norm = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -29,21 +30,7 @@ async function home() {
   document.title = 'NANSEN | The Belgian Refugee Council';
 
   main().innerHTML = `
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <figure class="hero-photo">
-        ${picture('zaal', 'Advocaten en juristen volgen een vorming van NANSEN in een volle zaal', { sizes: '(min-width: 64em) 62vw, 100vw', eager: true })}
-        <figcaption class="hero-caption" lang="${lang}">${t('home.quote')}</figcaption>
-      </figure>
-      <div class="hero-panel">
-        <p class="hero-eyebrow">${t('home.title')}</p>
-        <h1>${t('home.mission')}</h1>
-        <div class="hero-search">${searchForm('home')}</div>
-        <p class="hero-aside">${t('home.lawyer')} <a href="${url('bijstand.html')}">${t('home.lawyerLink')}</a></p>
-      </div>
-    </div>
-    ${programModel()}
-  </section>
+  ${programModel()}
 
   <section class="home-block" aria-labelledby="h-latest">
     <div class="wrap">
@@ -97,6 +84,7 @@ async function home() {
   };
   btns.forEach((b) => b.addEventListener('click', () => render(b.dataset.theme)));
   render('', true);
+  initPillars(main().querySelector('.lx'));
   homeMotion();
 }
 
@@ -107,36 +95,17 @@ function homeMotion() {
   const io = new IntersectionObserver((entries) => entries.forEach((en) => {
     if (!en.isIntersecting) return;
     en.target.classList.add('is-in');
-    if (en.target.classList.contains('program')) countUp(en.target.querySelector('.program-stat strong'));
     io.unobserve(en.target);
   }), { rootMargin: '0px 0px -12% 0px' });
   document.querySelectorAll('.home-block .section-head, .theme-filter, .latest-grid, .home-partners .partner-grid, .prefooter-grid').forEach((el) => {
     el.classList.add('reveal'); io.observe(el);
   });
-  main().querySelectorAll('.register, .event-grid, .program').forEach((el) => {
-    stagger(el.matches('.program') ? el.querySelector('.program-steps') : el);
+  main().querySelectorAll('.register, .event-grid').forEach((el) => {
+    stagger(el);
     el.classList.add('motion-ready');
     io.observe(el);
   });
 }
-function countUp(el) {
-  if (!el) return;
-  const txt = el.textContent.trim();
-  const sep = (txt.match(/[.,\u202f ]/) || [''])[0];
-  const target = Number(txt.replace(/\D/g, ''));
-  if (!target) return;
-  const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);
-  const t0 = performance.now() + 700, dur = 1400;
-  el.style.minWidth = `${txt.length}ch`;
-  const tick = (now) => {
-    const k = Math.min(1, Math.max(0, (now - t0) / dur));
-    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - k, 3))));
-    if (k < 1) requestAnimationFrame(tick);
-  };
-  el.textContent = fmt(0);
-  requestAnimationFrame(tick);
-}
-
 /* ---------------- Thema-overzicht ---------------- */
 async function themas() {
   setMeta({ title: t('pages.themasTitle'), description: t('pages.themasLead') });
