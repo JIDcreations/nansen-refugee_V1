@@ -1848,3 +1848,43 @@ main > .anchor-section:nth-of-type(even) .contact-card, main > .section--band .t
 .subnav ul, .search-tabs { flex-wrap: wrap; overflow: visible; row-gap: var(--s-2); }
 .subnav { position: static; }
 @media (min-width: 64em) { .subnav { position: sticky; } }
+
+/* =========================================================
+   22. Home: komende evenementen als agenda
+   Groot dagcijfer, titel, praktische info, status. Hover: hele rij keert om.
+   ========================================================= */
+.agenda { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(47,58,49,.35); }
+.agenda-item { border-bottom: 1px solid rgba(47,58,49,.18); }
+.agenda-link {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); align-items: start;
+  padding: var(--s-6) var(--s-4); border-radius: .875rem; color: var(--ink); text-decoration: none;
+  transition: background-color .35s var(--ease), color .35s var(--ease);
+}
+@media (min-width: 48em) { .agenda-link { grid-template-columns: 10.5rem minmax(0, 1fr) auto; column-gap: var(--s-7); } }
+.agenda-date { display: grid; grid-template-columns: auto 1fr; column-gap: var(--s-3); align-items: end; }
+.agenda-d { grid-row: span 2; font-size: clamp(3.75rem, 2.8rem + 2.6vw, 5.5rem); line-height: .8; font-weight: 400; letter-spacing: -.04em; color: var(--frame); font-variant-numeric: tabular-nums; }
+.agenda-my { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--frame); align-self: end; }
+.agenda-rel { font-size: var(--fs-xs); color: var(--initial); font-weight: 600; align-self: start; }
+.agenda-type { margin: .35rem 0 var(--s-2); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.agenda-title { margin: 0 0 var(--s-3); font-size: clamp(1.25rem, 1.05rem + .6vw, 1.625rem); line-height: 1.25; font-weight: 500; color: var(--frame); text-wrap: balance; }
+.agenda-facts { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-5); margin: 0; font-size: var(--fs-sm); color: var(--ink-soft); }
+.agenda-facts span { display: inline-flex; align-items: center; gap: .4em; }
+.agenda-facts svg { width: 1rem; height: 1rem; flex: none; }
+.agenda-side { display: flex; align-items: center; gap: var(--s-5); padding-top: .35rem; }
+@media (min-width: 48em) { .agenda-side { flex-direction: column; align-items: flex-end; justify-content: space-between; align-self: stretch; } }
+.agenda-arrow { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(47,58,49,.3); color: var(--frame); transition: background-color .35s var(--ease), color .35s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease); }
+.agenda-arrow svg { width: 1.1rem; height: 1.1rem; }
+
+.agenda-item:hover .agenda-link, .agenda-link:focus-visible { background: var(--grain), var(--frame); }
+.agenda-item:hover :is(.agenda-d, .agenda-my, .agenda-title, .agenda-type, .agenda-facts, .status), .agenda-link:focus-visible :is(.agenda-d, .agenda-my, .agenda-title, .agenda-type, .agenda-facts, .status) { color: var(--cream); }
+.agenda-item:hover .agenda-rel, .agenda-link:focus-visible .agenda-rel { color: var(--orange-400); }
+.agenda-item:hover .agenda-arrow, .agenda-link:focus-visible .agenda-arrow { background: var(--orange-600); color: var(--frame); box-shadow: none; transform: rotate(-45deg); }
+.agenda-link:focus-visible { box-shadow: 0 0 0 3px var(--panel), 0 0 0 5px var(--frame); }
+
+/* Binnenkomen: rijen schuiven gespreid in */
+.agenda.motion-ready .agenda-item { opacity: 0; transform: translateY(1rem); }
+.agenda.motion-ready.is-in .agenda-item { opacity: 1; transform: none; transition: opacity .6s var(--ease), transform .6s var(--ease); transition-delay: calc(var(--i, 0) * 110ms); }
+@media (prefers-reduced-motion: reduce) { .agenda-link, .agenda-arrow { transition: none; } .agenda-item:hover .agenda-arrow { transform: none; } }
+@media (min-width: 48em) { .agenda-link { grid-template-columns: 12.5rem minmax(0, 1fr) auto; } }
+.agenda-my, .agenda-rel { white-space: nowrap; }
+@media (max-width: 63.99em) { .section-head { row-gap: var(--s-4); } }

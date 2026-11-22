@@ -324,6 +324,29 @@ export function eventItem(e, { headingLevel = 3 } = {}) {
   </li>`;
 }
 
+/* ---------- Agendarij (home: komende evenementen) ----------
+   Groot dagcijfer + "over x dagen", titel en praktische info, status. Hele rij is één link. */
+export function agendaItem(e) {
+  const d = parseDate(e.start);
+  const days = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(new Date().toDateString())) / 864e5);
+  const rel = new Intl.RelativeTimeFormat(lang === 'en' ? 'en-GB' : `${lang}-BE`, { numeric: 'auto' }).format(days, 'day');
+  const time = e.heleDag ? t('event.allDay') : `${fmtTime(e.start)}${e.einde ? `–${fmtTime(e.einde)}` : ''}`;
+  return `
+  <li class="agenda-item"><a class="agenda-link" href="${url('evenement.html', { slug: e.slug })}">
+    <time class="agenda-date" datetime="${e.start}">
+      <span class="agenda-d">${String(d.getDate()).padStart(2, '0')}</span>
+      <span class="agenda-my">${fmtMonth(e.start)} ${d.getFullYear()}</span>
+      <span class="agenda-rel">${esc(rel)}</span>
+    </time>
+    <div class="agenda-body">
+      <p class="agenda-type">${esc(term('evenementType', e.type))}</p>
+      <h3 class="agenda-title">${esc(tr(e.titel))}</h3>
+      <p class="agenda-facts"><span>${icon.clock}${time}</span><span>${icon.pin}${esc(tr(e.locatie))}</span>${e.partners?.length ? `<span>${icon.users}${esc(e.partners.join(', '))}</span>` : ''}</p>
+    </div>
+    <div class="agenda-side">${statusBadge(e)}<span class="agenda-arrow" aria-hidden="true">${icon.arrow}</span></div>
+  </a></li>`;
+}
+
 /* ---------- Thema-tegel ---------- */
 export function themeTile(th, { headingLevel = 3 } = {}) {
   const np = pubsForTheme(th.slug).length, ne = eventsForTheme(th.slug).length;

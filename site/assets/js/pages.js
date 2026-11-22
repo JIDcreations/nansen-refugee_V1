@@ -9,7 +9,7 @@ import {
 } from './core.js';
 import {
   icon, breadcrumb, pubItem, eventItem, themeTile, themeTags, countryTags, langBadges, pubTitle,
-  downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel, pubFeature
+  downloads, notice, blocks, toc, searchForm, statusBadge, subnav, programModel, pubFeature, agendaItem
 } from './partials.js';
 import { createListing } from './filters.js';
 import { initPillars } from './pillars.js';
@@ -44,11 +44,10 @@ async function home() {
     </div>
   </section>
 
-  <section class="home-block home-block--green" aria-labelledby="h-upcoming">
-    <svg class="hat-mark" viewBox="248 384 92 46" aria-hidden="true" focusable="false"><path fill="currentColor" d="M 337.78 404.62 C 326.63 402.42 317.37 407.44 308.35 412.39 C 295.98 419.19 282.92 423.03 268.96 424.73 C 262.76 425.48 256.77 427.88 250.15 428.39 C 254.66 426.64 259.05 424.45 263.70 423.30 C 267.39 422.38 268.97 421.34 268.30 417.17 C 267.49 412.170 265.65 405.89 267.79 402.25 C 269.91 398.66 276.43 397.67 281.03 395.55 C 286.65 392.94 292.36 390.51 297.88 387.70 C 301.23 385.99 303.34 386.74 305.09 389.86 C 307.23 393.69 309.69 397.33 311.64 401.25 C 313.58 405.14 315.82 406.55 320.28 404.80 C 323.96 403.35 328.07 402.88 332.04 402.39 C 333.91 402.17 335.90 402.92 337.83 403.24 C 337.82 403.70 337.80 404.16 337.78 404.62"/></svg>
+  <section class="home-block home-agenda" aria-labelledby="h-upcoming">
     <div class="wrap">
       <header class="section-head"><h2 id="h-upcoming">${t('home.upcoming')}</h2><a class="more" href="${url('evenementen.html')}">${t('home.allEvents')}</a></header>
-      ${upcoming.length ? `<ul class="event-grid" role="list">${upcoming.map((e) => eventItem(e)).join('')}</ul>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
+      ${upcoming.length ? `<ol class="agenda" role="list">${upcoming.map((e) => agendaItem(e)).join('')}</ol>` : `<p class="muted">${t('home.noUpcoming')}</p>`}
     </div>
   </section>
 
@@ -99,7 +98,7 @@ function homeMotion() {
   document.querySelectorAll('.home-block .section-head, .theme-filter, .latest-grid, .home-partners .partner-grid, .prefooter-grid').forEach((el) => {
     el.classList.add('reveal'); io.observe(el);
   });
-  main().querySelectorAll('.register, .event-grid').forEach((el) => {
+  main().querySelectorAll('.register, .agenda').forEach((el) => {
     stagger(el);
     el.classList.add('motion-ready');
     io.observe(el);
