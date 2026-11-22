@@ -62,7 +62,6 @@ async function home() {
         const tag = p.url ? `a href="${p.url}" rel="noopener"` : 'div';
         return `<li><${tag} class="partner-tile">${inner}<span class="partner-role">${esc(tr(p.rol))}</span></${p.url ? 'a' : 'div'}></li>`;
       }).join('')}</ul>
-      <p class="todo partners-todo">${t('home.fundersTodo')}</p>
     </div>
   </section>`;
 

@@ -167,7 +167,7 @@ export function prefooter() {
 }
 
 /* ---------- Footer ---------- */
-const MAIL = (label, addr) => `<li><a class="footer-mail" href="mailto:${addr}"><span class="footer-mail-label">${label}</span><span class="footer-mail-addr">${addr}</span>${icon.arrow}</a></li>`;
+const MAIL = (label, addr) => `<li><a class="footer-mail" href="mailto:${addr}"><span class="footer-mail-label">${label}</span><span class="footer-mail-addr">${addr.replace("@", "@<wbr>")}</span>${icon.arrow}</a></li>`;
 
 export async function footer() {
   /* Woordmerk: elke letter een eigen pad, de hoed apart, voor de reveal-animatie */
@@ -211,7 +211,7 @@ export async function footer() {
         </div>
         <div>
           <h2>${t('footer.direction')}</h2>
-          <p>Gert Bruininkx<br><span class="footer-todo">[e-mail directie volgt]</span></p>
+          <p>Gert Bruininkx</p>
           <ul class="socials" role="list" aria-label="${t('footer.follow')}">
             <li><a href="https://www.linkedin.com/company/nansen-refugee/" aria-label="LinkedIn">${icon.linkedin}</a></li>
             <li><a href="https://www.facebook.com/nansenrefugee/" aria-label="Facebook">${icon.facebook}</a></li>
@@ -409,7 +409,6 @@ export function programModel() {
               ${s.list ? `<ol class="lx-list">${s.list.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
               ${s.src ? `<p class="lx-src">${esc(s.src)}</p>` : ''}
               ${s.stat ? `<p class="lx-stat"><strong>${esc(s.stat)}</strong> <span>${esc(s.statLabel)}</span></p>` : ''}
-              ${s.todo ? `<p class="lx-todo">${esc(s.todo)}</p>` : ''}
             </div></div>
           </div>
           ${i === 0 ? `${dots}<dl class="lx-meta"><dt>NANSEN :</dt><dd><h1 id="h-home" class="lx-h1">${t('home.title')}</h1></dd></dl>` : ''}
@@ -422,7 +421,6 @@ export function programModel() {
     <div class="wrap ph-funders-inner">
       <h2 class="ph-funders-label">${t('home.partners')}</h2>
       <ul role="list">${partners}</ul>
-      <p class="ph-funders-todo">${t('home.fundersTodo')}</p>
     </div>
   </div>`;
 }

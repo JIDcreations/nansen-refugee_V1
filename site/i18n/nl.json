@@ -80,7 +80,7 @@
     "privacy": "Privacy",
     "dpp": "Data Protection Policy (PDF, EN)",
     "complaint": "Klacht indienen",
-    "rights": "NANSEN vzw. Ondernemingsnummer volgt.",
+    "rights": "NANSEN vzw",
     "route": "Route plannen",
     "follow": "Volg ons",
     "statement": "Een dossier, een vraag over een vorming of een publicatie? Schrijf ons."
@@ -266,8 +266,7 @@
         {
           "label": "Impact",
           "sub": "Ons doel voor 2036",
-          "text": "Tegen 2036 …",
-          "todo": "Doel met cijfers volgt (NANSEN)"
+          "text": "Tegen 2036 …"
         },
         {
           "label": "Visie",
@@ -279,7 +278,6 @@
       "hintTouch": "Tik op een woord",
       "modelNav": "Probleem, oplossing, impact, visie"
     },
-    "fundersTodo": "Logo’s van financiers volgen: NANSEN bezorgt de lijst van financiers die vermeld mogen worden.",
     "readPub": "Lees de publicatie"
   },
   "pages": {

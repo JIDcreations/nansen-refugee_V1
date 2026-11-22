@@ -80,7 +80,7 @@
     "privacy": "Vie privée",
     "dpp": "Data Protection Policy (PDF, EN)",
     "complaint": "Déposer une plainte",
-    "rights": "NANSEN asbl. Numéro d’entreprise à compléter.",
+    "rights": "NANSEN asbl",
     "route": "Itinéraire",
     "follow": "Suivez-nous",
     "statement": "Un dossier, une question sur une formation ou une publication ? Écrivez-nous."
@@ -266,8 +266,7 @@
         {
           "label": "Impact",
           "sub": "Notre objectif pour 2036",
-          "text": "D’ici 2036, …",
-          "todo": "Objectif chiffré à venir (NANSEN)"
+          "text": "D’ici 2036, …"
         },
         {
           "label": "Vision",
@@ -279,7 +278,6 @@
       "hintTouch": "Touchez un mot",
       "modelNav": "Problème, solution, impact, vision"
     },
-    "fundersTodo": "Logos des bailleurs à venir : NANSEN fournit la liste des bailleurs pouvant être mentionnés.",
     "readPub": "Lire la publication"
   },
   "pages": {

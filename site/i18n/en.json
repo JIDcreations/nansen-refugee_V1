@@ -80,7 +80,7 @@
     "privacy": "Privacy",
     "dpp": "Data Protection Policy (PDF)",
     "complaint": "File a complaint",
-    "rights": "NANSEN vzw. Company number to be added.",
+    "rights": "NANSEN vzw",
     "route": "Get directions",
     "follow": "Follow us",
     "statement": "A case, a question about a training or a publication? Write to us."
@@ -266,8 +266,7 @@
         {
           "label": "Impact",
           "sub": "Our 10-year target",
-          "text": "By 2036, …",
-          "todo": "Target with figures to follow (NANSEN)"
+          "text": "By 2036, …"
         },
         {
           "label": "Vision",
@@ -279,7 +278,6 @@
       "hintTouch": "Tap a word",
       "modelNav": "Problem, solution, impact, vision"
     },
-    "fundersTodo": "Funder logos to follow: NANSEN will provide the list of funders that may be shown.",
     "readPub": "Read the publication"
   },
   "pages": {
