@@ -100,6 +100,28 @@ export function initPillars(root) {
     btn.addEventListener('click', () => select(i));
     btn.addEventListener('focus', () => select(i));
   });
+  /* Gsm: kaarten swipen horizontaal; tabs volgen en sturen de scrollpositie */
+  const tabs = [...root.querySelectorAll('.lx-tabs button')];
+  const tabRow = root.querySelector('.lx-tabs');
+  const setTab = (i) => {
+    tabs.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+    const b = tabs[i];
+    if (b && tabRow) tabRow.scrollTo({ left: b.offsetLeft - tabRow.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
+  };
+  tabs.forEach((b) => b.addEventListener('click', () => {
+    const i = Number(b.dataset.go);
+    stage.scrollTo({ left: panels[i].offsetLeft - panels[0].offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+    setTab(i);
+  }));
+  let st = 0;
+  stage.addEventListener('scroll', () => {
+    if (wide.matches) return;
+    cancelAnimationFrame(st);
+    st = requestAnimationFrame(() => {
+      const step = panels[1].offsetLeft - panels[0].offsetLeft;
+      setTab(Math.max(0, Math.min(panels.length - 1, Math.round(stage.scrollLeft / step))));
+    });
+  }, { passive: true });
   new ResizeObserver(() => cur && draw()).observe(stage);
   wide.addEventListener('change', () => cur && draw());
   select(0);

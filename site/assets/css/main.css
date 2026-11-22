@@ -1890,3 +1890,82 @@ main > .anchor-section:nth-of-type(even) .contact-card, main > .section--band .t
 @media (max-width: 63.99em) { .section-head { row-gap: var(--s-4); } }
 /* Elk home-blok is een eigen paneel: altijd ruimte boven én onder */
 main > .home-block { padding-block: var(--section-y) !important; }
+
+/* =========================================================
+   23. Gsm en contrast (WCAG AA)
+   ========================================================= */
+/* Kleine oranje tekst: donker oranje (AA op de lichte panelen) */
+.agenda-rel, .page-head .doc-kicker .type-label { color: var(--orange-ink); }
+.lx-tabs { display: none; }
+
+@media (max-width: 63.99em) {
+  /* ---- Hero: vier kaarten om te swipen, tabs erboven ---- */
+  main > .lx { padding: var(--s-4) 0 var(--s-5); }
+  .lx-wrap { display: flex; flex-direction: column; padding-inline: 0; }
+  .lx-tabs { order: -1; display: flex; gap: .375rem; padding: 0 var(--gutter) var(--s-4); overflow-x: auto; scrollbar-width: none; }
+  .lx-tabs::-webkit-scrollbar { display: none; }
+  .lx-tabs button {
+    flex: none; display: inline-flex; align-items: baseline; gap: .4em; min-height: 2.75rem; padding: 0 1rem;
+    border: 1px solid rgba(250,240,230,.28); border-radius: 99px; background: transparent; color: var(--cream);
+    font-size: var(--fs-sm); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; align-items: center;
+  }
+  .lx-tabs button span { font-size: .6875rem; color: rgba(250,240,230,.75); font-variant-numeric: tabular-nums; }
+  .lx-tabs button[aria-pressed="true"] { background: var(--cream); border-color: var(--cream); color: var(--frame); }
+  .lx-tabs button[aria-pressed="true"] span { color: var(--orange-ink); }
+  .lx-tabs button:focus-visible { box-shadow: 0 0 0 3px var(--frame), 0 0 0 5px var(--cream); }
+
+  .lx-stage {
+    flex-direction: row; gap: var(--gap); overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); padding-inline: var(--gutter); scrollbar-width: none;
+  }
+  .lx-stage::-webkit-scrollbar { display: none; }
+  .lx-panel { flex: 0 0 min(86vw, 30rem); scroll-snap-align: start; display: flex; flex-direction: column; }
+  .lx-box { flex: 1; padding: var(--s-6) var(--s-5) var(--s-5); }
+  .lx-label { font-size: clamp(1.875rem, 1.4rem + 2vw, 2.5rem); }
+  .lx-text { font-size: 1.0625rem; color: var(--ink); }
+  .lx-meta { margin: 0 var(--s-5) var(--s-5); }
+  /* Oplossing: foto enkel bovenaan, tekst op effen vlak */
+  .lx-panel--tr { background: var(--grain), var(--panel-2); }
+  .lx-photo { inset: 0; filter: grayscale(1) blur(5px) contrast(.85) brightness(1.15); opacity: .7;
+    -webkit-mask-image: linear-gradient(#000 0, rgba(0,0,0,.35) 30%, transparent 52%); mask-image: linear-gradient(#000 0, rgba(0,0,0,.35) 30%, transparent 52%); }
+  /* Impact: effen donker, lichte tekst (AA) */
+  .lx-panel--bl { background: var(--grain), var(--frame); }
+  .lx-panel--bl :is(.lx-text, .lx-label) { color: var(--cream); }
+  .lx-panel--bl .lx-sub { color: rgba(250,240,230,.8); }
+  .lx-panel::after { opacity: .1; }
+
+  /* ---- Ritme: minder lege ruimte ---- */
+  :root { --section-y: 3.5rem; }
+  main > .section, main > .anchor-section, main > .home-block { padding-block: var(--section-y) !important; }
+  .section-head, .anchor-section .split > header, main > .section > .wrap.split > header { margin-bottom: var(--s-6); }
+  .section-head::before, .anchor-section .split > header::before, main > .section > .wrap.split > header::before { margin-bottom: var(--s-3); }
+  .anchor-section .split, main > .section > .wrap.split { gap: var(--s-5); }
+
+  /* ---- Themafilter op home: één rij om te swipen ---- */
+  .theme-filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter) .25rem; }
+  .theme-filter::-webkit-scrollbar { display: none; }
+  .theme-filter button { flex: none; }
+
+  /* ---- Paginakop: bladwijzer niet over de tekst, laatste kruimel weg ---- */
+  .page-head .ribbon-big { width: 2rem; right: var(--gutter); }
+  .page-head .breadcrumb { padding-right: 2.75rem; }
+  .page-head--doc .breadcrumb li[aria-current] { display: none; }
+  .page-head h1 { font-size: clamp(2.25rem, 1.6rem + 3.5vw, 3rem); }
+  .page-head--doc h1 { font-size: clamp(1.75rem, 1.35rem + 2.2vw, 2.25rem); }
+}
+
+@media (max-width: 47.99em) {
+  /* ---- Register: geen nummerkolom, bladwijzer + tekst ---- */
+  .pub-link, .register--compact .pub-link, .latest-grid .register .pub-link { grid-template-columns: 1rem minmax(0, 1fr) !important; column-gap: var(--s-3); padding: var(--s-5) var(--s-2); }
+  .pub-link::before { display: none; }
+  .pub-body, .register--compact .pub-body { grid-column: 2 !important; }
+  .pub-item .ribbon svg { width: .875rem; }
+  .pub-foot .tags { gap: .375rem; }
+  .pub-foot .tag { font-size: .75rem; padding: .15rem .6rem; }
+  .agenda-link { padding-inline: var(--s-2); }
+  .agenda-d { font-size: 3.5rem; }
+}
+/* Contrast: partnernamen donker; donkere vlakken hebben ook een echte achtergrondkleur (niet enkel een afbeelding) */
+.partner-name { color: var(--frame); }
+.datebox, .practical, .theme-cta, .casus-head, .pub-feature, .team-card .avatar { background-color: var(--frame); }
+.event-item.is-past .datebox { background-color: var(--panel-3); }

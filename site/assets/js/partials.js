@@ -438,6 +438,7 @@ export function programModel() {
           ${i === 3 ? `${dots}<dl class="lx-meta lx-meta--end"><dt>Sinds :</dt><dd>2017</dd><dt>Partner :</dt><dd>UNHCR</dd></dl>` : ''}
         </article>`).join('')}
       </div>
+      <div class="lx-tabs" role="group" aria-label="${t('home.model.modelNav')}">${steps.map((s, i) => `<button type="button" data-go="${i}" aria-pressed="${i === 0}"><span>${String(i + 1).padStart(2, '0')}</span>${esc(s.label)}</button>`).join('')}</div>
     </div>
   </section>
   <div class="ph-funders">
