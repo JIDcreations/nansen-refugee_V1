@@ -249,22 +249,30 @@
       "steps": [
         {
           "label": "Problem",
-          "text": "Procedures are getting more complex and faster. People seeking protection are often on their own.",
-          "stat": "34,439",
-          "statLabel": "applications for protection in Belgium in 2025 (CGRS)"
+          "sub": "The main problem",
+          "text": "In 2025, 34,439 people applied for international protection in Belgium, in a system that is increasingly complex and focused on efficiency and speed.",
+          "src": "Source: CGRS, annual report 2025"
         },
         {
           "label": "Solution",
-          "text": "We follow complex cases and share our legal expertise with lawyers and policymakers."
+          "sub": "Our mission",
+          "text": "NANSEN is a centre of legal expertise that brings quality legal assistance to people in need of international protection and people affected by statelessness, through",
+          "list": [
+            "individual casework",
+            "practical tools and training for legal practitioners",
+            "dialogue with asylum authorities and policymakers"
+          ]
         },
         {
           "label": "Impact",
-          "text": "By 2036, every lawyer with a complex case finds the expertise it requires.",
-          "todo": "Figure to follow (NANSEN)"
+          "sub": "Our 10-year target",
+          "text": "By 2036, …",
+          "todo": "Target with figures to follow (NANSEN)"
         },
         {
           "label": "Vision",
-          "text": "Fair procedures that see the person behind every case."
+          "sub": "The ultimate goal",
+          "text": "A Belgium where international protection and statelessness procedures are fair and accessible for everyone who goes through them."
         }
       ],
       "hint": "Hover over a word",

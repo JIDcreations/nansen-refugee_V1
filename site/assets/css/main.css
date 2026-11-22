@@ -1369,6 +1369,13 @@ mark { border-radius: 2px; padding: 0 .1em; }
 .lx-stat strong { font-size: var(--fs-xl); font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
 .lx-stat span { max-width: 28ch; font-size: var(--fs-sm); line-height: 1.4; color: var(--ink-soft); }
 .lx-todo { margin: var(--s-3) 0 0; font-size: var(--fs-xs); color: var(--orange-ink); }
+/* Programmamodel (FUNCAP): onderlabel, genummerde lijst, bron */
+.lx-sub { font-size: var(--fs-xs); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.lx-list { margin: var(--s-3) 0 0; padding: 0; list-style: none; counter-reset: lx; font-size: clamp(1rem, .92rem + .3vw, 1.125rem); line-height: 1.45; color: var(--ink); }
+.lx-list li { counter-increment: lx; display: flex; gap: .5em; }
+.lx-list li::before { content: "(" counter(lx) ")"; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.lx-src { margin: var(--s-3) 0 0; font-size: var(--fs-xs); color: var(--ink-soft); }
+.lx-panel--bl .lx-sub, .lx-panel--bl .lx-src { color: rgba(250,240,230,.72); }
 .lx-dots { display: none; }
 .lx-meta { display: grid; grid-template-columns: auto 1fr; gap: .2rem var(--s-6); margin: 0 var(--s-5) var(--s-5); font-size: var(--fs-xs); line-height: 1.45; color: var(--ink-soft); }
 .lx-meta dt { font-weight: 600; }

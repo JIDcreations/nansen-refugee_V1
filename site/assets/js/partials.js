@@ -401,10 +401,13 @@ export function programModel() {
             <h2 class="lx-head">
               <button type="button" class="lx-btn" id="lx-btn-${i}" aria-expanded="${i === 0}" aria-controls="lx-body-${i}">
                 <span class="lx-label">${label(s)}</span>
+                ${s.sub ? `<span class="lx-sub">${esc(s.sub)}</span>` : ''}
               </button>
             </h2>
             <div class="lx-body" id="lx-body-${i}" role="region" aria-labelledby="lx-btn-${i}"><div class="lx-body-inner">
               <p class="lx-text">${esc(s.text)}</p>
+              ${s.list ? `<ol class="lx-list">${s.list.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>` : ''}
+              ${s.src ? `<p class="lx-src">${esc(s.src)}</p>` : ''}
               ${s.stat ? `<p class="lx-stat"><strong>${esc(s.stat)}</strong> <span>${esc(s.statLabel)}</span></p>` : ''}
               ${s.todo ? `<p class="lx-todo">${esc(s.todo)}</p>` : ''}
             </div></div>

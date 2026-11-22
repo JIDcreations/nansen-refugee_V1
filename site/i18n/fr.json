@@ -249,22 +249,30 @@
       "steps": [
         {
           "label": "Problème",
-          "text": "Les procédures deviennent plus complexes et plus rapides. Les personnes en quête de protection sont souvent seules.",
-          "stat": "34.439",
-          "statLabel": "demandes de protection en Belgique en 2025 (CGRA)"
+          "sub": "Le problème principal",
+          "text": "En 2025, 34 439 personnes ont introduit une demande de protection internationale en Belgique, dans un système de plus en plus complexe, axé sur l’efficacité et la rapidité.",
+          "src": "Source : CGRA, rapport annuel 2025"
         },
         {
           "label": "Solution",
-          "text": "Nous suivons des dossiers complexes et partageons notre expertise juridique avec avocats et décideurs."
+          "sub": "Notre mission",
+          "text": "NANSEN est un centre d’expertise juridique qui apporte une assistance juridique de qualité aux personnes ayant besoin d’une protection internationale et aux personnes apatrides, à travers",
+          "list": [
+            "le suivi de situations individuelles",
+            "des outils pratiques et des formations pour les praticien·nes",
+            "le dialogue avec les autorités d’asile et les décideur·ses politiques"
+          ]
         },
         {
           "label": "Impact",
-          "text": "D’ici 2036, chaque avocat face à un dossier complexe trouve l’expertise nécessaire.",
-          "todo": "Chiffre à venir (NANSEN)"
+          "sub": "Notre objectif pour 2036",
+          "text": "D’ici 2036, …",
+          "todo": "Objectif chiffré à venir (NANSEN)"
         },
         {
           "label": "Vision",
-          "text": "Des procédures justes, attentives à la personne derrière chaque dossier."
+          "sub": "Le but ultime",
+          "text": "Une Belgique où les procédures de protection internationale et d’apatridie sont équitables et accessibles pour toutes les personnes qui les traversent."
         }
       ],
       "hint": "Survolez un mot",

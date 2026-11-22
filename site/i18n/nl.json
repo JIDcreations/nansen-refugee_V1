@@ -249,22 +249,30 @@
       "steps": [
         {
           "label": "Probleem",
-          "text": "Procedures worden complexer en sneller. Wie bescherming zoekt, staat er vaak alleen voor.",
-          "stat": "34.439",
-          "statLabel": "verzoeken om bescherming in België in 2025 (CGVS)"
+          "sub": "Het hoofdprobleem",
+          "text": "In 2025 vroegen 34.439 mensen om internationale bescherming in België, in een systeem dat steeds complexer wordt en draait om efficiëntie en snelheid.",
+          "src": "Bron: CGVS, jaarverslag 2025"
         },
         {
           "label": "Oplossing",
-          "text": "We volgen complexe dossiers op en delen onze juridische kennis met advocaten en beleidsmakers."
+          "sub": "Onze missie",
+          "text": "NANSEN is een juridisch expertisecentrum dat kwaliteitsvolle juridische bijstand brengt bij mensen die internationale bescherming nodig hebben en bij staatlozen, via",
+          "list": [
+            "individuele dossiers",
+            "praktische tools en vormingen voor praktijkbeoefenaars",
+            "dialoog met asielinstanties en beleidsmakers"
+          ]
         },
         {
           "label": "Impact",
-          "text": "Tegen 2036 vindt elke advocaat met een complex dossier de expertise die het vraagt.",
-          "todo": "Cijfer volgt (NANSEN)"
+          "sub": "Ons doel voor 2036",
+          "text": "Tegen 2036 …",
+          "todo": "Doel met cijfers volgt (NANSEN)"
         },
         {
           "label": "Visie",
-          "text": "Eerlijke procedures, met oog voor de mens achter elk dossier."
+          "sub": "Het einddoel",
+          "text": "Een België waar procedures voor internationale bescherming en staatloosheid eerlijk en toegankelijk zijn voor iedereen die ze doorloopt."
         }
       ],
       "hint": "Beweeg over een woord",
