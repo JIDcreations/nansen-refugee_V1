@@ -5,6 +5,7 @@
 import { load, lang, LANGS, DEFAULT_LANG, t } from './core.js';
 import { header, footer, prefooter, notice, initFooter } from './partials.js';
 import { pages } from './pages.js';
+import { initHeads } from './split.js';
 
 async function boot() {
   document.documentElement.lang = lang;
@@ -38,6 +39,7 @@ async function boot() {
 
   initHeader();
   if (pages[page]) await pages[page]();
+  initHeads();
   initAnchors();
   if (page !== 'home') initReveal();
   document.documentElement.classList.add('is-ready');

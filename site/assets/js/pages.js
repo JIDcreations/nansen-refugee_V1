@@ -110,7 +110,7 @@ function homeMotion() {
 async function themas() {
   setMeta({ title: t('pages.themasTitle'), description: t('pages.themasLead') });
   main().innerHTML = `
-  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.themasTitle') }])}<h1>${t('pages.themasTitle')}</h1><p class="lead">${t('pages.themasLead')}</p></div></header>
+  <header class="page-head" data-media="grens-weg"><div class="wrap">${breadcrumb([{ label: t('pages.themasTitle') }])}<h1>${t('pages.themasTitle')}</h1><p class="lead">${t('pages.themasLead')}</p></div></header>
   <section class="wrap" style="padding-bottom:var(--s-9)">
     <ul class="theme-rows" role="list">${data().themas.map((th) => {
       const pubs = pubsForTheme(th.slug), latestPub = pubs.find((p) => p.type !== 'jaarverslag'), evs = eventsForTheme(th.slug), next = evs.filter((e) => !isPast(e)).sort((a, b) => a.start.localeCompare(b.start))[0];
@@ -147,7 +147,7 @@ async function diensten() {
       aside: next ? `<div><p class="label">${t('theme.nextEvent')}</p><a href="${url('evenement.html', { slug: next.slug })}">${esc(tr(next.titel))}</a><span class="small muted">${fmtDate(next.start)}</span></div>` : '' }
   ];
   main().innerHTML = `
-  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.dienstenTitle') }])}<h1>${t('pages.dienstenTitle')}</h1><p class="lead">${t('pages.dienstenLead')}</p></div></header>
+  <header class="page-head" data-media="centrum"><div class="wrap">${breadcrumb([{ label: t('pages.dienstenTitle') }])}<h1>${t('pages.dienstenTitle')}</h1><p class="lead">${t('pages.dienstenLead')}</p></div></header>
   <section class="wrap" style="padding-bottom:var(--s-9)">
     <ul class="theme-rows" role="list">${rows.map((r) => `<li class="theme-row">
         <div class="theme-row-media">${picture(r.img, '', { sizes: '(min-width: 64em) 22rem, 100vw', widths: [640, 1280] })}</div>
@@ -179,17 +179,14 @@ async function thema() {
   setMeta({ title: themeName(th), description: tr(th.kort) });
 
   main().innerHTML = `
-  <header class="theme-head">
-    <div class="wrap">${breadcrumb([{ label: t('pages.themasTitle'), href: url('themas.html') }, { label: themeName(th) }])}</div>
-    <div class="wrap theme-head-grid">
-      <div>
-        <p class="type-label">${t('types.theme')}</p>
-        <h1>${esc(themeName(th))}</h1>
-        ${th.naamLang ? `<p class="muted">${esc(tr(th.naamLang))}</p>` : ''}
-        <p class="lead">${esc(tr(th.intro))}</p>
-        <p class="count-links"><a href="#publicaties">${t('theme.countPub', { n: themePubs.length })} ${down}</a><a href="#evenementen">${t('theme.countEv', { n: evs.length })} ${down}</a></p>
-      </div>
-      ${picture(th.afbeelding, '', { cls: 'theme-head-photo', sizes: '(min-width: 64em) 40vw, 100vw', eager: true })}
+  <header class="page-head page-head--theme" data-media="${th.afbeelding || 'spot'}">
+    <div class="wrap">
+      ${breadcrumb([{ label: t('pages.themasTitle'), href: url('themas.html') }, { label: themeName(th) }])}
+      <p class="ph-kicker">${t('types.theme')}</p>
+      <h1>${esc(themeName(th))}</h1>
+      ${th.naamLang ? `<p class="ph-sub">${esc(tr(th.naamLang))}</p>` : ''}
+      <p class="lead">${esc(tr(th.intro))}</p>
+      <dl class="ph-meta"><div><dt>${t('types.publications')}</dt><dd><a href="#publicaties">${themePubs.length} ${down}</a></dd></div><div><dt>${t('types.events')}</dt><dd><a href="#evenementen">${evs.length} ${down}</a></dd></div></dl>
     </div>
   </header>
 
@@ -250,7 +247,7 @@ async function publicaties() {
   const items = data().publicaties;
   setMeta({ title: t('pages.pubsTitle'), description: t('pages.pubsLead') });
   main().innerHTML = `
-  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.pubsTitle') }])}<h1>${t('pages.pubsTitle')}</h1><p class="lead">${t('pages.pubsLead')}</p></div></header>
+  <header class="page-head" data-media="horizon"><div class="wrap">${breadcrumb([{ label: t('pages.pubsTitle') }])}<h1>${t('pages.pubsTitle')}</h1><p class="lead">${t('pages.pubsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
   /* FILTERCONFIG publicaties. Klant levert de definitieve 3–7 filters (open vraag 2). */
@@ -301,17 +298,17 @@ async function publicatie() {
   const relPubs = pubsSorted().filter((x) => x !== p && x.type !== 'jaarverslag' && !readAlso.includes(x) && x.themas.some((s) => p.themas.includes(s))).slice(0, 4);
 
   main().innerHTML = `
-  <article class="wrap">
-    <header class="doc-head">
+  <article>
+    <header class="page-head page-head--doc" data-media="spot"><div class="wrap">
       ${breadcrumb([{ label: t('knowledge.pubs'), href: url('publicaties.html') }, { label: term('publicatieType', p.type), href: url('publicaties.html', { type: p.type }) }, { label: ti.text.length > 60 ? `${ti.text.slice(0, 58)}…` : ti.text }])}
       <span class="ribbon-big" aria-hidden="true">${icon.ribbon}</span>
       <p class="doc-kicker"><a class="type-label" href="${url('publicaties.html', { type: p.type })}">${esc(term('publicatieType', p.type))}</a><time datetime="${p.datum}">${fmtDate(p.datum)}</time>${langBadges(p.documentTalen)}</p>
       <h1${ti.attr}>${esc(ti.text)}</h1>
       <p class="lead">${esc(tr(p.samenvatting))}</p>
-      <div class="mt-5"><p class="label mb-2">${t('meta.themes')}</p>${themeTags(p.themas)}</div>
-    </header>
+      <div class="ph-tags">${themeTags(p.themas)}</div>
+    </div></header>
 
-    <div class="detail">
+    <div class="wrap detail">
       <div class="detail-main" data-translation-notice>
         ${docOnly ? notice(t('docOnlyIn', { l: p.documentTalen.map(langName).join(', ') })) : ''}
         ${content.fallback ? notice(t('translationMissing')) : ''}
@@ -379,7 +376,7 @@ async function evenementen() {
   const items = data().evenementen;
   setMeta({ title: t('pages.eventsTitle'), description: t('pages.eventsLead') });
   main().innerHTML = `
-  <header class="page-head"><div class="wrap">${breadcrumb([{ label: t('pages.eventsTitle') }])}<h1>${t('pages.eventsTitle')}</h1><p class="lead">${t('pages.eventsLead')}</p></div></header>
+  <header class="page-head" data-media="zaal"><div class="wrap">${breadcrumb([{ label: t('pages.eventsTitle') }])}<h1>${t('pages.eventsTitle')}</h1><p class="lead">${t('pages.eventsLead')}</p></div></header>
   <div class="wrap" style="padding-bottom:var(--s-9)" id="listing"></div>`;
 
   const soonest = (a, b) => {
@@ -439,15 +436,15 @@ async function evenement() {
   });
 
   main().innerHTML = `
-  <article class="wrap">
-    <header class="doc-head">
+  <article>
+    <header class="page-head page-head--doc" data-media="spot"><div class="wrap">
       ${breadcrumb([{ label: t('knowledge.events'), href: url('evenementen.html') }, { label: past ? t('event.archive') : t('event.upcoming'), href: url('evenementen.html', { wanneer: past ? 'archief' : 'komend' }) }, { label: tr(e.titel) }])}
       <p class="doc-kicker"><a class="type-label" href="${url('evenementen.html', { type: e.type })}">${esc(term('evenementType', e.type))}</a>${statusBadge(e)}</p>
       <h1>${esc(tr(e.titel))}</h1>
       <p class="lead">${esc(tr(e.samenvatting))}</p>
-      <div class="mt-5"><p class="label mb-2">${t('meta.themes')}</p>${themeTags(e.themas)}</div>
-    </header>
-    <div class="detail">
+      <div class="ph-tags">${themeTags(e.themas)}</div>
+    </div></header>
+    <div class="wrap detail">
       <div class="detail-main" data-translation-notice>
         ${desc.fallback ? notice(t('translationMissing')) : ''}
         <div class="blocks">
@@ -534,7 +531,7 @@ async function zoeken() {
   const total = groups.reduce((s, g) => s + g.n, 0);
 
   main().innerHTML = `
-  <section class="search-hero"><div class="wrap">${breadcrumb([{ label: t('search.title') }])}
+  <section class="page-head page-head--search" data-media="spot"><div class="wrap">${breadcrumb([{ label: t('search.title') }])}
     <h1>${q ? `${t('search.resultsFor')} <span class="serif">“${esc(q)}”</span>` : t('search.title')}</h1>
     <div class="mt-5">${searchForm('page', q)}</div>
     ${q && otherLangCount ? `<label class="check mt-5"><input type="checkbox" id="alle" ${allLang ? 'checked' : ''}><span>${t('search.otherLangs')}</span><span class="count">+${otherLangCount}</span></label>` : ''}

@@ -106,7 +106,7 @@ export function initPillars(root) {
 }
 
 /* Afgeronde veelhoek: elke hoek krijgt een straal naar zijn hoek (stomp = groot, scherp = middel, recht = klein) */
-function roundPoly(pts, { big, mid, small }) {
+export function roundPoly(pts, { big, mid, small }) {
   const n = pts.length;
   let out = '';
   for (let i = 0; i < n; i++) {
