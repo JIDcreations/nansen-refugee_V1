@@ -1888,3 +1888,5 @@ main > .anchor-section:nth-of-type(even) .contact-card, main > .section--band .t
 @media (min-width: 48em) { .agenda-link { grid-template-columns: 12.5rem minmax(0, 1fr) auto; } }
 .agenda-my, .agenda-rel { white-space: nowrap; }
 @media (max-width: 63.99em) { .section-head { row-gap: var(--s-4); } }
+/* Elk home-blok is een eigen paneel: altijd ruimte boven én onder */
+main > .home-block { padding-block: var(--section-y) !important; }
