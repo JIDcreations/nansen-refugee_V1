@@ -231,7 +231,7 @@ async function thema() {
 
   <nav class="section section--band theme-others" aria-labelledby="h-others">
     <div class="wrap">
-      <h2 id="h-others" class="section-head">${t('theme.others')}</h2>
+      <header class="section-head"><h2 id="h-others">${t('theme.others')}</h2></header>
       <ul role="list">${others.map((x) => `<li><a href="${url('thema.html', { slug: x.slug })}"><strong>${esc(themeName(x))}</strong><span>${esc(tr(x.kort))}</span></a></li>`).join('')}</ul>
     </div>
   </nav>`;
@@ -299,7 +299,7 @@ async function publicatie() {
 
   main().innerHTML = `
   <article>
-    <header class="page-head page-head--doc" data-media="spot"><div class="wrap">
+    <header class="page-head page-head--doc" data-media="${theme(p.themas[0])?.afbeelding || 'prikkeldraad'}"><div class="wrap">
       ${breadcrumb([{ label: t('knowledge.pubs'), href: url('publicaties.html') }, { label: term('publicatieType', p.type), href: url('publicaties.html', { type: p.type }) }, { label: ti.text.length > 60 ? `${ti.text.slice(0, 58)}…` : ti.text }])}
       <span class="ribbon-big" aria-hidden="true">${icon.ribbon}</span>
       <p class="doc-kicker"><a class="type-label" href="${url('publicaties.html', { type: p.type })}">${esc(term('publicatieType', p.type))}</a><time datetime="${p.datum}">${fmtDate(p.datum)}</time>${langBadges(p.documentTalen)}</p>
@@ -437,7 +437,7 @@ async function evenement() {
 
   main().innerHTML = `
   <article>
-    <header class="page-head page-head--doc" data-media="spot"><div class="wrap">
+    <header class="page-head page-head--doc" data-media="${e.foto || theme(e.themas[0])?.afbeelding || 'zaal'}"><div class="wrap">
       ${breadcrumb([{ label: t('knowledge.events'), href: url('evenementen.html') }, { label: past ? t('event.archive') : t('event.upcoming'), href: url('evenementen.html', { wanneer: past ? 'archief' : 'komend' }) }, { label: tr(e.titel) }])}
       <p class="doc-kicker"><a class="type-label" href="${url('evenementen.html', { type: e.type })}">${esc(term('evenementType', e.type))}</a>${statusBadge(e)}</p>
       <h1>${esc(tr(e.titel))}</h1>
@@ -531,7 +531,7 @@ async function zoeken() {
   const total = groups.reduce((s, g) => s + g.n, 0);
 
   main().innerHTML = `
-  <section class="page-head page-head--search" data-media="spot"><div class="wrap">${breadcrumb([{ label: t('search.title') }])}
+  <section class="page-head page-head--search" data-media="grens-weg"><div class="wrap">${breadcrumb([{ label: t('search.title') }])}
     <h1>${q ? `${t('search.resultsFor')} <span class="serif">“${esc(q)}”</span>` : t('search.title')}</h1>
     <div class="mt-5">${searchForm('page', q)}</div>
     ${q && otherLangCount ? `<label class="check mt-5"><input type="checkbox" id="alle" ${allLang ? 'checked' : ''}><span>${t('search.otherLangs')}</span><span class="count">+${otherLangCount}</span></label>` : ''}
